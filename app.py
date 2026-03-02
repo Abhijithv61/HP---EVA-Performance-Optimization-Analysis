@@ -83,7 +83,7 @@ def chart(fig, title="", sub=""):
 # ── data ─────────────────────────────────────────────────────────────────────
 @st.cache_data
 def load():
-    df = pd.read_csv(r"output_datasets\logs_consolidated.csv", parse_dates=["timestamp"])
+    df = pd.read_csv("output_datasets/logs_consolidated.csv", parse_dates=["timestamp"])
     def sp(v):
         if pd.isna(v): return None
         try: return ast.literal_eval(v)
