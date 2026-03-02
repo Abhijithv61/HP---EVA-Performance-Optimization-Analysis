@@ -1,0 +1,2204 @@
+[
+  {
+    "id": "77b0177257c16cbe9aade93a41bf308f",
+    "projectId": "cmgt9niok000wvo07s9ywpqc3",
+    "timestamp": "2026-02-17T05:18:40.002Z",
+    "tags": [],
+    "bookmarked": false,
+    "name": "Invoke Agent",
+    "release": "9.0 Hotfix",
+    "version": null,
+    "userId": "user@email.com",
+    "environment": "staging",
+    "sessionId": "48a4b950-0bbf-11f1-a0cf-2de6f6a7e71d",
+    "public": false,
+    "input": "The same Airwave",
+    "output": [
+      {
+        "type": "guardrail_trace",
+        "trace": {
+          "action": "NONE",
+          "inputAssessments": [{}],
+          "metadata": {
+            "clientRequestId": "b743e56e-b84b-4dd4-ab7c-8651123b6ad4",
+            "endTime": "2026-02-17T05:18:41.238113Z",
+            "startTime": "2026-02-17T05:18:40.464272Z",
+            "totalTimeMs": 774
+          },
+          "traceId": "4649b269-6983-4571-863b-2352d1326495-guardrail-pre-0"
+        }
+      },
+      {
+        "type": "routing_classifier_trace",
+        "trace": {
+          "modelInvocationInput": {
+            "foundationModel": "anthropic.model_name-v1:0",
+            "inferenceConfiguration": {
+              "maximumLength": 512,
+              "stopSequences": ["\n\nHuman:"],
+              "temperature": 0,
+              "topK": 250,
+              "topP": 1
+            },
+            "text": "prompt",
+            "traceId": "4649b269-6983-4571-863b-2352d1326495-routing-0",
+            "type": "ROUTING_CLASSIFIER"
+          }
+        }
+      },
+      {
+        "type": "routing_classifier_trace",
+        "trace": {
+          "modelInvocationOutput": {
+            "metadata": {
+              "clientRequestId": "52c40159-faf1-473b-8c6c-ef55391ca708",
+              "endTime": "2026-02-17T05:18:42.612109Z",
+              "startTime": "2026-02-17T05:18:41.240963Z",
+              "totalTimeMs": 1372,
+              "usage": { "inputTokens": 4077, "outputTokens": 20 }
+            },
+            "rawResponse": {
+              "content": "{\"stop_sequence\":null,\"type\":\"message\",\"id\":\"msg_bdrk_01QswZTVG28XEmD8E2GRJZsk\",\"content\":[{\"imageSource\":null,\"reasoningTextSignature\":null,\"reasoningRedactedContent\":null,\"name\":null,\"type\":\"text\",\"id\":null,\"source\":null,\"input\":null,\"is_error\":null,\"text\":\"<a>license-assist-collaborator</a>\",\"content\":null,\"tool_use_id\":null,\"guardContent\":null,\"reasoningText\":null}],\"model\":\"model_name\",\"usage\":{\"input_tokens\":4077,\"output_tokens\":20,\"cache_read_input_tokens\":null,\"cache_creation_input_tokens\":null},\"role\":\"assistant\",\"stop_reason\":\"end_turn\"}"
+            },
+            "traceId": "4649b269-6983-4571-863b-2352d1326495-routing-0"
+          }
+        }
+      },
+      {
+        "type": "routing_classifier_trace",
+        "trace": {
+          "invocationInput": {
+            "agentCollaboratorInvocationInput": {
+              "agentCollaboratorAliasArn": "aws_arn_uri_2",
+              "agentCollaboratorName": "license-assist-collaborator",
+              "input": { "text": "The same Airwave", "type": "TEXT" }
+            },
+            "invocationType": "AGENT_COLLABORATOR",
+            "traceId": "4649b269-6983-4571-863b-2352d1326495-routing-0"
+          }
+        }
+      },
+      {
+        "type": "guardrail_trace",
+        "trace": {
+          "action": "NONE",
+          "inputAssessments": [{}],
+          "metadata": {
+            "clientRequestId": "c7367adb-2c26-42e1-befc-bdd295d03174",
+            "endTime": "2026-02-17T05:18:43.789398Z",
+            "startTime": "2026-02-17T05:18:43.184696Z",
+            "totalTimeMs": 605
+          },
+          "traceId": "efb5eaec-c3e2-4f01-a4b9-f3d4d82d4ac0-guardrail-pre-0"
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "modelInvocationInput": {
+            "foundationModel": "anthropic.model_name-v1:0",
+            "inferenceConfiguration": {
+              "maximumLength": 2048,
+              "stopSequences": ["</invoke>", "</answer>", "</error>"],
+              "temperature": 0,
+              "topK": 250,
+              "topP": 1
+            },
+            "text": "Input Prompt + Context + User input",
+            "traceId": "efb5eaec-c3e2-4f01-a4b9-f3d4d82d4ac0-0",
+            "type": "ORCHESTRATION"
+          }
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "modelInvocationOutput": {
+            "metadata": {
+              "clientRequestId": "abee494c-8f3d-44bd-8701-5c617d2c3a16",
+              "endTime": "2026-02-17T05:18:47.299106Z",
+              "startTime": "2026-02-17T05:18:43.836756Z",
+              "totalTimeMs": 3463,
+              "usage": { "inputTokens": 8830, "outputTokens": 125 }
+            },
+            "rawResponse": {
+              "content": "{\"stop_sequence\":null,\"type\":\"message\",\"id\":\"msg_bdrk_019NuzxEBM4H3fYhNX6t3mch\",\"content\":[{\"imageSource\":null,\"reasoningTextSignature\":null,\"reasoningRedactedContent\":null,\"name\":null,\"type\":\"text\",\"id\":null,\"source\":null,\"input\":null,\"is_error\":null,\"text\":\"<thinking>The user has indicated that the product line is Airwave, which they mentioned earlier. I need to validate this product line for the device transfer use case.</thinking>\",\"content\":null,\"reasoningText\":null,\"tool_use_id\":null,\"guardContent\":null},{\"imageSource\":null,\"reasoningTextSignature\":null,\"reasoningRedactedContent\":null,\"name\":\"get__license_action_group__validateProductLineUsecase\",\"type\":\"tool_use\",\"id\":\"toolu_bdrk_01CwhDfcatoeBkhGcpvi3ieH\",\"source\":null,\"input\":{\"productLine\":\"Airwave\",\"useCase\":\"device_transfer\"},\"is_error\":null,\"text\":null,\"content\":null,\"reasoningText\":null,\"tool_use_id\":null,\"guardContent\":null}],\"model\":\"model_name\",\"usage\":{\"input_tokens\":8830,\"output_tokens\":125,\"cache_read_input_tokens\":null,\"cache_creation_input_tokens\":null},\"role\":\"assistant\",\"stop_reason\":\"tool_use\"}"
+            },
+            "traceId": "efb5eaec-c3e2-4f01-a4b9-f3d4d82d4ac0-0"
+          }
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "rationale": {
+            "text": "The user has indicated that the product line is Airwave, which they mentioned earlier. I need to validate this product line for the device transfer use case.",
+            "traceId": "efb5eaec-c3e2-4f01-a4b9-f3d4d82d4ac0-0"
+          }
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "invocationInput": {
+            "actionGroupInvocationInput": {
+              "actionGroupName": "license_action_group",
+              "apiPath": "/validate-product-line/{useCase}/{productLine}",
+              "executionType": "LAMBDA",
+              "parameters": [
+                {
+                  "name": "useCase",
+                  "type": "string",
+                  "value": "device_transfer"
+                },
+                { "name": "productLine", "type": "string", "value": "Airwave" }
+              ],
+              "verb": "get"
+            },
+            "invocationType": "ACTION_GROUP",
+            "traceId": "efb5eaec-c3e2-4f01-a4b9-f3d4d82d4ac0-0"
+          }
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "observation": {
+            "actionGroupInvocationOutput": {
+              "metadata": {
+                "clientRequestId": "4258c14f-80b6-48b3-8b6b-c1960be91a2a",
+                "endTime": "2026-02-17T05:18:47.373912Z",
+                "startTime": "2026-02-17T05:18:47.305843Z",
+                "totalTimeMs": 68
+              },
+              "text": "{\"is_valid\": true, \"valid_for_use_case\": true, \"normalized_product_line\": \"Airwave\", \"valid_product_lines\": [\"AOS\", \"Airwave\", \"AFC\"]}"
+            },
+            "traceId": "efb5eaec-c3e2-4f01-a4b9-f3d4d82d4ac0-0",
+            "type": "ACTION_GROUP"
+          }
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "modelInvocationInput": {
+            "foundationModel": "anthropic.model_name-v1:0",
+            "inferenceConfiguration": {
+              "maximumLength": 2048,
+              "stopSequences": ["</invoke>", "</answer>", "</error>"],
+              "temperature": 0,
+              "topK": 250,
+              "topP": 1
+            },
+            "text": "Input Prompt + Context + User input",
+            "traceId": "efb5eaec-c3e2-4f01-a4b9-f3d4d82d4ac0-1",
+            "type": "ORCHESTRATION"
+          }
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "modelInvocationOutput": {
+            "metadata": {
+              "clientRequestId": "eb901b89-d97b-4358-845b-6765d8eb8a6c",
+              "endTime": "2026-02-17T05:18:50.593191Z",
+              "startTime": "2026-02-17T05:18:47.380450Z",
+              "totalTimeMs": 3213,
+              "usage": { "inputTokens": 9015, "outputTokens": 110 }
+            },
+            "rawResponse": {
+              "content": "{\"stop_sequence\":null,\"type\":\"message\",\"id\":\"msg_bdrk_019xMEKFYiAgSMkEiPaJeowZ\",\"content\":[{\"imageSource\":null,\"reasoningTextSignature\":null,\"reasoningRedactedContent\":null,\"name\":null,\"type\":\"text\",\"id\":null,\"source\":null,\"input\":null,\"is_error\":null,\"text\":\"<thinking>The product line \\\"Airwave\\\" is valid and eligible for device transfer. Now, I can proceed to get the License Device Transfer Page URL for the user.</thinking>\",\"content\":null,\"reasoningText\":null,\"tool_use_id\":null,\"guardContent\":null},{\"imageSource\":null,\"reasoningTextSignature\":null,\"reasoningRedactedContent\":null,\"name\":\"get__license_action_group__getLicenseDeviceTransferPageUrl\",\"type\":\"tool_use\",\"id\":\"toolu_bdrk_01PSurKd9TZ7e4HvtmPMYGc7\",\"source\":null,\"input\":{\"productLine\":\"Airwave\"},\"is_error\":null,\"text\":null,\"content\":null,\"reasoningText\":null,\"tool_use_id\":null,\"guardContent\":null}],\"model\":\"model_name\",\"usage\":{\"input_tokens\":9015,\"output_tokens\":110,\"cache_read_input_tokens\":null,\"cache_creation_input_tokens\":null},\"role\":\"assistant\",\"stop_reason\":\"tool_use\"}"
+            },
+            "traceId": "efb5eaec-c3e2-4f01-a4b9-f3d4d82d4ac0-1"
+          }
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "rationale": {
+            "text": "The product line \"Airwave\" is valid and eligible for device transfer. Now, I can proceed to get the License Device Transfer Page URL for the user.",
+            "traceId": "efb5eaec-c3e2-4f01-a4b9-f3d4d82d4ac0-1"
+          }
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "invocationInput": {
+            "actionGroupInvocationInput": {
+              "actionGroupName": "license_action_group",
+              "apiPath": "/get-license-transfer-page-url/device/{productLine}",
+              "executionType": "LAMBDA",
+              "parameters": [
+                { "name": "productLine", "type": "string", "value": "Airwave" }
+              ],
+              "verb": "get"
+            },
+            "invocationType": "ACTION_GROUP",
+            "traceId": "efb5eaec-c3e2-4f01-a4b9-f3d4d82d4ac0-1"
+          }
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "observation": {
+            "actionGroupInvocationOutput": {
+              "metadata": {
+                "clientRequestId": "382047cb-04b8-4bae-8ca1-96d9649f9183",
+                "endTime": "2026-02-17T05:18:50.629832Z",
+                "startTime": "2026-02-17T05:18:50.600032Z",
+                "totalTimeMs": 29
+              },
+              "text": "license_device_transfer_page_url"
+            },
+            "traceId": "efb5eaec-c3e2-4f01-a4b9-f3d4d82d4ac0-1",
+            "type": "ACTION_GROUP"
+          }
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "modelInvocationInput": {
+            "foundationModel": "anthropic.model_name-v1:0",
+            "inferenceConfiguration": {
+              "maximumLength": 2048,
+              "stopSequences": ["</invoke>", "</answer>", "</error>"],
+              "temperature": 0,
+              "topK": 250,
+              "topP": 1
+            },
+            "text": "Input Prompt + Context + User input",
+            "traceId": "efb5eaec-c3e2-4f01-a4b9-f3d4d82d4ac0-2",
+            "type": "ORCHESTRATION"
+          }
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "modelInvocationOutput": {
+            "metadata": {
+              "clientRequestId": "92aa37db-325f-4809-a773-131b3c95d55e",
+              "endTime": "2026-02-17T05:18:57.557180Z",
+              "startTime": "2026-02-17T05:18:50.636427Z",
+              "totalTimeMs": 6921,
+              "usage": { "inputTokens": 9248, "outputTokens": 298 }
+            },
+            "rawResponse": {
+              "content": "{\"stop_sequence\":\"</answer>\",\"type\":\"message\",\"id\":\"msg_bdrk_01MS241noRFJQ1iSjkx7f146\",\"content\":[{\"imageSource\":null,\"reasoningTextSignature\":null,\"reasoningRedactedContent\":null,\"name\":null,\"type\":\"text\",\"id\":null,\"source\":null,\"input\":null,\"is_error\":null,\"text\":\"<thinking>I have obtained the License Device Transfer Page URL for Airwave. I'll provide this to the user along with some guidance on how to proceed.</thinking><answer>Great! I can help you with the device transfer for your Airwave license. Here's what you need to do:\\n\\n1. Please visit the License Device Transfer Page using the following link:\\n   [Airwave License Device Transfer Page](<license_device_transfer_page_url>)\\n\\n2. On this page, you'll be able to initiate and complete the device transfer process for your Airwave license.\\n\\n3. Follow the on-screen instructions to transfer the license from one device to another.\\n\\nIf you encounter any issues during the transfer process or need additional assistance, please don't hesitate to ask. You can also contact our Technical Assistance Center (TAC) for more detailed support if needed.\\n\\nIs there anything else you'd like to know about the device transfer process?\",\"content\":null,\"reasoningText\":null,\"tool_use_id\":null,\"guardContent\":null}],\"model\":\"model_name\",\"usage\":{\"input_tokens\":9248,\"output_tokens\":298,\"cache_read_input_tokens\":null,\"cache_creation_input_tokens\":null},\"role\":\"assistant\",\"stop_reason\":\"stop_sequence\"}"
+            },
+            "traceId": "efb5eaec-c3e2-4f01-a4b9-f3d4d82d4ac0-2"
+          }
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "rationale": {
+            "text": "I have obtained the License Device Transfer Page URL for Airwave. I'll provide this to the user along with some guidance on how to proceed.",
+            "traceId": "efb5eaec-c3e2-4f01-a4b9-f3d4d82d4ac0-2"
+          }
+        }
+      },
+      {
+        "type": "guardrail_trace",
+        "trace": {
+          "action": "NONE",
+          "metadata": {
+            "clientRequestId": "7d2fb56a-1afb-41b1-a96e-fbeca38ef399",
+            "endTime": "2026-02-17T05:18:58.388157Z",
+            "startTime": "2026-02-17T05:18:57.749726Z",
+            "totalTimeMs": 639
+          },
+          "outputAssessments": [{}],
+          "traceId": "efb5eaec-c3e2-4f01-a4b9-f3d4d82d4ac0-guardrail-post-0"
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "observation": {
+            "finalResponse": {
+              "metadata": {
+                "endTime": "2026-02-17T05:18:58.442314Z",
+                "operationTotalTimeMs": 15740,
+                "startTime": "2026-02-17T05:18:42.702689Z"
+              },
+              "text": "Great! I can help you with the device transfer for your Airwave license. Here's what you need to do:\n\n1. Please visit the License Device Transfer Page using the following link:\n   [Airwave License Device Transfer Page](<license_device_transfer_page_url>)\n\n2. On this page, you'll be able to initiate and complete the device transfer process for your Airwave license.\n\n3. Follow the on-screen instructions to transfer the license from one device to another.\n\nIf you encounter any issues during the transfer process or need additional assistance, please don't hesitate to ask. You can also contact our Technical Assistance Center (TAC) for more detailed support if needed.\n\nIs there anything else you'd like to know about the device transfer process?"
+            },
+            "traceId": "efb5eaec-c3e2-4f01-a4b9-f3d4d82d4ac0-2",
+            "type": "FINISH"
+          }
+        }
+      },
+      {
+        "type": "routing_classifier_trace",
+        "trace": {
+          "observation": {
+            "agentCollaboratorInvocationOutput": {
+              "agentCollaboratorAliasArn": "arn:aws:bedrock:us-east-1:576584121853:agent-alias/NQC7FRYMF7/OV2FRTQZON",
+              "agentCollaboratorName": "license-assist-collaborator",
+              "metadata": {
+                "clientRequestId": "efb5eaec-c3e2-4f01-a4b9-f3d4d82d4ac0",
+                "endTime": "2026-02-17T05:18:58.514620Z",
+                "startTime": "2026-02-17T05:18:42.625159Z",
+                "totalTimeMs": 15889
+              },
+              "output": {
+                "text": "Great! I can help you with the device transfer for your Airwave license. Here's what you need to do:\n\n1. Please visit the License Device Transfer Page using the following link:\n   [Airwave License Device Transfer Page](<license_device_transfer_page_url>)\n\n2. On this page, you'll be able to initiate and complete the device transfer process for your Airwave license.\n\n3. Follow the on-screen instructions to transfer the license from one device to another.\n\nIf you encounter any issues during the transfer process or need additional assistance, please don't hesitate to ask. You can also contact our Technical Assistance Center (TAC) for more detailed support if needed.\n\nIs there anything else you'd like to know about the device transfer process?",
+                "type": "TEXT"
+              }
+            },
+            "traceId": "4649b269-6983-4571-863b-2352d1326495-routing-0",
+            "type": "AGENT_COLLABORATOR"
+          }
+        }
+      },
+      {
+        "type": "routing_classifier_trace",
+        "trace": {
+          "observation": {
+            "finalResponse": {
+              "metadata": {
+                "endTime": "2026-02-17T05:18:58.520586Z",
+                "operationTotalTimeMs": 18481,
+                "startTime": "2026-02-17T05:18:40.039639Z"
+              },
+              "text": "Great! I can help you with the device transfer for your Airwave license. Here's what you need to do:\n\n1. Please visit the License Device Transfer Page using the following link:\n   [Airwave License Device Transfer Page](<license_device_transfer_page_url>)\n\n2. On this page, you'll be able to initiate and complete the device transfer process for your Airwave license.\n\n3. Follow the on-screen instructions to transfer the license from one device to another.\n\nIf you encounter any issues during the transfer process or need additional assistance, please don't hesitate to ask. You can also contact our Technical Assistance Center (TAC) for more detailed support if needed.\n\nIs there anything else you'd like to know about the device transfer process?"
+            },
+            "traceId": "4649b269-6983-4571-863b-2352d1326495-routing-0",
+            "type": "FINISH"
+          }
+        }
+      },
+      {
+        "type": "guardrail_trace",
+        "trace": {
+          "action": "NONE",
+          "metadata": {
+            "clientRequestId": "62407bca-4ade-4f40-a31e-5183af172f1b",
+            "endTime": "2026-02-17T05:18:59.442278Z",
+            "startTime": "2026-02-17T05:18:58.710822Z",
+            "totalTimeMs": 732
+          },
+          "outputAssessments": [{}],
+          "traceId": "4649b269-6983-4571-863b-2352d1326495-guardrail-post-0"
+        }
+      },
+      {
+        "type": "chunk",
+        "chunk": {
+          "bytes": "Great! I can help you with the device transfer for your Airwave license. Here's what you need to do:\n\n1. Please visit the License Device Transfer Page using the following link:\n   [Airwave License Device Transfer Page](<license_device_transfer_page_url>)\n\n2. On this page, you'll be able to initiate and complete the device transfer process for your Airwave license.\n\n3. Follow the on-screen instructions to transfer the license from one device to another.\n\nIf you encounter any issues during the transfer process or need additional assistance, please don't hesitate to ask. You can also contact our Technical Assistance Center (TAC) for more detailed support if needed.\n\nIs there anything else you'd like to know about the device transfer process?"
+        }
+      }
+    ],
+    "metadata": {
+      "resourceAttributes": {
+        "telemetry.sdk.language": "python",
+        "telemetry.sdk.name": "opentelemetry",
+        "telemetry.sdk.version": "1.39.1",
+        "langfuse.environment": "staging",
+        "langfuse.release": "9.0 Hotfix",
+        "service.name": "unknown_service"
+      },
+      "scope": {
+        "name": "langfuse-sdk",
+        "version": "3.7.0",
+        "attributes": {
+          "public_key": "pk1"
+        }
+      }
+    },
+    "latency": 19.569,
+    "usage": {
+      "promptTokens": 31170,
+      "completionTokens": 553,
+      "totalTokens": 31723
+    },
+    "inputCost": "0.09351",
+    "outputCost": "0.008294999999",
+    "totalCost": "0.101804999999",
+    "level": "DEFAULT",
+    "errorCount": 0,
+    "warningCount": 0,
+    "defaultCount": 1,
+    "debugCount": 0,
+    "observationCount": 1,
+    "inputTokens": 31170,
+    "outputTokens": 553,
+    "totalTokens": 31723
+  },
+  {
+    "id": "d0ed5e6524e3c8d7b08b93b4b56683fc",
+    "projectId": "cmgt9niok000wvo07s9ywpqc3",
+    "timestamp": "2026-02-17T05:18:13.990Z",
+    "tags": [],
+    "bookmarked": false,
+    "name": "Invoke Agent",
+    "release": "9.0 Hotfix",
+    "version": null,
+    "userId": "user@email.com",
+    "environment": "staging",
+    "sessionId": "48a4b950-0bbf-11f1-a0cf-2de6f6a7e71d",
+    "public": false,
+    "input": "it is for Device transfer",
+    "output": [
+      {
+        "type": "guardrail_trace",
+        "trace": {
+          "action": "NONE",
+          "inputAssessments": [{}],
+          "metadata": {
+            "clientRequestId": "f48b04e5-8a48-4634-aac2-724dc8dc603d",
+            "endTime": "2026-02-17T05:18:15.130474Z",
+            "startTime": "2026-02-17T05:18:14.264130Z",
+            "totalTimeMs": 866
+          },
+          "traceId": "ecb2f566-5c59-4942-9abc-ce6822a9da3a-guardrail-pre-0"
+        }
+      },
+      {
+        "type": "routing_classifier_trace",
+        "trace": {
+          "modelInvocationInput": {
+            "foundationModel": "anthropic.model_name-v1:0",
+            "inferenceConfiguration": {
+              "maximumLength": 512,
+              "stopSequences": ["\n\nHuman:"],
+              "temperature": 0,
+              "topK": 250,
+              "topP": 1
+            },
+            "text": "Input Prompt + Context + User input",
+            "traceId": "ecb2f566-5c59-4942-9abc-ce6822a9da3a-routing-0",
+            "type": "ROUTING_CLASSIFIER"
+          }
+        }
+      },
+      {
+        "type": "routing_classifier_trace",
+        "trace": {
+          "modelInvocationOutput": {
+            "metadata": {
+              "clientRequestId": "ab0eb399-60f8-4a48-9bfa-ad6a1352c7b9",
+              "endTime": "2026-02-17T05:18:16.164222Z",
+              "startTime": "2026-02-17T05:18:15.133202Z",
+              "totalTimeMs": 1031,
+              "usage": { "inputTokens": 3993, "outputTokens": 20 }
+            },
+            "rawResponse": {
+              "content": "{\"type\":\"message\",\"id\":\"msg_bdrk_015wwX4D1chBN7uExzWGVmvv\",\"content\":[{\"imageSource\":null,\"reasoningTextSignature\":null,\"reasoningRedactedContent\":null,\"name\":null,\"type\":\"text\",\"id\":null,\"source\":null,\"input\":null,\"is_error\":null,\"text\":\"<a>license-assist-collaborator</a>\",\"content\":null,\"reasoningText\":null,\"tool_use_id\":null,\"guardContent\":null}],\"model\":\"model_name\",\"usage\":{\"input_tokens\":3993,\"output_tokens\":20,\"cache_read_input_tokens\":null,\"cache_creation_input_tokens\":null},\"role\":\"assistant\",\"stop_sequence\":null,\"stop_reason\":\"end_turn\"}"
+            },
+            "traceId": "ecb2f566-5c59-4942-9abc-ce6822a9da3a-routing-0"
+          }
+        }
+      },
+      {
+        "type": "routing_classifier_trace",
+        "trace": {
+          "invocationInput": {
+            "agentCollaboratorInvocationInput": {
+              "agentCollaboratorAliasArn": "arn:aws:bedrock:us-east-1:576584121853:agent-alias/NQC7FRYMF7/OV2FRTQZON",
+              "agentCollaboratorName": "license-assist-collaborator",
+              "input": { "text": "it is for Device transfer", "type": "TEXT" }
+            },
+            "invocationType": "AGENT_COLLABORATOR",
+            "traceId": "ecb2f566-5c59-4942-9abc-ce6822a9da3a-routing-0"
+          }
+        }
+      },
+      {
+        "type": "guardrail_trace",
+        "trace": {
+          "action": "NONE",
+          "inputAssessments": [{}],
+          "metadata": {
+            "clientRequestId": "83e6f3c6-04ff-41fa-b37d-2a3c93d565c4",
+            "endTime": "2026-02-17T05:18:17.489134Z",
+            "startTime": "2026-02-17T05:18:16.734766Z",
+            "totalTimeMs": 755
+          },
+          "traceId": "86c5f1bc-6d9d-4fad-a29b-38ce22512cf5-guardrail-pre-0"
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "modelInvocationInput": {
+            "foundationModel": "anthropic.model_name-v1:0",
+            "inferenceConfiguration": {
+              "maximumLength": 2048,
+              "stopSequences": ["</invoke>", "</answer>", "</error>"],
+              "temperature": 0,
+              "topK": 250,
+              "topP": 1
+            },
+            "text": "Input Prompt + Context + User input",
+            "traceId": "86c5f1bc-6d9d-4fad-a29b-38ce22512cf5-0",
+            "type": "ORCHESTRATION"
+          }
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "modelInvocationOutput": {
+            "metadata": {
+              "clientRequestId": "07675123-5329-4461-8962-52ad64e618f5",
+              "endTime": "2026-02-17T05:18:21.107718Z",
+              "startTime": "2026-02-17T05:18:17.538499Z",
+              "totalTimeMs": 3569,
+              "usage": { "inputTokens": 8678, "outputTokens": 85 }
+            },
+            "rawResponse": {
+              "content": "{\"stop_sequence\":\"</answer>\",\"type\":\"message\",\"id\":\"msg_bdrk_018TAiJUC2Uv6cqAzRg5RqHF\",\"content\":[{\"imageSource\":null,\"reasoningTextSignature\":null,\"reasoningRedactedContent\":null,\"name\":null,\"type\":\"text\",\"id\":null,\"source\":null,\"input\":null,\"is_error\":null,\"text\":\"<thinking>The user has specified that they want to perform a device transfer. For this, I need to get the product line and validate it before providing the transfer URL.</thinking>\\n\\n<answer>Thank you for clarifying. To proceed with the device transfer, I'll need to know which product line the license belongs to. Could you please provide the product line for the license you want to transfer?\",\"content\":null,\"reasoningText\":null,\"tool_use_id\":null,\"guardContent\":null}],\"model\":\"model_name\",\"usage\":{\"input_tokens\":8678,\"output_tokens\":85,\"cache_read_input_tokens\":null,\"cache_creation_input_tokens\":null},\"role\":\"assistant\",\"stop_reason\":\"stop_sequence\"}"
+            },
+            "traceId": "86c5f1bc-6d9d-4fad-a29b-38ce22512cf5-0"
+          }
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "rationale": {
+            "text": "The user has specified that they want to perform a device transfer. For this, I need to get the product line and validate it before providing the transfer URL.",
+            "traceId": "86c5f1bc-6d9d-4fad-a29b-38ce22512cf5-0"
+          }
+        }
+      },
+      {
+        "type": "guardrail_trace",
+        "trace": {
+          "action": "NONE",
+          "metadata": {
+            "clientRequestId": "33a019eb-a332-4226-b1b7-f9e7e6d47905",
+            "endTime": "2026-02-17T05:18:21.919839Z",
+            "startTime": "2026-02-17T05:18:21.262202Z",
+            "totalTimeMs": 657
+          },
+          "outputAssessments": [{}],
+          "traceId": "86c5f1bc-6d9d-4fad-a29b-38ce22512cf5-guardrail-post-0"
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "observation": {
+            "finalResponse": {
+              "metadata": {
+                "endTime": "2026-02-17T05:18:21.969219Z",
+                "operationTotalTimeMs": 5692,
+                "startTime": "2026-02-17T05:18:16.277820Z"
+              },
+              "text": "Thank you for clarifying. To proceed with the device transfer, I'll need to know which product line the license belongs to. Could you please provide the product line for the license you want to transfer?"
+            },
+            "traceId": "86c5f1bc-6d9d-4fad-a29b-38ce22512cf5-0",
+            "type": "FINISH"
+          }
+        }
+      },
+      {
+        "type": "routing_classifier_trace",
+        "trace": {
+          "observation": {
+            "agentCollaboratorInvocationOutput": {
+              "agentCollaboratorAliasArn": "arn:aws:bedrock:us-east-1:576584121853:agent-alias/NQC7FRYMF7/OV2FRTQZON",
+              "agentCollaboratorName": "license-assist-collaborator",
+              "metadata": {
+                "clientRequestId": "86c5f1bc-6d9d-4fad-a29b-38ce22512cf5",
+                "endTime": "2026-02-17T05:18:22.038567Z",
+                "startTime": "2026-02-17T05:18:16.178361Z",
+                "totalTimeMs": 5860
+              },
+              "output": {
+                "text": "Thank you for clarifying. To proceed with the device transfer, I'll need to know which product line the license belongs to. Could you please provide the product line for the license you want to transfer?",
+                "type": "TEXT"
+              }
+            },
+            "traceId": "ecb2f566-5c59-4942-9abc-ce6822a9da3a-routing-0",
+            "type": "AGENT_COLLABORATOR"
+          }
+        }
+      },
+      {
+        "type": "routing_classifier_trace",
+        "trace": {
+          "observation": {
+            "finalResponse": {
+              "metadata": {
+                "endTime": "2026-02-17T05:18:22.043720Z",
+                "operationTotalTimeMs": 8012,
+                "startTime": "2026-02-17T05:18:14.031803Z"
+              },
+              "text": "Thank you for clarifying. To proceed with the device transfer, I'll need to know which product line the license belongs to. Could you please provide the product line for the license you want to transfer?"
+            },
+            "traceId": "ecb2f566-5c59-4942-9abc-ce6822a9da3a-routing-0",
+            "type": "FINISH"
+          }
+        }
+      },
+      {
+        "type": "guardrail_trace",
+        "trace": {
+          "action": "NONE",
+          "metadata": {
+            "clientRequestId": "c4498286-96a4-4c13-87b3-839b0dc210cf",
+            "endTime": "2026-02-17T05:18:22.918215Z",
+            "startTime": "2026-02-17T05:18:22.214569Z",
+            "totalTimeMs": 704
+          },
+          "outputAssessments": [{}],
+          "traceId": "ecb2f566-5c59-4942-9abc-ce6822a9da3a-guardrail-post-0"
+        }
+      },
+      {
+        "type": "chunk",
+        "chunk": {
+          "bytes": "Thank you for clarifying. To proceed with the device transfer, I'll need to know which product line the license belongs to. Could you please provide the product line for the license you want to transfer?"
+        }
+      }
+    ],
+    "metadata": {
+      "resourceAttributes": {
+        "telemetry.sdk.language": "python",
+        "telemetry.sdk.name": "opentelemetry",
+        "telemetry.sdk.version": "1.39.1",
+        "langfuse.environment": "staging",
+        "langfuse.release": "9.0 Hotfix",
+        "service.name": "unknown_service"
+      },
+      "scope": {
+        "name": "langfuse-sdk",
+        "version": "3.7.0",
+        "attributes": {
+          "public_key": "pk1"
+        }
+      }
+    },
+    "latency": 9.048,
+    "usage": {
+      "promptTokens": 12671,
+      "completionTokens": 105,
+      "totalTokens": 12776
+    },
+    "inputCost": "0.038013",
+    "outputCost": "0.001574999999",
+    "totalCost": "0.039588",
+    "level": "DEFAULT",
+    "errorCount": 0,
+    "warningCount": 0,
+    "defaultCount": 1,
+    "debugCount": 0,
+    "observationCount": 1,
+    "inputTokens": 12671,
+    "outputTokens": 105,
+    "totalTokens": 12776
+  },
+  {
+    "id": "ef18ba0eb8cd33ed1eca332a002b2709",
+    "projectId": "cmgt9niok000wvo07s9ywpqc3",
+    "timestamp": "2026-02-17T05:17:45.110Z",
+    "tags": [],
+    "bookmarked": false,
+    "name": "Invoke Agent",
+    "release": "9.0 Hotfix",
+    "version": null,
+    "userId": "user@email.com",
+    "environment": "staging",
+    "sessionId": "48a4b950-0bbf-11f1-a0cf-2de6f6a7e71d",
+    "public": false,
+    "input": "nevermind, how to perform license transfer?",
+    "output": [
+      {
+        "type": "guardrail_trace",
+        "trace": {
+          "action": "NONE",
+          "inputAssessments": [{}],
+          "metadata": {
+            "clientRequestId": "23d6340a-150d-4ef7-a02e-17b37c763624",
+            "endTime": "2026-02-17T05:17:46.127484Z",
+            "startTime": "2026-02-17T05:17:45.365022Z",
+            "totalTimeMs": 762
+          },
+          "traceId": "bd1b2a81-8166-4f05-b11f-e1bc984a4971-guardrail-pre-0"
+        }
+      },
+      {
+        "type": "routing_classifier_trace",
+        "trace": {
+          "modelInvocationInput": {
+            "foundationModel": "anthropic.model_name-v1:0",
+            "inferenceConfiguration": {
+              "maximumLength": 512,
+              "stopSequences": ["\n\nHuman:"],
+              "temperature": 0,
+              "topK": 250,
+              "topP": 1
+            },
+            "text": "Input Prompt + Context + User input",
+            "traceId": "bd1b2a81-8166-4f05-b11f-e1bc984a4971-routing-0",
+            "type": "ROUTING_CLASSIFIER"
+          }
+        }
+      },
+      {
+        "type": "routing_classifier_trace",
+        "trace": {
+          "modelInvocationOutput": {
+            "metadata": {
+              "clientRequestId": "e5be4be2-7c47-4b3d-9c56-ba690a43abc0",
+              "endTime": "2026-02-17T05:17:47.357342Z",
+              "startTime": "2026-02-17T05:17:46.131813Z",
+              "totalTimeMs": 1226,
+              "usage": { "inputTokens": 3872, "outputTokens": 20 }
+            },
+            "rawResponse": {
+              "content": "{\"stop_sequence\":null,\"type\":\"message\",\"id\":\"msg_bdrk_01PHQ3NRZvbnYgtWf5qhpSyp\",\"content\":[{\"imageSource\":null,\"reasoningTextSignature\":null,\"reasoningRedactedContent\":null,\"name\":null,\"type\":\"text\",\"id\":null,\"source\":null,\"input\":null,\"is_error\":null,\"text\":\"<a>license-assist-collaborator</a>\",\"content\":null,\"reasoningText\":null,\"tool_use_id\":null,\"guardContent\":null}],\"model\":\"model_name\",\"usage\":{\"input_tokens\":3872,\"output_tokens\":20,\"cache_read_input_tokens\":null,\"cache_creation_input_tokens\":null},\"role\":\"assistant\",\"stop_reason\":\"end_turn\"}"
+            },
+            "traceId": "bd1b2a81-8166-4f05-b11f-e1bc984a4971-routing-0"
+          }
+        }
+      },
+      {
+        "type": "routing_classifier_trace",
+        "trace": {
+          "invocationInput": {
+            "agentCollaboratorInvocationInput": {
+              "agentCollaboratorAliasArn": "arn:aws:bedrock:us-east-1:576584121853:agent-alias/NQC7FRYMF7/OV2FRTQZON",
+              "agentCollaboratorName": "license-assist-collaborator",
+              "input": {
+                "text": "nevermind, how to perform license transfer?",
+                "type": "TEXT"
+              }
+            },
+            "invocationType": "AGENT_COLLABORATOR",
+            "traceId": "bd1b2a81-8166-4f05-b11f-e1bc984a4971-routing-0"
+          }
+        }
+      },
+      {
+        "type": "guardrail_trace",
+        "trace": {
+          "action": "NONE",
+          "inputAssessments": [{}],
+          "metadata": {
+            "clientRequestId": "d0f855d1-2f2f-48d4-8f5e-769e9ee824d8",
+            "endTime": "2026-02-17T05:17:48.587521Z",
+            "startTime": "2026-02-17T05:17:47.845569Z",
+            "totalTimeMs": 742
+          },
+          "traceId": "ed980090-d90a-4973-ad11-63ce82e55198-guardrail-pre-0"
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "modelInvocationInput": {
+            "foundationModel": "anthropic.model_name-v1:0",
+            "inferenceConfiguration": {
+              "maximumLength": 2048,
+              "stopSequences": ["</invoke>", "</answer>", "</error>"],
+              "temperature": 0,
+              "topK": 250,
+              "topP": 1
+            },
+            "text": "Input Prompt + Context + User input",
+            "traceId": "ed980090-d90a-4973-ad11-63ce82e55198-0",
+            "type": "ORCHESTRATION"
+          }
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "modelInvocationOutput": {
+            "metadata": {
+              "clientRequestId": "7294e0b6-b306-4361-9107-5b3434bcddb3",
+              "endTime": "2026-02-17T05:17:53.444273Z",
+              "startTime": "2026-02-17T05:17:48.644039Z",
+              "totalTimeMs": 4800,
+              "usage": { "inputTokens": 8424, "outputTokens": 140 }
+            },
+            "rawResponse": {
+              "content": "{\"stop_sequence\":\"</answer>\",\"type\":\"message\",\"id\":\"msg_bdrk_01QcAh2iiLen6GaXHkzDcVtv\",\"content\":[{\"imageSource\":null,\"reasoningTextSignature\":null,\"reasoningRedactedContent\":null,\"name\":null,\"type\":\"text\",\"id\":null,\"source\":null,\"input\":null,\"is_error\":null,\"text\":\"<thinking>The user has changed their request to inquire about license transfer. This falls under UC2: License transfer queries. I need to guide them through the transfer process, starting with understanding the type of transfer they're looking for.</thinking>\\n\\n<answer>Certainly! I'd be happy to help you with license transfer. There are two types of license transfers we can assist you with:\\n\\n1. Device Transfer: This is used when you want to move a license from one device to another.\\n2. Account Transfer: This is used when you want to transfer a license from one account to another.\\n\\nWhich type of license transfer are you looking to perform?\",\"content\":null,\"reasoningText\":null,\"tool_use_id\":null,\"guardContent\":null}],\"model\":\"model_name\",\"usage\":{\"input_tokens\":8424,\"output_tokens\":140,\"cache_read_input_tokens\":null,\"cache_creation_input_tokens\":null},\"role\":\"assistant\",\"stop_reason\":\"stop_sequence\"}"
+            },
+            "traceId": "ed980090-d90a-4973-ad11-63ce82e55198-0"
+          }
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "rationale": {
+            "text": "The user has changed their request to inquire about license transfer. This falls under UC2: License transfer queries. I need to guide them through the transfer process, starting with understanding the type of transfer they're looking for.",
+            "traceId": "ed980090-d90a-4973-ad11-63ce82e55198-0"
+          }
+        }
+      },
+      {
+        "type": "guardrail_trace",
+        "trace": {
+          "action": "NONE",
+          "metadata": {
+            "clientRequestId": "5d53ffb5-8849-42d0-876f-63f95665fe8a",
+            "endTime": "2026-02-17T05:17:54.273706Z",
+            "startTime": "2026-02-17T05:17:53.610313Z",
+            "totalTimeMs": 663
+          },
+          "outputAssessments": [{}],
+          "traceId": "ed980090-d90a-4973-ad11-63ce82e55198-guardrail-post-0"
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "observation": {
+            "finalResponse": {
+              "metadata": {
+                "endTime": "2026-02-17T05:17:54.329395Z",
+                "operationTotalTimeMs": 6863,
+                "startTime": "2026-02-17T05:17:47.466965Z"
+              },
+              "text": "Certainly! I'd be happy to help you with license transfer. There are two types of license transfers we can assist you with:\n\n1. Device Transfer: This is used when you want to move a license from one device to another.\n2. Account Transfer: This is used when you want to transfer a license from one account to another.\n\nWhich type of license transfer are you looking to perform?"
+            },
+            "traceId": "ed980090-d90a-4973-ad11-63ce82e55198-0",
+            "type": "FINISH"
+          }
+        }
+      },
+      {
+        "type": "routing_classifier_trace",
+        "trace": {
+          "observation": {
+            "agentCollaboratorInvocationOutput": {
+              "agentCollaboratorAliasArn": "arn:aws:bedrock:us-east-1:576584121853:agent-alias/NQC7FRYMF7/OV2FRTQZON",
+              "agentCollaboratorName": "license-assist-collaborator",
+              "metadata": {
+                "clientRequestId": "ed980090-d90a-4973-ad11-63ce82e55198",
+                "endTime": "2026-02-17T05:17:54.403745Z",
+                "startTime": "2026-02-17T05:17:47.371801Z",
+                "totalTimeMs": 7032
+              },
+              "output": {
+                "text": "Certainly! I'd be happy to help you with license transfer. There are two types of license transfers we can assist you with:\n\n1. Device Transfer: This is used when you want to move a license from one device to another.\n2. Account Transfer: This is used when you want to transfer a license from one account to another.\n\nWhich type of license transfer are you looking to perform?",
+                "type": "TEXT"
+              }
+            },
+            "traceId": "bd1b2a81-8166-4f05-b11f-e1bc984a4971-routing-0",
+            "type": "AGENT_COLLABORATOR"
+          }
+        }
+      },
+      {
+        "type": "routing_classifier_trace",
+        "trace": {
+          "observation": {
+            "finalResponse": {
+              "metadata": {
+                "endTime": "2026-02-17T05:17:54.409732Z",
+                "operationTotalTimeMs": 9264,
+                "startTime": "2026-02-17T05:17:45.145738Z"
+              },
+              "text": "Certainly! I'd be happy to help you with license transfer. There are two types of license transfers we can assist you with:\n\n1. Device Transfer: This is used when you want to move a license from one device to another.\n2. Account Transfer: This is used when you want to transfer a license from one account to another.\n\nWhich type of license transfer are you looking to perform?"
+            },
+            "traceId": "bd1b2a81-8166-4f05-b11f-e1bc984a4971-routing-0",
+            "type": "FINISH"
+          }
+        }
+      },
+      {
+        "type": "guardrail_trace",
+        "trace": {
+          "action": "NONE",
+          "metadata": {
+            "clientRequestId": "8813880e-3080-48d2-816d-3b41c35857d0",
+            "endTime": "2026-02-17T05:17:55.543161Z",
+            "startTime": "2026-02-17T05:17:54.831875Z",
+            "totalTimeMs": 712
+          },
+          "outputAssessments": [{}],
+          "traceId": "bd1b2a81-8166-4f05-b11f-e1bc984a4971-guardrail-post-0"
+        }
+      },
+      {
+        "type": "chunk",
+        "chunk": {
+          "bytes": "Certainly! I'd be happy to help you with license transfer. There are two types of license transfers we can assist you with:\n\n1. Device Transfer: This is used when you want to move a license from one device to another.\n2. Account Transfer: This is used when you want to transfer a license from one account to another.\n\nWhich type of license transfer are you looking to perform?"
+        }
+      }
+    ],
+    "metadata": {
+      "resourceAttributes": {
+        "telemetry.sdk.language": "python",
+        "telemetry.sdk.name": "opentelemetry",
+        "telemetry.sdk.version": "1.39.1",
+        "langfuse.environment": "staging",
+        "langfuse.release": "9.0 Hotfix",
+        "service.name": "unknown_service"
+      },
+      "scope": {
+        "name": "langfuse-sdk",
+        "version": "3.7.0",
+        "attributes": {
+          "public_key": "pk1"
+        }
+      }
+    },
+    "latency": 10.56,
+    "usage": {
+      "promptTokens": 12296,
+      "completionTokens": 160,
+      "totalTokens": 12456
+    },
+    "inputCost": "0.036888",
+    "outputCost": "0.0024",
+    "totalCost": "0.039288",
+    "level": "DEFAULT",
+    "errorCount": 0,
+    "warningCount": 0,
+    "defaultCount": 1,
+    "debugCount": 0,
+    "observationCount": 1,
+    "inputTokens": 12296,
+    "outputTokens": 160,
+    "totalTokens": 12456
+  },
+  {
+    "id": "6af8cb2e4de0dae7701cf8f65bd6398f",
+    "projectId": "cmgt9niok000wvo07s9ywpqc3",
+    "timestamp": "2026-02-17T05:16:34.734Z",
+    "tags": [],
+    "bookmarked": false,
+    "name": "Invoke Agent",
+    "release": "9.0 Hotfix",
+    "version": null,
+    "userId": "user@email.com",
+    "environment": "staging",
+    "sessionId": "48a4b950-0bbf-11f1-a0cf-2de6f6a7e71d",
+    "public": false,
+    "input": "Order no order_number_ABC",
+    "output": [
+      {
+        "type": "guardrail_trace",
+        "trace": {
+          "action": "NONE",
+          "inputAssessments": [{}],
+          "metadata": {
+            "clientRequestId": "abf5da4a-fcfe-4541-8ddb-d3d6200fc280",
+            "endTime": "2026-02-17T05:16:36.058143Z",
+            "startTime": "2026-02-17T05:16:35.241603Z",
+            "totalTimeMs": 817
+          },
+          "traceId": "5f7388b0-5a60-4564-bc16-384f7e9b9e91-guardrail-pre-0"
+        }
+      },
+      {
+        "type": "routing_classifier_trace",
+        "trace": {
+          "modelInvocationInput": {
+            "foundationModel": "anthropic.model_name-v1:0",
+            "inferenceConfiguration": {
+              "maximumLength": 512,
+              "stopSequences": ["\n\nHuman:"],
+              "temperature": 0,
+              "topK": 250,
+              "topP": 1
+            },
+            "text": "Input Prompt + Context + User input",
+            "traceId": "5f7388b0-5a60-4564-bc16-384f7e9b9e91-routing-0",
+            "type": "ROUTING_CLASSIFIER"
+          }
+        }
+      },
+      {
+        "type": "routing_classifier_trace",
+        "trace": {
+          "modelInvocationOutput": {
+            "metadata": {
+              "clientRequestId": "824bee10-23ed-48fe-924e-9cfdc2cc437f",
+              "endTime": "2026-02-17T05:16:37.338621Z",
+              "startTime": "2026-02-17T05:16:36.060878Z",
+              "totalTimeMs": 1278,
+              "usage": { "inputTokens": 3612, "outputTokens": 14 }
+            },
+            "rawResponse": {
+              "content": "{\"stop_sequence\":null,\"type\":\"message\",\"id\":\"msg_bdrk_01GN1yCXUA5hPGhozQFnXhHV\",\"content\":[{\"imageSource\":null,\"reasoningTextSignature\":null,\"reasoningRedactedContent\":null,\"name\":null,\"type\":\"text\",\"id\":null,\"source\":null,\"input\":null,\"is_error\":null,\"text\":\"<a>keep_previous_agent</a>\",\"content\":null,\"reasoningText\":null,\"tool_use_id\":null,\"guardContent\":null}],\"model\":\"model_name\",\"usage\":{\"input_tokens\":3612,\"output_tokens\":14,\"cache_read_input_tokens\":null,\"cache_creation_input_tokens\":null},\"role\":\"assistant\",\"stop_reason\":\"end_turn\"}"
+            },
+            "traceId": "5f7388b0-5a60-4564-bc16-384f7e9b9e91-routing-0"
+          }
+        }
+      },
+      {
+        "type": "routing_classifier_trace",
+        "trace": {
+          "invocationInput": {
+            "agentCollaboratorInvocationInput": {
+              "agentCollaboratorAliasArn": "aws_arn_uri_2",
+              "agentCollaboratorName": "license-assist-collaborator",
+              "input": { "text": "Order no order_number_ABC", "type": "TEXT" }
+            },
+            "invocationType": "AGENT_COLLABORATOR",
+            "traceId": "5f7388b0-5a60-4564-bc16-384f7e9b9e91-routing-0"
+          }
+        }
+      },
+      {
+        "type": "guardrail_trace",
+        "trace": {
+          "action": "NONE",
+          "inputAssessments": [{}],
+          "metadata": {
+            "clientRequestId": "231bc72d-7ae5-48cc-8ab1-4e81bf43113f",
+            "endTime": "2026-02-17T05:16:38.445209Z",
+            "startTime": "2026-02-17T05:16:37.767173Z",
+            "totalTimeMs": 678
+          },
+          "traceId": "36cff9c9-49fe-40b3-aa1a-648697d08016-guardrail-pre-0"
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "modelInvocationInput": {
+            "foundationModel": "anthropic.model_name-v1:0",
+            "inferenceConfiguration": {
+              "maximumLength": 2048,
+              "stopSequences": ["</invoke>", "</answer>", "</error>"],
+              "temperature": 0,
+              "topK": 250,
+              "topP": 1
+            },
+            "text": "Input Prompt + Context + User input",
+            "traceId": "36cff9c9-49fe-40b3-aa1a-648697d08016-0",
+            "type": "ORCHESTRATION"
+          }
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "modelInvocationOutput": {
+            "metadata": {
+              "clientRequestId": "f87c37bf-c8d1-49db-96cf-898cc82c1e0a",
+              "endTime": "2026-02-17T05:16:41.632165Z",
+              "startTime": "2026-02-17T05:16:38.493588Z",
+              "totalTimeMs": 3139,
+              "usage": { "inputTokens": 7791, "outputTokens": 108 }
+            },
+            "rawResponse": {
+              "content": "{\"stop_sequence\":null,\"type\":\"message\",\"id\":\"msg_bdrk_012cdzJFv6vuZ81xKbzBJEYv\",\"content\":[{\"imageSource\":null,\"reasoningTextSignature\":null,\"reasoningRedactedContent\":null,\"name\":null,\"type\":\"text\",\"id\":null,\"source\":null,\"input\":null,\"is_error\":null,\"text\":\"<thinking>The user has provided the order number order_number_ABC. I need to validate this order number using the available tool before proceeding to ask for the confirmation number.</thinking>\",\"content\":null,\"reasoningText\":null,\"tool_use_id\":null,\"guardContent\":null},{\"imageSource\":null,\"reasoningTextSignature\":null,\"reasoningRedactedContent\":null,\"name\":\"GET__license_action_group__validateOrderNumber\",\"type\":\"tool_use\",\"id\":\"toolu_bdrk_01BX4tua2qbaNd2YdzFZsku3\",\"source\":null,\"input\":{\"orderNumber\":\"order_number_ABC\"},\"is_error\":null,\"text\":null,\"content\":null,\"reasoningText\":null,\"tool_use_id\":null,\"guardContent\":null}],\"model\":\"model_name\",\"usage\":{\"input_tokens\":7791,\"output_tokens\":108,\"cache_read_input_tokens\":null,\"cache_creation_input_tokens\":null},\"role\":\"assistant\",\"stop_reason\":\"tool_use\"}"
+            },
+            "traceId": "36cff9c9-49fe-40b3-aa1a-648697d08016-0"
+          }
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "rationale": {
+            "text": "The user has provided the order number order_number_ABC. I need to validate this order number using the available tool before proceeding to ask for the confirmation number.",
+            "traceId": "36cff9c9-49fe-40b3-aa1a-648697d08016-0"
+          }
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "invocationInput": {
+            "actionGroupInvocationInput": {
+              "actionGroupName": "license_action_group",
+              "apiPath": "/validate-order-number/{orderNumber}",
+              "executionType": "LAMBDA",
+              "parameters": [
+                {
+                  "name": "orderNumber",
+                  "type": "string",
+                  "value": "order_number_ABC"
+                }
+              ],
+              "verb": "get"
+            },
+            "invocationType": "ACTION_GROUP",
+            "traceId": "36cff9c9-49fe-40b3-aa1a-648697d08016-0"
+          }
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "observation": {
+            "actionGroupInvocationOutput": {
+              "metadata": {
+                "clientRequestId": "7ec2f2b4-a60c-435d-92a9-755d54181523",
+                "endTime": "2026-02-17T05:16:43.762281Z",
+                "startTime": "2026-02-17T05:16:41.638899Z",
+                "totalTimeMs": 2124
+              },
+              "text": "{\"message\": \"Validity of Order Number can't be verified due to internal system error\"}"
+            },
+            "traceId": "36cff9c9-49fe-40b3-aa1a-648697d08016-0",
+            "type": "ACTION_GROUP"
+          }
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "modelInvocationInput": {
+            "foundationModel": "anthropic.model_name-v1:0",
+            "inferenceConfiguration": {
+              "maximumLength": 2048,
+              "stopSequences": ["</invoke>", "</answer>", "</error>"],
+              "temperature": 0,
+              "topK": 250,
+              "topP": 1
+            },
+            "text": "Input Prompt + Context + User input",
+            "traceId": "36cff9c9-49fe-40b3-aa1a-648697d08016-1",
+            "type": "ORCHESTRATION"
+          }
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "modelInvocationOutput": {
+            "metadata": {
+              "clientRequestId": "da05ab0e-0b5e-455d-8616-36b3e8b0689a",
+              "endTime": "2026-02-17T05:16:50.601779Z",
+              "startTime": "2026-02-17T05:16:43.768683Z",
+              "totalTimeMs": 6833,
+              "usage": { "inputTokens": 7929, "outputTokens": 251 }
+            },
+            "rawResponse": {
+              "content": "{\"stop_sequence\":\"</answer>\",\"type\":\"message\",\"id\":\"msg_bdrk_015LAfatfegCgQo9aK5dZCj3\",\"content\":[{\"imageSource\":null,\"reasoningTextSignature\":null,\"reasoningRedactedContent\":null,\"name\":null,\"type\":\"text\",\"id\":null,\"source\":null,\"input\":null,\"is_error\":null,\"text\":\"<thinking>The validation of the order number failed due to an internal system error. I need to inform the user about this issue and provide alternative steps.</thinking>\\n\\n<answer>I apologize, but I'm unable to verify the validity of the order number order_number_ABC due to an internal system error. \\n\\nTo ensure you can proceed with your license activation, I recommend the following steps:\\n\\n1. Please double-check the order number to ensure it's correct.\\n2. If you're certain the order number is correct, you can try to proceed with the activation process directly through the License Management System (LMS) portal.\\n\\nHere's the link to the License Management System portal where you can attempt to activate your license:\\n\\n[Access License Management System Portal](<lms_url>)\\n\\nIf you continue to experience issues or need further assistance, please don't hesitate to contact our Technical Assistance Center (TAC) for personalized support. They will be able to help you resolve any system-related issues and guide you through the activation process.\\n\\nIs there anything else I can help you with regarding license management?\",\"content\":null,\"reasoningText\":null,\"tool_use_id\":null,\"guardContent\":null}],\"model\":\"model_name\",\"usage\":{\"input_tokens\":7929,\"output_tokens\":251,\"cache_read_input_tokens\":null,\"cache_creation_input_tokens\":null},\"role\":\"assistant\",\"stop_reason\":\"stop_sequence\"}"
+            },
+            "traceId": "36cff9c9-49fe-40b3-aa1a-648697d08016-1"
+          }
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "rationale": {
+            "text": "The validation of the order number failed due to an internal system error. I need to inform the user about this issue and provide alternative steps.",
+            "traceId": "36cff9c9-49fe-40b3-aa1a-648697d08016-1"
+          }
+        }
+      },
+      {
+        "type": "guardrail_trace",
+        "trace": {
+          "action": "NONE",
+          "metadata": {
+            "clientRequestId": "7e34269e-2f0d-49c0-93a4-21f5550b8262",
+            "endTime": "2026-02-17T05:16:51.558298Z",
+            "startTime": "2026-02-17T05:16:50.756645Z",
+            "totalTimeMs": 802
+          },
+          "outputAssessments": [{}],
+          "traceId": "36cff9c9-49fe-40b3-aa1a-648697d08016-guardrail-post-0"
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "observation": {
+            "finalResponse": {
+              "metadata": {
+                "endTime": "2026-02-17T05:16:51.586869Z",
+                "operationTotalTimeMs": 14160,
+                "startTime": "2026-02-17T05:16:37.426207Z"
+              },
+              "text": "I apologize, but I'm unable to verify the validity of the order number order_number_ABC due to an internal system error. \n\nTo ensure you can proceed with your license activation, I recommend the following steps:\n\n1. Please double-check the order number to ensure it's correct.\n2. If you're certain the order number is correct, you can try to proceed with the activation process directly through the License Management System (LMS) portal.\n\nHere's the link to the License Management System portal where you can attempt to activate your license:\n\n[Access License Management System Portal](<lms_url>)\n\nIf you continue to experience issues or need further assistance, please don't hesitate to contact our Technical Assistance Center (TAC) for personalized support. They will be able to help you resolve any system-related issues and guide you through the activation process.\n\nIs there anything else I can help you with regarding license management?"
+            },
+            "traceId": "36cff9c9-49fe-40b3-aa1a-648697d08016-1",
+            "type": "FINISH"
+          }
+        }
+      },
+      {
+        "type": "routing_classifier_trace",
+        "trace": {
+          "observation": {
+            "agentCollaboratorInvocationOutput": {
+              "agentCollaboratorAliasArn": "arn:aws:bedrock:us-east-1:576584121853:agent-alias/NQC7FRYMF7/OV2FRTQZON",
+              "agentCollaboratorName": "license-assist-collaborator",
+              "metadata": {
+                "clientRequestId": "36cff9c9-49fe-40b3-aa1a-648697d08016",
+                "endTime": "2026-02-17T05:16:51.668741Z",
+                "startTime": "2026-02-17T05:16:37.349643Z",
+                "totalTimeMs": 14319
+              },
+              "output": {
+                "text": "I apologize, but I'm unable to verify the validity of the order number order_number_ABC due to an internal system error. \n\nTo ensure you can proceed with your license activation, I recommend the following steps:\n\n1. Please double-check the order number to ensure it's correct.\n2. If you're certain the order number is correct, you can try to proceed with the activation process directly through the License Management System (LMS) portal.\n\nHere's the link to the License Management System portal where you can attempt to activate your license:\n\n[Access License Management System Portal](<lms_url>)\n\nIf you continue to experience issues or need further assistance, please don't hesitate to contact our Technical Assistance Center (TAC) for personalized support. They will be able to help you resolve any system-related issues and guide you through the activation process.\n\nIs there anything else I can help you with regarding license management?",
+                "type": "TEXT"
+              }
+            },
+            "traceId": "5f7388b0-5a60-4564-bc16-384f7e9b9e91-routing-0",
+            "type": "AGENT_COLLABORATOR"
+          }
+        }
+      },
+      {
+        "type": "routing_classifier_trace",
+        "trace": {
+          "observation": {
+            "finalResponse": {
+              "metadata": {
+                "endTime": "2026-02-17T05:16:51.673318Z",
+                "operationTotalTimeMs": 16904,
+                "startTime": "2026-02-17T05:16:34.769464Z"
+              },
+              "text": "I apologize, but I'm unable to verify the validity of the order number order_number_ABC due to an internal system error. \n\nTo ensure you can proceed with your license activation, I recommend the following steps:\n\n1. Please double-check the order number to ensure it's correct.\n2. If you're certain the order number is correct, you can try to proceed with the activation process directly through the License Management System (LMS) portal.\n\nHere's the link to the License Management System portal where you can attempt to activate your license:\n\n[Access License Management System Portal](<lms_url>)\n\nIf you continue to experience issues or need further assistance, please don't hesitate to contact our Technical Assistance Center (TAC) for personalized support. They will be able to help you resolve any system-related issues and guide you through the activation process.\n\nIs there anything else I can help you with regarding license management?"
+            },
+            "traceId": "5f7388b0-5a60-4564-bc16-384f7e9b9e91-routing-0",
+            "type": "FINISH"
+          }
+        }
+      },
+      {
+        "type": "guardrail_trace",
+        "trace": {
+          "action": "NONE",
+          "metadata": {
+            "clientRequestId": "798dd773-f98c-48a6-8a7f-369ff8f73881",
+            "endTime": "2026-02-17T05:16:52.528851Z",
+            "startTime": "2026-02-17T05:16:51.849539Z",
+            "totalTimeMs": 679
+          },
+          "outputAssessments": [{}],
+          "traceId": "5f7388b0-5a60-4564-bc16-384f7e9b9e91-guardrail-post-0"
+        }
+      },
+      {
+        "type": "chunk",
+        "chunk": {
+          "bytes": "I apologize, but I'm unable to verify the validity of the order number order_number_ABC due to an internal system error. \n\nTo ensure you can proceed with your license activation, I recommend the following steps:\n\n1. Please double-check the order number to ensure it's correct.\n2. If you're certain the order number is correct, you can try to proceed with the activation process directly through the License Management System (LMS) portal.\n\nHere's the link to the License Management System portal where you can attempt to activate your license:\n\n[Access License Management System Portal](<lms_url>)\n\nIf you continue to experience issues or need further assistance, please don't hesitate to contact our Technical Assistance Center (TAC) for personalized support. They will be able to help you resolve any system-related issues and guide you through the activation process.\n\nIs there anything else I can help you with regarding license management?"
+        }
+      }
+    ],
+    "metadata": {
+      "resourceAttributes": {
+        "telemetry.sdk.language": "python",
+        "telemetry.sdk.name": "opentelemetry",
+        "telemetry.sdk.version": "1.39.1",
+        "langfuse.environment": "staging",
+        "langfuse.release": "9.0 Hotfix",
+        "service.name": "unknown_service"
+      },
+      "scope": {
+        "name": "langfuse-sdk",
+        "version": "3.7.0",
+        "attributes": {
+          "public_key": "pk1"
+        }
+      }
+    },
+    "latency": 17.925,
+    "usage": {
+      "promptTokens": 19332,
+      "completionTokens": 373,
+      "totalTokens": 19705
+    },
+    "inputCost": "0.057996",
+    "outputCost": "0.005594999999",
+    "totalCost": "0.063591",
+    "level": "DEFAULT",
+    "errorCount": 0,
+    "warningCount": 0,
+    "defaultCount": 1,
+    "debugCount": 0,
+    "observationCount": 1,
+    "inputTokens": 19332,
+    "outputTokens": 373,
+    "totalTokens": 19705
+  },
+  {
+    "id": "2c0faab6db8de19a4d13f7e9dcd98dc7",
+    "projectId": "cmgt9niok000wvo07s9ywpqc3",
+    "timestamp": "2026-02-17T05:15:58.473Z",
+    "tags": [],
+    "bookmarked": false,
+    "name": "Invoke Agent",
+    "release": "9.0 Hotfix",
+    "version": null,
+    "userId": "user@email.com",
+    "environment": "staging",
+    "sessionId": "48a4b950-0bbf-11f1-a0cf-2de6f6a7e71d",
+    "public": false,
+    "input": "Airwave",
+    "output": [
+      {
+        "type": "guardrail_trace",
+        "trace": {
+          "action": "NONE",
+          "inputAssessments": [{}],
+          "metadata": {
+            "clientRequestId": "1a9b079e-b828-476b-bc8d-1a27f8e6e4fe",
+            "endTime": "2026-02-17T05:15:59.529705Z",
+            "startTime": "2026-02-17T05:15:58.800420Z",
+            "totalTimeMs": 729
+          },
+          "traceId": "2ec64673-d6cd-4fab-982f-7d80558a3d5b-guardrail-pre-0"
+        }
+      },
+      {
+        "type": "routing_classifier_trace",
+        "trace": {
+          "modelInvocationInput": {
+            "foundationModel": "anthropic.model_name-v1:0",
+            "inferenceConfiguration": {
+              "maximumLength": 512,
+              "stopSequences": ["\n\nHuman:"],
+              "temperature": 0,
+              "topK": 250,
+              "topP": 1
+            },
+            "text": "Input Prompt + Context + User input",
+            "traceId": "2ec64673-d6cd-4fab-982f-7d80558a3d5b-routing-0",
+            "type": "ROUTING_CLASSIFIER"
+          }
+        }
+      },
+      {
+        "type": "routing_classifier_trace",
+        "trace": {
+          "modelInvocationOutput": {
+            "metadata": {
+              "clientRequestId": "f4cc2425-76c4-4c4f-ab56-fac82765993d",
+              "endTime": "2026-02-17T05:16:00.655983Z",
+              "startTime": "2026-02-17T05:15:59.531341Z",
+              "totalTimeMs": 1124,
+              "usage": { "inputTokens": 3498, "outputTokens": 20 }
+            },
+            "rawResponse": {
+              "content": "{\"stop_sequence\":null,\"type\":\"message\",\"id\":\"msg_bdrk_01U6YYXWSFaLpkSjE21fuGf3\",\"content\":[{\"imageSource\":null,\"reasoningTextSignature\":null,\"reasoningRedactedContent\":null,\"name\":null,\"type\":\"text\",\"id\":null,\"source\":null,\"input\":null,\"is_error\":null,\"text\":\"<a>license-assist-collaborator</a>\",\"content\":null,\"reasoningText\":null,\"tool_use_id\":null,\"guardContent\":null}],\"model\":\"model_name\",\"usage\":{\"input_tokens\":3498,\"output_tokens\":20,\"cache_read_input_tokens\":null,\"cache_creation_input_tokens\":null},\"role\":\"assistant\",\"stop_reason\":\"end_turn\"}"
+            },
+            "traceId": "2ec64673-d6cd-4fab-982f-7d80558a3d5b-routing-0"
+          }
+        }
+      },
+      {
+        "type": "routing_classifier_trace",
+        "trace": {
+          "invocationInput": {
+            "agentCollaboratorInvocationInput": {
+              "agentCollaboratorAliasArn": "arn:aws:bedrock:us-east-1:576584121853:agent-alias/NQC7FRYMF7/OV2FRTQZON",
+              "agentCollaboratorName": "license-assist-collaborator",
+              "input": { "text": "Airwave", "type": "TEXT" }
+            },
+            "invocationType": "AGENT_COLLABORATOR",
+            "traceId": "2ec64673-d6cd-4fab-982f-7d80558a3d5b-routing-0"
+          }
+        }
+      },
+      {
+        "type": "guardrail_trace",
+        "trace": {
+          "action": "NONE",
+          "inputAssessments": [{}],
+          "metadata": {
+            "clientRequestId": "9a682a9c-0791-44a4-b51a-adc303879deb",
+            "endTime": "2026-02-17T05:16:01.913029Z",
+            "startTime": "2026-02-17T05:16:01.156160Z",
+            "totalTimeMs": 757
+          },
+          "traceId": "2c1fc994-1bd1-486e-967d-e682fb5e3548-guardrail-pre-0"
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "modelInvocationInput": {
+            "foundationModel": "anthropic.model_name-v1:0",
+            "inferenceConfiguration": {
+              "maximumLength": 2048,
+              "stopSequences": ["</invoke>", "</answer>", "</error>"],
+              "temperature": 0,
+              "topK": 250,
+              "topP": 1
+            },
+            "text": "Input Prompt + Context + User input",
+            "traceId": "2c1fc994-1bd1-486e-967d-e682fb5e3548-0",
+            "type": "ORCHESTRATION"
+          }
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "modelInvocationOutput": {
+            "metadata": {
+              "clientRequestId": "657572e1-bacd-4a20-a40b-20cf8fde5902",
+              "endTime": "2026-02-17T05:16:06.208156Z",
+              "startTime": "2026-02-17T05:16:01.970113Z",
+              "totalTimeMs": 4238,
+              "usage": { "inputTokens": 7383, "outputTokens": 123 }
+            },
+            "rawResponse": {
+              "content": "{\"stop_sequence\":null,\"type\":\"message\",\"id\":\"msg_bdrk_01VwjdLwxrvobbQHAb3fDPJe\",\"content\":[{\"imageSource\":null,\"reasoningTextSignature\":null,\"reasoningRedactedContent\":null,\"name\":null,\"type\":\"text\",\"id\":null,\"source\":null,\"input\":null,\"is_error\":null,\"text\":\"<thinking>The user has provided the product line as \\\"Airwave\\\". I need to validate this product line using the available tool before proceeding with the activation process.</thinking>\",\"content\":null,\"reasoningText\":null,\"tool_use_id\":null,\"guardContent\":null},{\"imageSource\":null,\"reasoningTextSignature\":null,\"reasoningRedactedContent\":null,\"name\":\"GET__license_action_group__validateProductLineUsecase\",\"type\":\"tool_use\",\"id\":\"toolu_bdrk_01FQNr7uTmoJ3czZeevetSFb\",\"source\":null,\"input\":{\"productLine\":\"Airwave\",\"useCase\":\"activation\"},\"is_error\":null,\"text\":null,\"content\":null,\"reasoningText\":null,\"tool_use_id\":null,\"guardContent\":null}],\"model\":\"model_name\",\"usage\":{\"input_tokens\":7383,\"output_tokens\":123,\"cache_read_input_tokens\":null,\"cache_creation_input_tokens\":null},\"role\":\"assistant\",\"stop_reason\":\"tool_use\"}"
+            },
+            "traceId": "2c1fc994-1bd1-486e-967d-e682fb5e3548-0"
+          }
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "rationale": {
+            "text": "The user has provided the product line as \"Airwave\". I need to validate this product line using the available tool before proceeding with the activation process.",
+            "traceId": "2c1fc994-1bd1-486e-967d-e682fb5e3548-0"
+          }
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "invocationInput": {
+            "actionGroupInvocationInput": {
+              "actionGroupName": "license_action_group",
+              "apiPath": "/validate-product-line/{useCase}/{productLine}",
+              "executionType": "LAMBDA",
+              "parameters": [
+                { "name": "useCase", "type": "string", "value": "activation" },
+                { "name": "productLine", "type": "string", "value": "Airwave" }
+              ],
+              "verb": "get"
+            },
+            "invocationType": "ACTION_GROUP",
+            "traceId": "2c1fc994-1bd1-486e-967d-e682fb5e3548-0"
+          }
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "observation": {
+            "actionGroupInvocationOutput": {
+              "metadata": {
+                "clientRequestId": "40832523-2f27-4daa-b4a7-efde96a3a4fc",
+                "endTime": "2026-02-17T05:16:09.309322Z",
+                "startTime": "2026-02-17T05:16:06.214508Z",
+                "totalTimeMs": 3095
+              },
+              "text": "{\"is_valid\": true, \"valid_for_use_case\": true, \"normalized_product_line\": \"Airwave\", \"valid_product_lines\": [\"AOS\", \"Airwave\", \"AFC\", \"CoP\", \"ClearPass\", \"ALE\", \"AOS-CX\"]}"
+            },
+            "traceId": "2c1fc994-1bd1-486e-967d-e682fb5e3548-0",
+            "type": "ACTION_GROUP"
+          }
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "modelInvocationInput": {
+            "foundationModel": "anthropic.model_name-v1:0",
+            "inferenceConfiguration": {
+              "maximumLength": 2048,
+              "stopSequences": ["</invoke>", "</answer>", "</error>"],
+              "temperature": 0,
+              "topK": 250,
+              "topP": 1
+            },
+            "text": "Input Prompt + Context + User input",
+            "traceId": "2c1fc994-1bd1-486e-967d-e682fb5e3548-1",
+            "type": "ORCHESTRATION"
+          }
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "modelInvocationOutput": {
+            "metadata": {
+              "clientRequestId": "150334a9-2182-4611-a7b2-e761a710a04c",
+              "endTime": "2026-02-17T05:16:13.188236Z",
+              "startTime": "2026-02-17T05:16:09.315526Z",
+              "totalTimeMs": 3873,
+              "usage": { "inputTokens": 7586, "outputTokens": 115 }
+            },
+            "rawResponse": {
+              "content": "{\"stop_sequence\":\"</answer>\",\"type\":\"message\",\"id\":\"msg_bdrk_01GUNDbTVxb9eHRz5qVkMCVi\",\"content\":[{\"imageSource\":null,\"reasoningTextSignature\":null,\"reasoningRedactedContent\":null,\"name\":null,\"type\":\"text\",\"id\":null,\"source\":null,\"input\":null,\"is_error\":null,\"text\":\"<thinking>The product line \\\"Airwave\\\" is valid and eligible for activation. Now, I need to proceed with getting the order number and confirmation number from the user to continue with the activation process.</thinking>\\n\\n<answer>Thank you for providing the product line. Airwave is a valid product line for license activation.\\n\\nTo proceed with the activation process, I'll need two more pieces of information:\\n\\n1. Your order number\\n2. The confirmation number associated with that order\\n\\nCould you please provide your order number first?\",\"content\":null,\"reasoningText\":null,\"tool_use_id\":null,\"guardContent\":null}],\"model\":\"model_name\",\"usage\":{\"input_tokens\":7586,\"output_tokens\":115,\"cache_read_input_tokens\":null,\"cache_creation_input_tokens\":null},\"role\":\"assistant\",\"stop_reason\":\"stop_sequence\"}"
+            },
+            "traceId": "2c1fc994-1bd1-486e-967d-e682fb5e3548-1"
+          }
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "rationale": {
+            "text": "The product line \"Airwave\" is valid and eligible for activation. Now, I need to proceed with getting the order number and confirmation number from the user to continue with the activation process.",
+            "traceId": "2c1fc994-1bd1-486e-967d-e682fb5e3548-1"
+          }
+        }
+      },
+      {
+        "type": "guardrail_trace",
+        "trace": {
+          "action": "NONE",
+          "metadata": {
+            "clientRequestId": "5a3594f5-4dec-4a03-8baf-e987585f50ff",
+            "endTime": "2026-02-17T05:16:14.082647Z",
+            "startTime": "2026-02-17T05:16:13.383556Z",
+            "totalTimeMs": 699
+          },
+          "outputAssessments": [{}],
+          "traceId": "2c1fc994-1bd1-486e-967d-e682fb5e3548-guardrail-post-0"
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "observation": {
+            "finalResponse": {
+              "metadata": {
+                "endTime": "2026-02-17T05:16:14.140917Z",
+                "operationTotalTimeMs": 13381,
+                "startTime": "2026-02-17T05:16:00.759616Z"
+              },
+              "text": "Thank you for providing the product line. Airwave is a valid product line for license activation.\n\nTo proceed with the activation process, I'll need two more pieces of information:\n\n1. Your order number\n2. The confirmation number associated with that order\n\nCould you please provide your order number first?"
+            },
+            "traceId": "2c1fc994-1bd1-486e-967d-e682fb5e3548-1",
+            "type": "FINISH"
+          }
+        }
+      },
+      {
+        "type": "routing_classifier_trace",
+        "trace": {
+          "observation": {
+            "agentCollaboratorInvocationOutput": {
+              "agentCollaboratorAliasArn": "aws_ari_urn",
+              "agentCollaboratorName": "license-assist-collaborator",
+              "metadata": {
+                "clientRequestId": "2c1fc994-1bd1-486e-967d-e682fb5e3548",
+                "endTime": "2026-02-17T05:16:14.209484Z",
+                "startTime": "2026-02-17T05:16:00.669303Z",
+                "totalTimeMs": 13540
+              },
+              "output": {
+                "text": "Thank you for providing the product line. Airwave is a valid product line for license activation.\n\nTo proceed with the activation process, I'll need two more pieces of information:\n\n1. Your order number\n2. The confirmation number associated with that order\n\nCould you please provide your order number first?",
+                "type": "TEXT"
+              }
+            },
+            "traceId": "2ec64673-d6cd-4fab-982f-7d80558a3d5b-routing-0",
+            "type": "AGENT_COLLABORATOR"
+          }
+        }
+      },
+      {
+        "type": "routing_classifier_trace",
+        "trace": {
+          "observation": {
+            "finalResponse": {
+              "metadata": {
+                "endTime": "2026-02-17T05:16:14.213875Z",
+                "operationTotalTimeMs": 15683,
+                "startTime": "2026-02-17T05:15:58.530282Z"
+              },
+              "text": "Thank you for providing the product line. Airwave is a valid product line for license activation.\n\nTo proceed with the activation process, I'll need two more pieces of information:\n\n1. Your order number\n2. The confirmation number associated with that order\n\nCould you please provide your order number first?"
+            },
+            "traceId": "2ec64673-d6cd-4fab-982f-7d80558a3d5b-routing-0",
+            "type": "FINISH"
+          }
+        }
+      },
+      {
+        "type": "guardrail_trace",
+        "trace": {
+          "action": "NONE",
+          "metadata": {
+            "clientRequestId": "3d1970e3-94b2-491a-8136-eae62c9593c5",
+            "endTime": "2026-02-17T05:16:15.171162Z",
+            "startTime": "2026-02-17T05:16:14.390810Z",
+            "totalTimeMs": 781
+          },
+          "outputAssessments": [{}],
+          "traceId": "2ec64673-d6cd-4fab-982f-7d80558a3d5b-guardrail-post-0"
+        }
+      },
+      {
+        "type": "chunk",
+        "chunk": {
+          "bytes": "Thank you for providing the product line. Airwave is a valid product line for license activation.\n\nTo proceed with the activation process, I'll need two more pieces of information:\n\n1. Your order number\n2. The confirmation number associated with that order\n\nCould you please provide your order number first?"
+        }
+      }
+    ],
+    "metadata": {
+      "resourceAttributes": {
+        "telemetry.sdk.language": "python",
+        "telemetry.sdk.name": "opentelemetry",
+        "telemetry.sdk.version": "1.39.1",
+        "langfuse.environment": "staging",
+        "langfuse.release": "9.0 Hotfix",
+        "service.name": "unknown_service"
+      },
+      "scope": {
+        "name": "langfuse-sdk",
+        "version": "3.7.0",
+        "attributes": {
+          "public_key": "pk1"
+        }
+      }
+    },
+    "latency": 16.829,
+    "usage": {
+      "promptTokens": 18467,
+      "completionTokens": 258,
+      "totalTokens": 18725
+    },
+    "inputCost": "0.055401",
+    "outputCost": "0.003869999999",
+    "totalCost": "0.059271",
+    "level": "DEFAULT",
+    "errorCount": 0,
+    "warningCount": 0,
+    "defaultCount": 1,
+    "debugCount": 0,
+    "observationCount": 1,
+    "inputTokens": 18467,
+    "outputTokens": 258,
+    "totalTokens": 18725
+  },
+  {
+    "id": "8ad986dc707c8a546f2f89e530636adf",
+    "projectId": "cmgt9niok000wvo07s9ywpqc3",
+    "timestamp": "2026-02-17T05:15:31.199Z",
+    "tags": [],
+    "bookmarked": false,
+    "name": "Invoke Agent",
+    "release": "9.0 Hotfix",
+    "version": null,
+    "userId": "user@email.com",
+    "environment": "staging",
+    "sessionId": "48a4b950-0bbf-11f1-a0cf-2de6f6a7e71d",
+    "public": false,
+    "input": "I want to active",
+    "output": [
+      {
+        "type": "guardrail_trace",
+        "trace": {
+          "action": "NONE",
+          "inputAssessments": [{}],
+          "metadata": {
+            "clientRequestId": "ecff09e4-7292-4fc6-92ac-7c360b2c13ce",
+            "endTime": "2026-02-17T05:15:32.291589Z",
+            "startTime": "2026-02-17T05:15:31.535987Z",
+            "totalTimeMs": 756
+          },
+          "traceId": "d4fc0806-9fc5-4cab-9381-b4f132ce4bac-guardrail-pre-0"
+        }
+      },
+      {
+        "type": "routing_classifier_trace",
+        "trace": {
+          "modelInvocationInput": {
+            "foundationModel": "anthropic.model_name-v1:0",
+            "inferenceConfiguration": {
+              "maximumLength": 512,
+              "stopSequences": ["\n\nHuman:"],
+              "temperature": 0,
+              "topK": 250,
+              "topP": 1
+            },
+            "text": "Input Prompt + Context + User input",
+            "traceId": "d4fc0806-9fc5-4cab-9381-b4f132ce4bac-routing-0",
+            "type": "ROUTING_CLASSIFIER"
+          }
+        }
+      },
+      {
+        "type": "routing_classifier_trace",
+        "trace": {
+          "modelInvocationOutput": {
+            "metadata": {
+              "clientRequestId": "511d95f1-460c-4b84-a802-8e000b150507",
+              "endTime": "2026-02-17T05:15:33.552729Z",
+              "startTime": "2026-02-17T05:15:32.294201Z",
+              "totalTimeMs": 1258,
+              "usage": { "inputTokens": 3407, "outputTokens": 20 }
+            },
+            "rawResponse": {
+              "content": "{\"stop_sequence\":null,\"type\":\"message\",\"id\":\"msg_bdrk_01MdavCg8KCU6W4nDJDMUshd\",\"content\":[{\"imageSource\":null,\"reasoningTextSignature\":null,\"reasoningRedactedContent\":null,\"name\":null,\"type\":\"text\",\"id\":null,\"source\":null,\"input\":null,\"is_error\":null,\"text\":\"<a>license-assist-collaborator</a>\",\"content\":null,\"reasoningText\":null,\"tool_use_id\":null,\"guardContent\":null}],\"model\":\"model_name\",\"usage\":{\"input_tokens\":3407,\"output_tokens\":20,\"cache_read_input_tokens\":null,\"cache_creation_input_tokens\":null},\"role\":\"assistant\",\"stop_reason\":\"end_turn\"}"
+            },
+            "traceId": "d4fc0806-9fc5-4cab-9381-b4f132ce4bac-routing-0"
+          }
+        }
+      },
+      {
+        "type": "routing_classifier_trace",
+        "trace": {
+          "invocationInput": {
+            "agentCollaboratorInvocationInput": {
+              "agentCollaboratorAliasArn": "aws_ari_urn_",
+              "agentCollaboratorName": "license-assist-collaborator",
+              "input": { "text": "I want to active", "type": "TEXT" }
+            },
+            "invocationType": "AGENT_COLLABORATOR",
+            "traceId": "d4fc0806-9fc5-4cab-9381-b4f132ce4bac-routing-0"
+          }
+        }
+      },
+      {
+        "type": "guardrail_trace",
+        "trace": {
+          "action": "NONE",
+          "inputAssessments": [{}],
+          "metadata": {
+            "clientRequestId": "8d6cc69f-7938-445c-9a12-d5412a045487",
+            "endTime": "2026-02-17T05:15:34.770606Z",
+            "startTime": "2026-02-17T05:15:34.110155Z",
+            "totalTimeMs": 660
+          },
+          "traceId": "12430de4-3fb3-4940-87d3-892df56518cf-guardrail-pre-0"
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "modelInvocationInput": {
+            "foundationModel": "anthropic.model_name-v1:0",
+            "inferenceConfiguration": {
+              "maximumLength": 2048,
+              "stopSequences": ["</invoke>", "</answer>", "</error>"],
+              "temperature": 0,
+              "topK": 250,
+              "topP": 1
+            },
+            "text": "Input Prompt + Context + User input",
+            "traceId": "12430de4-3fb3-4940-87d3-892df56518cf-0",
+            "type": "ORCHESTRATION"
+          }
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "modelInvocationOutput": {
+            "metadata": {
+              "clientRequestId": "420f596e-60bc-4c0e-8ceb-3783b260a42b",
+              "endTime": "2026-02-17T05:15:38.248974Z",
+              "startTime": "2026-02-17T05:15:34.825981Z",
+              "totalTimeMs": 3423,
+              "usage": { "inputTokens": 7203, "outputTokens": 106 }
+            },
+            "rawResponse": {
+              "content": "{\"stop_sequence\":\"</answer>\",\"type\":\"message\",\"id\":\"msg_bdrk_01257Yh1NhgHFmKwx8JNivTq\",\"content\":[{\"imageSource\":null,\"reasoningTextSignature\":null,\"reasoningRedactedContent\":null,\"name\":null,\"type\":\"text\",\"id\":null,\"source\":null,\"input\":null,\"is_error\":null,\"text\":\"<thinking>The user has indicated they want to activate a license. This falls under UC1: License activation queries. I'll need to guide them through the activation process, starting with getting the product line they want to activate.</thinking>\\n\\n<answer>Certainly! I'd be happy to help you activate your license. To get started with the activation process, I'll need to know which product line you're looking to activate. Could you please provide the product line for the license you want to activate?\",\"content\":null,\"reasoningText\":null,\"tool_use_id\":null,\"guardContent\":null}],\"model\":\"model_name\",\"usage\":{\"input_tokens\":7203,\"output_tokens\":106,\"cache_read_input_tokens\":null,\"cache_creation_input_tokens\":null},\"role\":\"assistant\",\"stop_reason\":\"stop_sequence\"}"
+            },
+            "traceId": "12430de4-3fb3-4940-87d3-892df56518cf-0"
+          }
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "rationale": {
+            "text": "The user has indicated they want to activate a license. This falls under UC1: License activation queries. I'll need to guide them through the activation process, starting with getting the product line they want to activate.",
+            "traceId": "12430de4-3fb3-4940-87d3-892df56518cf-0"
+          }
+        }
+      },
+      {
+        "type": "guardrail_trace",
+        "trace": {
+          "action": "NONE",
+          "metadata": {
+            "clientRequestId": "2971f444-499f-489d-802a-cceefbca0a3f",
+            "endTime": "2026-02-17T05:15:39.283719Z",
+            "startTime": "2026-02-17T05:15:38.430150Z",
+            "totalTimeMs": 853
+          },
+          "outputAssessments": [{}],
+          "traceId": "12430de4-3fb3-4940-87d3-892df56518cf-guardrail-post-0"
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "observation": {
+            "finalResponse": {
+              "metadata": {
+                "endTime": "2026-02-17T05:15:39.328618Z",
+                "operationTotalTimeMs": 5692,
+                "startTime": "2026-02-17T05:15:33.636865Z"
+              },
+              "text": "Certainly! I'd be happy to help you activate your license. To get started with the activation process, I'll need to know which product line you're looking to activate. Could you please provide the product line for the license you want to activate?"
+            },
+            "traceId": "12430de4-3fb3-4940-87d3-892df56518cf-0",
+            "type": "FINISH"
+          }
+        }
+      },
+      {
+        "type": "routing_classifier_trace",
+        "trace": {
+          "observation": {
+            "agentCollaboratorInvocationOutput": {
+              "agentCollaboratorAliasArn": "arn:aws:bedrock:us-east-1:576584121853:agent-alias/NQC7FRYMF7/OV2FRTQZON",
+              "agentCollaboratorName": "license-assist-collaborator",
+              "metadata": {
+                "clientRequestId": "12430de4-3fb3-4940-87d3-892df56518cf",
+                "endTime": "2026-02-17T05:15:39.397616Z",
+                "startTime": "2026-02-17T05:15:33.567137Z",
+                "totalTimeMs": 5830
+              },
+              "output": {
+                "text": "Certainly! I'd be happy to help you activate your license. To get started with the activation process, I'll need to know which product line you're looking to activate. Could you please provide the product line for the license you want to activate?",
+                "type": "TEXT"
+              }
+            },
+            "traceId": "d4fc0806-9fc5-4cab-9381-b4f132ce4bac-routing-0",
+            "type": "AGENT_COLLABORATOR"
+          }
+        }
+      },
+      {
+        "type": "routing_classifier_trace",
+        "trace": {
+          "observation": {
+            "finalResponse": {
+              "metadata": {
+                "endTime": "2026-02-17T05:15:39.403193Z",
+                "operationTotalTimeMs": 8170,
+                "startTime": "2026-02-17T05:15:31.233487Z"
+              },
+              "text": "Certainly! I'd be happy to help you activate your license. To get started with the activation process, I'll need to know which product line you're looking to activate. Could you please provide the product line for the license you want to activate?"
+            },
+            "traceId": "d4fc0806-9fc5-4cab-9381-b4f132ce4bac-routing-0",
+            "type": "FINISH"
+          }
+        }
+      },
+      {
+        "type": "guardrail_trace",
+        "trace": {
+          "action": "NONE",
+          "metadata": {
+            "clientRequestId": "2361ffa5-090b-4735-9d6e-f50779a68f6a",
+            "endTime": "2026-02-17T05:15:40.353241Z",
+            "startTime": "2026-02-17T05:15:39.570007Z",
+            "totalTimeMs": 783
+          },
+          "outputAssessments": [{}],
+          "traceId": "d4fc0806-9fc5-4cab-9381-b4f132ce4bac-guardrail-post-0"
+        }
+      },
+      {
+        "type": "chunk",
+        "chunk": {
+          "bytes": "Certainly! I'd be happy to help you activate your license. To get started with the activation process, I'll need to know which product line you're looking to activate. Could you please provide the product line for the license you want to activate?"
+        }
+      }
+    ],
+    "metadata": {
+      "resourceAttributes": {
+        "telemetry.sdk.language": "python",
+        "telemetry.sdk.name": "opentelemetry",
+        "telemetry.sdk.version": "1.39.1",
+        "langfuse.environment": "staging",
+        "langfuse.release": "9.0 Hotfix",
+        "service.name": "unknown_service"
+      },
+      "scope": {
+        "name": "langfuse-sdk",
+        "version": "3.7.0",
+        "attributes": {
+          "public_key": "pk1"
+        }
+      }
+    },
+    "latency": 9.267,
+    "usage": {
+      "promptTokens": 10610,
+      "completionTokens": 126,
+      "totalTokens": 10736
+    },
+    "inputCost": "0.03183",
+    "outputCost": "0.001889999999",
+    "totalCost": "0.03372",
+    "level": "DEFAULT",
+    "errorCount": 0,
+    "warningCount": 0,
+    "defaultCount": 1,
+    "debugCount": 0,
+    "observationCount": 1,
+    "inputTokens": 10610,
+    "outputTokens": 126,
+    "totalTokens": 10736
+  },
+  {
+    "id": "8fc335aa5b97039a0cf1dd32c78b6c79",
+    "projectId": "cmgt9niok000wvo07s9ywpqc3",
+    "timestamp": "2026-02-17T05:12:41.313Z",
+    "tags": [],
+    "bookmarked": false,
+    "name": "Invoke Agent",
+    "release": "9.0 Hotfix",
+    "version": null,
+    "userId": "user@email.com",
+    "environment": "staging",
+    "sessionId": "48a4b950-0bbf-11f1-a0cf-2de6f6a7e71d",
+    "public": false,
+    "input": "I need assistance with License Management",
+    "output": [
+      {
+        "type": "guardrail_trace",
+        "trace": {
+          "action": "NONE",
+          "inputAssessments": [{}],
+          "metadata": {
+            "clientRequestId": "11ccc38b-14e1-460b-a65d-793cdc5634a0",
+            "endTime": "2026-02-17T05:12:42.127763Z",
+            "startTime": "2026-02-17T05:12:41.590380Z",
+            "totalTimeMs": 537
+          },
+          "traceId": "48de8dbc-6427-49b2-b8e6-c60f39bc7e55-guardrail-pre-0"
+        }
+      },
+      {
+        "type": "routing_classifier_trace",
+        "trace": {
+          "modelInvocationInput": {
+            "foundationModel": "anthropic.model_name-v1:0",
+            "inferenceConfiguration": {
+              "maximumLength": 512,
+              "stopSequences": ["\n\nHuman:"],
+              "temperature": 0,
+              "topK": 250,
+              "topP": 1
+            },
+            "text": "Input Prompt + Context + User input",
+            "traceId": "48de8dbc-6427-49b2-b8e6-c60f39bc7e55-routing-0",
+            "type": "ROUTING_CLASSIFIER"
+          }
+        }
+      },
+      {
+        "type": "routing_classifier_trace",
+        "trace": {
+          "modelInvocationOutput": {
+            "metadata": {
+              "clientRequestId": "98b748fa-312d-4822-b1d2-008c533b656f",
+              "endTime": "2026-02-17T05:12:43.366476Z",
+              "startTime": "2026-02-17T05:12:42.130241Z",
+              "totalTimeMs": 1236,
+              "usage": { "inputTokens": 3196, "outputTokens": 20 }
+            },
+            "rawResponse": {
+              "content": "{\"stop_sequence\":null,\"type\":\"message\",\"id\":\"msg_bdrk_01294ZZ971CeLugrvXrjksxF\",\"content\":[{\"imageSource\":null,\"reasoningTextSignature\":null,\"reasoningRedactedContent\":null,\"name\":null,\"type\":\"text\",\"id\":null,\"source\":null,\"input\":null,\"is_error\":null,\"text\":\"<a>license-assist-collaborator</a>\",\"content\":null,\"reasoningText\":null,\"tool_use_id\":null,\"guardContent\":null}],\"model\":\"model_name\",\"usage\":{\"input_tokens\":3196,\"output_tokens\":20,\"cache_read_input_tokens\":null,\"cache_creation_input_tokens\":null},\"role\":\"assistant\",\"stop_reason\":\"end_turn\"}"
+            },
+            "traceId": "48de8dbc-6427-49b2-b8e6-c60f39bc7e55-routing-0"
+          }
+        }
+      },
+      {
+        "type": "routing_classifier_trace",
+        "trace": {
+          "invocationInput": {
+            "agentCollaboratorInvocationInput": {
+              "agentCollaboratorAliasArn": "arn:aws:bedrock:us-east-1:576584121853:agent-alias/NQC7FRYMF7/OV2FRTQZON",
+              "agentCollaboratorName": "license-assist-collaborator",
+              "input": {
+                "text": "I need assistance with License Management",
+                "type": "TEXT"
+              }
+            },
+            "invocationType": "AGENT_COLLABORATOR",
+            "traceId": "48de8dbc-6427-49b2-b8e6-c60f39bc7e55-routing-0"
+          }
+        }
+      },
+      {
+        "type": "guardrail_trace",
+        "trace": {
+          "action": "NONE",
+          "inputAssessments": [{}],
+          "metadata": {
+            "clientRequestId": "114387ab-828b-4233-ba0f-231b236b6f2d",
+            "endTime": "2026-02-17T05:12:44.553921Z",
+            "startTime": "2026-02-17T05:12:43.925340Z",
+            "totalTimeMs": 628
+          },
+          "traceId": "c5a1316e-9a82-4505-9221-2db545dfe503-guardrail-pre-0"
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "modelInvocationInput": {
+            "foundationModel": "anthropic.model_name-v1:0",
+            "inferenceConfiguration": {
+              "maximumLength": 2048,
+              "stopSequences": ["</invoke>", "</answer>", "</error>"],
+              "temperature": 0,
+              "topK": 250,
+              "topP": 1
+            },
+            "text": "Input Prompt + Context + User input",
+            "traceId": "c5a1316e-9a82-4505-9221-2db545dfe503-0",
+            "type": "ORCHESTRATION"
+          }
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "modelInvocationOutput": {
+            "metadata": {
+              "clientRequestId": "a538532d-bab0-497f-a571-7ce656660918",
+              "endTime": "2026-02-17T05:12:49.834780Z",
+              "startTime": "2026-02-17T05:12:44.609968Z",
+              "totalTimeMs": 5225,
+              "usage": { "inputTokens": 6906, "outputTokens": 169 }
+            },
+            "rawResponse": {
+              "content": "{\"type\":\"message\",\"id\":\"msg_bdrk_01QvfLAqCdXQvJ5MQFGjoDuY\",\"content\":[{\"imageSource\":null,\"reasoningTextSignature\":null,\"reasoningRedactedContent\":null,\"name\":null,\"type\":\"text\",\"id\":null,\"source\":null,\"input\":null,\"is_error\":null,\"text\":\"<thinking>\\nThe user is requesting assistance with License Management. This falls under our core responsibilities as an HPE Aruba Networking Support Assistant. I need to determine which specific aspect of License Management they need help with to select the appropriate Use Case Driver.\\n</thinking>\\n\\n<answer>Certainly! I'd be happy to assist you with License Management. To better help you, could you please provide more details about what specific aspect of License Management you need assistance with? For example, are you looking to:\\n\\n1. Activate a license\\n2. Transfer a license\\n3. Generate an evaluation (EVAL) license\\n4. Query license information (such as expiration or summary)\\n\\nOnce I know more about your specific need, I'll be able to guide you through the process more effectively.\",\"content\":null,\"reasoningText\":null,\"tool_use_id\":null,\"guardContent\":null}],\"model\":\"model_name\",\"usage\":{\"input_tokens\":6906,\"output_tokens\":169,\"cache_read_input_tokens\":null,\"cache_creation_input_tokens\":null},\"role\":\"assistant\",\"stop_sequence\":\"</answer>\",\"stop_reason\":\"stop_sequence\"}"
+            },
+            "traceId": "c5a1316e-9a82-4505-9221-2db545dfe503-0"
+          }
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "rationale": {
+            "text": "The user is requesting assistance with License Management. This falls under our core responsibilities as an HPE Aruba Networking Support Assistant. I need to determine which specific aspect of License Management they need help with to select the appropriate Use Case Driver.",
+            "traceId": "c5a1316e-9a82-4505-9221-2db545dfe503-0"
+          }
+        }
+      },
+      {
+        "type": "guardrail_trace",
+        "trace": {
+          "action": "NONE",
+          "metadata": {
+            "clientRequestId": "ed6960e6-9574-4a84-9f41-4576559286a1",
+            "endTime": "2026-02-17T05:12:50.635930Z",
+            "startTime": "2026-02-17T05:12:50.006169Z",
+            "totalTimeMs": 629
+          },
+          "outputAssessments": [{}],
+          "traceId": "c5a1316e-9a82-4505-9221-2db545dfe503-guardrail-post-0"
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "observation": {
+            "finalResponse": {
+              "metadata": {
+                "endTime": "2026-02-17T05:12:50.698601Z",
+                "operationTotalTimeMs": 7206,
+                "startTime": "2026-02-17T05:12:43.492415Z"
+              },
+              "text": "Certainly! I'd be happy to assist you with License Management. To better help you, could you please provide more details about what specific aspect of License Management you need assistance with? For example, are you looking to:\n\n1. Activate a license\n2. Transfer a license\n3. Generate an evaluation (EVAL) license\n4. Query license information (such as expiration or summary)\n\nOnce I know more about your specific need, I'll be able to guide you through the process more effectively."
+            },
+            "traceId": "c5a1316e-9a82-4505-9221-2db545dfe503-0",
+            "type": "FINISH"
+          }
+        }
+      },
+      {
+        "type": "routing_classifier_trace",
+        "trace": {
+          "observation": {
+            "agentCollaboratorInvocationOutput": {
+              "agentCollaboratorAliasArn": "arn:aws:bedrock:us-east-1:576584121853:agent-alias/NQC7FRYMF7/OV2FRTQZON",
+              "agentCollaboratorName": "license-assist-collaborator",
+              "metadata": {
+                "clientRequestId": "c5a1316e-9a82-4505-9221-2db545dfe503",
+                "endTime": "2026-02-17T05:12:50.772448Z",
+                "startTime": "2026-02-17T05:12:43.403656Z",
+                "totalTimeMs": 7369
+              },
+              "output": {
+                "text": "Certainly! I'd be happy to assist you with License Management. To better help you, could you please provide more details about what specific aspect of License Management you need assistance with? For example, are you looking to:\n\n1. Activate a license\n2. Transfer a license\n3. Generate an evaluation (EVAL) license\n4. Query license information (such as expiration or summary)\n\nOnce I know more about your specific need, I'll be able to guide you through the process more effectively.",
+                "type": "TEXT"
+              }
+            },
+            "traceId": "48de8dbc-6427-49b2-b8e6-c60f39bc7e55-routing-0",
+            "type": "AGENT_COLLABORATOR"
+          }
+        }
+      },
+      {
+        "type": "routing_classifier_trace",
+        "trace": {
+          "observation": {
+            "finalResponse": {
+              "metadata": {
+                "endTime": "2026-02-17T05:12:50.776976Z",
+                "operationTotalTimeMs": 9429,
+                "startTime": "2026-02-17T05:12:41.347981Z"
+              },
+              "text": "Certainly! I'd be happy to assist you with License Management. To better help you, could you please provide more details about what specific aspect of License Management you need assistance with? For example, are you looking to:\n\n1. Activate a license\n2. Transfer a license\n3. Generate an evaluation (EVAL) license\n4. Query license information (such as expiration or summary)\n\nOnce I know more about your specific need, I'll be able to guide you through the process more effectively."
+            },
+            "traceId": "48de8dbc-6427-49b2-b8e6-c60f39bc7e55-routing-0",
+            "type": "FINISH"
+          }
+        }
+      },
+      {
+        "type": "guardrail_trace",
+        "trace": {
+          "action": "NONE",
+          "metadata": {
+            "clientRequestId": "59f220dc-dfc7-4113-b662-dc35454cc7fa",
+            "endTime": "2026-02-17T05:12:51.640292Z",
+            "startTime": "2026-02-17T05:12:50.949679Z",
+            "totalTimeMs": 691
+          },
+          "outputAssessments": [{}],
+          "traceId": "48de8dbc-6427-49b2-b8e6-c60f39bc7e55-guardrail-post-0"
+        }
+      },
+      {
+        "type": "chunk",
+        "chunk": {
+          "bytes": "Certainly! I'd be happy to assist you with License Management. To better help you, could you please provide more details about what specific aspect of License Management you need assistance with? For example, are you looking to:\n\n1. Activate a license\n2. Transfer a license\n3. Generate an evaluation (EVAL) license\n4. Query license information (such as expiration or summary)\n\nOnce I know more about your specific need, I'll be able to guide you through the process more effectively."
+        }
+      }
+    ],
+    "metadata": {
+      "resourceAttributes": {
+        "telemetry.sdk.language": "python",
+        "telemetry.sdk.name": "opentelemetry",
+        "telemetry.sdk.version": "1.39.1",
+        "langfuse.environment": "staging",
+        "langfuse.release": "9.0 Hotfix",
+        "service.name": "unknown_service"
+      },
+      "scope": {
+        "name": "langfuse-sdk",
+        "version": "3.7.0",
+        "attributes": {
+          "public_key": "pk1"
+        }
+      }
+    },
+    "latency": 10.462,
+    "usage": {
+      "promptTokens": 10102,
+      "completionTokens": 189,
+      "totalTokens": 10291
+    },
+    "inputCost": "0.030306",
+    "outputCost": "0.002835",
+    "totalCost": "0.033141",
+    "level": "DEFAULT",
+    "errorCount": 0,
+    "warningCount": 0,
+    "defaultCount": 1,
+    "debugCount": 0,
+    "observationCount": 1,
+    "inputTokens": 10102,
+    "outputTokens": 189,
+    "totalTokens": 10291
+  }
+]

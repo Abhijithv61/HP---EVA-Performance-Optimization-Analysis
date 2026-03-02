@@ -1,0 +1,3195 @@
+[
+  {
+    "id": "324c3c4832f590e0db98efaa78fcc815",
+    "projectId": "cmgt9niok000wvo07s9ywpqc3",
+    "timestamp": "2026-02-13T09:51:54.991Z",
+    "tags": [],
+    "bookmarked": false,
+    "name": "Invoke Agent",
+    "release": "9.0 Hotfix",
+    "version": null,
+    "userId": "username@email.com",
+    "environment": "staging",
+    "sessionId": "5bef0490-08c0-11f1-907e-cdcae5aa3470",
+    "public": false,
+    "input": null,
+    "output": [
+      {
+        "type": "routing_classifier_trace",
+        "trace": {
+          "invocationInput": {
+            "agentCollaboratorInvocationInput": {
+              "agentCollaboratorAliasArn": "aws_arn_model_uri",
+              "agentCollaboratorName": "Case-Management2-Collaborator",
+              "input": { "text": "yes, please proceed", "type": "TEXT" }
+            },
+            "invocationType": "AGENT_COLLABORATOR",
+            "traceId": "78d89942-e744-4b05-9ab8-82846734ca15-routing-0"
+          }
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "invocationInput": {
+            "agentCollaboratorInvocationInput": {
+              "agentCollaboratorAliasArn": "aws_arn_model_uri2",
+              "agentCollaboratorName": "SupportCase-Management-Agent",
+              "input": {
+                "returnControlResults": {
+                  "invocationId": "945c1112-a7d2-4eb2-b876-3ec143562d2b",
+                  "returnControlInvocationResults": [
+                    {
+                      "apiResult": {
+                        "actionGroup": "case_attachment",
+                        "agentId": "PNBQYBTH4I",
+                        "apiPath": "/case-attachment",
+                        "httpStatusCode": 200,
+                        "responseBody": {
+                          "TEXT": {
+                            "body": "The file has been successfully attached to the case. Inform users that the file has been successfully attached to the case."
+                          }
+                        }
+                      }
+                    }
+                  ]
+                },
+                "type": "RETURN_CONTROL"
+              }
+            },
+            "invocationType": "AGENT_COLLABORATOR",
+            "traceId": "703d75b0-e057-4540-9dc2-4e8df864f08b-0"
+          }
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "modelInvocationInput": {
+            "foundationModel": "model_name",
+            "inferenceConfiguration": {
+              "maximumLength": 2048,
+              "stopSequences": ["</invoke>", "</answer>", "</error>"],
+              "temperature": 0,
+              "topK": 250,
+              "topP": 1
+            },
+            "text": "Input Prompt + text user sent",
+            "traceId": "fde85e38-c800-4a69-bd37-cff2da3300b5-0",
+            "type": "ORCHESTRATION"
+          }
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "modelInvocationOutput": {
+            "metadata": {
+              "clientRequestId": "9c4fc48b-a8b7-442e-b6f5-1c4f91731a15",
+              "endTime": "2026-02-13T09:52:03.436384Z",
+              "startTime": "2026-02-13T09:51:55.741711Z",
+              "totalTimeMs": 7695,
+              "usage": { "inputTokens": 11743, "outputTokens": 263 }
+            },
+            "rawResponse": {
+              "content": "{\"stop_sequence\":\"</answer>\",\"type\":\"message\",\"id\":\"msg_bdrk_01VTsrAJ8vbJK9bgUhMTBQZ7\",\"content\":[{\"imageSource\":null,\"reasoningTextSignature\":null,\"reasoningRedactedContent\":null,\"name\":null,\"type\":\"text\",\"id\":null,\"source\":null,\"input\":null,\"is_error\":null,\"text\":\"<thinking>The file attachment process has been initiated successfully. I will now provide the user with confirmation and next steps.</thinking>\\n\\n<answer>Thank you for confirming. I'm pleased to inform you that the file attachment process for your support case (Case Number: case_num_XYZ) has been successfully initiated. \\n\\nThe system has confirmed that the file has been successfully attached to your case. This means that the support team will be able to access and review the file you've provided as they work on resolving your network issue.\\n\\nHere are a few important points to note:\\n\\n1. The file you've attached is now securely associated with your case.\\n2. Our support team will review the attached file as part of their investigation into your network problem.\\n3. If they need any additional information or clarification regarding the attached file, they will contact you through the case communication channels.\\n\\nIs there anything else you would like to do with your support case? For example:\\n1. Would you like to attach any additional files?\\n2. Do you want to add any comments or further information to the case?\\n3. Would you like to review the current status of your case?\\n\\nPlease let me know if you need any further assistance.\",\"content\":null,\"reasoningText\":null,\"tool_use_id\":null,\"guardContent\":null}],\"model\":\"model_name\",\"usage\":{\"input_tokens\":11743,\"output_tokens\":263,\"cache_read_input_tokens\":null,\"cache_creation_input_tokens\":null},\"role\":\"assistant\",\"stop_reason\":\"stop_sequence\"}"
+            },
+            "traceId": "fde85e38-c800-4a69-bd37-cff2da3300b5-0"
+          }
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "rationale": {
+            "text": "The file attachment process has been initiated successfully. I will now provide the user with confirmation and next steps.",
+            "traceId": "fde85e38-c800-4a69-bd37-cff2da3300b5-0"
+          }
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "observation": {
+            "finalResponse": {
+              "metadata": {
+                "endTime": "2026-02-13T09:52:03.545004Z",
+                "operationTotalTimeMs": 8076,
+                "startTime": "2026-02-13T09:51:55.469628Z"
+              },
+              "text": "Thank you for confirming. I'm pleased to inform you that the file attachment process for your support case (Case Number: case_num_XYZ) has been successfully initiated. \n\nThe system has confirmed that the file has been successfully attached to your case. This means that the support team will be able to access and review the file you've provided as they work on resolving your network issue.\n\nHere are a few important points to note:\n\n1. The file you've attached is now securely associated with your case.\n2. Our support team will review the attached file as part of their investigation into your network problem.\n3. If they need any additional information or clarification regarding the attached file, they will contact you through the case communication channels.\n\nIs there anything else you would like to do with your support case? For example:\n1. Would you like to attach any additional files?\n2. Do you want to add any comments or further information to the case?\n3. Would you like to review the current status of your case?\n\nPlease let me know if you need any further assistance."
+            },
+            "traceId": "fde85e38-c800-4a69-bd37-cff2da3300b5-0",
+            "type": "FINISH"
+          }
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "observation": {
+            "agentCollaboratorInvocationOutput": {
+              "agentCollaboratorAliasArn": "aws_arn_model_uri2",
+              "agentCollaboratorName": "SupportCase-Management-Agent",
+              "metadata": {
+                "clientRequestId": "fde85e38-c800-4a69-bd37-cff2da3300b5",
+                "endTime": "2026-02-13T09:52:03.612569Z",
+                "startTime": "2026-02-13T09:51:55.398799Z",
+                "totalTimeMs": 8214
+              },
+              "output": {
+                "text": "Thank you for confirming. I'm pleased to inform you that the file attachment process for your support case (Case Number: case_num_XYZ) has been successfully initiated. \n\nThe system has confirmed that the file has been successfully attached to your case. This means that the support team will be able to access and review the file you've provided as they work on resolving your network issue.\n\nHere are a few important points to note:\n\n1. The file you've attached is now securely associated with your case.\n2. Our support team will review the attached file as part of their investigation into your network problem.\n3. If they need any additional information or clarification regarding the attached file, they will contact you through the case communication channels.\n\nIs there anything else you would like to do with your support case? For example:\n1. Would you like to attach any additional files?\n2. Do you want to add any comments or further information to the case?\n3. Would you like to review the current status of your case?\n\nPlease let me know if you need any further assistance.",
+                "type": "TEXT"
+              }
+            },
+            "traceId": "703d75b0-e057-4540-9dc2-4e8df864f08b-0",
+            "type": "AGENT_COLLABORATOR"
+          }
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "modelInvocationInput": {
+            "foundationModel": "model_name",
+            "inferenceConfiguration": {
+              "maximumLength": 2048,
+              "stopSequences": ["</invoke>", "</answer>", "</error>"],
+              "temperature": 0,
+              "topK": 250,
+              "topP": 1
+            },
+            "text": "Input Prompt + text user sent",
+            "traceId": "703d75b0-e057-4540-9dc2-4e8df864f08b-0",
+            "type": "ORCHESTRATION"
+          }
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "modelInvocationOutput": {
+            "metadata": {
+              "clientRequestId": "cdfd1724-b1ce-4fe7-a50c-b36ade417b6c",
+              "endTime": "2026-02-13T09:52:13.164749Z",
+              "startTime": "2026-02-13T09:52:03.725898Z",
+              "totalTimeMs": 9439,
+              "usage": { "inputTokens": 10842, "outputTokens": 438 }
+            },
+            "rawResponse": {
+              "content": "{\"stop_sequence\":\"</answer>\",\"type\":\"message\",\"id\":\"msg_bdrk_01HGmSymTiKkFnKfZWp6HGX1\",\"content\":[{\"imageSource\":null,\"reasoningTextSignature\":null,\"reasoningRedactedContent\":null,\"name\":null,\"type\":\"text\",\"id\":null,\"source\":null,\"input\":null,\"is_error\":null,\"text\":\"<thinking>The Support Case Management Agent has confirmed that the file attachment process was successful. I'll relay this information to the user and offer additional assistance if needed.</thinking>\\n\\nGreat news! The file has been successfully attached to your support case (Case Number: case_num_XYZ). Here's a summary of what has happened:\\n\\n1. The file you provided has been securely uploaded and associated with your case.\\n2. Our support team will be able to access and review this file as they work on resolving your network issue.\\n3. If they need any additional information or clarification about the attached file, they will contact you through the case communication channels.\\n\\nIs there anything else you would like to do with your support case? For example:\\n\\n1. Would you like to attach any additional files?\\n2. Do you want to add any comments or further information to the case?\\n3. Would you like to review the current status of your case?\\n\\nPlease let me know if you need any further assistance or if you have any questions about your case.\\n\\n<thinking>I'll wait for the user's response to see if they need any additional help with their support case.</thinking><answer>Great news! The file has been successfully attached to your support case (Case Number: case_num_XYZ). Here's a summary of what has happened:\\n\\n1. The file you provided has been securely uploaded and associated with your case.\\n2. Our support team will be able to access and review this file as they work on resolving your network issue.\\n3. If they need any additional information or clarification about the attached file, they will contact you through the case communication channels.\\n\\nIs there anything else you would like to do with your support case? For example:\\n\\n1. Would you like to attach any additional files?\\n2. Do you want to add any comments or further information to the case?\\n3. Would you like to review the current status of your case?\\n\\nPlease let me know if you need any further assistance or if you have any questions about your case.\",\"content\":null,\"reasoningText\":null,\"tool_use_id\":null,\"guardContent\":null}],\"model\":\"model_name\",\"usage\":{\"input_tokens\":10842,\"output_tokens\":438,\"cache_read_input_tokens\":null,\"cache_creation_input_tokens\":null},\"role\":\"assistant\",\"stop_reason\":\"stop_sequence\"}"
+            },
+            "traceId": "703d75b0-e057-4540-9dc2-4e8df864f08b-0"
+          }
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "rationale": {
+            "text": "The Support Case Management Agent has confirmed that the file attachment process was successful. I'll relay this information to the user and offer additional assistance if needed.</thinking>\n\nGreat news! The file has been successfully attached to your support case (Case Number: case_num_XYZ). Here's a summary of what has happened:\n\n1. The file you provided has been securely uploaded and associated with your case.\n2. Our support team will be able to access and review this file as they work on resolving your network issue.\n3. If they need any additional information or clarification about the attached file, they will contact you through the case communication channels.\n\nIs there anything else you would like to do with your support case? For example:\n\n1. Would you like to attach any additional files?\n2. Do you want to add any comments or further information to the case?\n3. Would you like to review the current status of your case?\n\nPlease let me know if you need any further assistance or if you have any questions about your case.\n\n<thinking>I'll wait for the user's response to see if they need any additional help with their support case.",
+            "traceId": "703d75b0-e057-4540-9dc2-4e8df864f08b-0"
+          }
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "observation": {
+            "finalResponse": {
+              "metadata": {
+                "endTime": "2026-02-13T09:52:13.202481Z",
+                "operationTotalTimeMs": 17956,
+                "startTime": "2026-02-13T09:51:55.246097Z"
+              },
+              "text": "Great news! The file has been successfully attached to your support case (Case Number: case_num_XYZ). Here's a summary of what has happened:\n\n1. The file you provided has been securely uploaded and associated with your case.\n2. Our support team will be able to access and review this file as they work on resolving your network issue.\n3. If they need any additional information or clarification about the attached file, they will contact you through the case communication channels.\n\nIs there anything else you would like to do with your support case? For example:\n\n1. Would you like to attach any additional files?\n2. Do you want to add any comments or further information to the case?\n3. Would you like to review the current status of your case?\n\nPlease let me know if you need any further assistance or if you have any questions about your case."
+            },
+            "traceId": "703d75b0-e057-4540-9dc2-4e8df864f08b-0",
+            "type": "FINISH"
+          }
+        }
+      },
+      {
+        "type": "routing_classifier_trace",
+        "trace": {
+          "observation": {
+            "agentCollaboratorInvocationOutput": {
+              "agentCollaboratorAliasArn": "aws_arn_model_uri",
+              "agentCollaboratorName": "Case-Management2-Collaborator",
+              "metadata": {
+                "clientRequestId": "703d75b0-e057-4540-9dc2-4e8df864f08b",
+                "endTime": "2026-02-13T09:52:13.272032Z",
+                "startTime": "2026-02-13T09:51:55.172579Z",
+                "totalTimeMs": 18100
+              },
+              "output": {
+                "text": "Great news! The file has been successfully attached to your support case (Case Number: case_num_XYZ). Here's a summary of what has happened:\n\n1. The file you provided has been securely uploaded and associated with your case.\n2. Our support team will be able to access and review this file as they work on resolving your network issue.\n3. If they need any additional information or clarification about the attached file, they will contact you through the case communication channels.\n\nIs there anything else you would like to do with your support case? For example:\n\n1. Would you like to attach any additional files?\n2. Do you want to add any comments or further information to the case?\n3. Would you like to review the current status of your case?\n\nPlease let me know if you need any further assistance or if you have any questions about your case.",
+                "type": "TEXT"
+              }
+            },
+            "traceId": "78d89942-e744-4b05-9ab8-82846734ca15-routing-0",
+            "type": "AGENT_COLLABORATOR"
+          }
+        }
+      },
+      {
+        "type": "chunk",
+        "chunk": {
+          "bytes": "Great news! The file has been successfully attached to your support case (Case Number: case_num_XYZ). Here's a summary of what has happened:\n\n1. The file you provided has been securely uploaded and associated with your case.\n2. Our support team will be able to access and review this file as they work on resolving your network issue.\n3. If they need any additional information or clarification about the attached file, they will contact you through the case communication channels.\n\nIs there anything else you would like to do with your support case? For example:\n\n1. Would you like to attach any additional files?\n2. Do you want to add any comments or further information to the case?\n3. Would you like to review the current status of your case?\n\nPlease let me know if you need any further assistance or if you have any questions about your case."
+        }
+      }
+    ],
+    "metadata": {
+      "resourceAttributes": {
+        "telemetry.sdk.language": "python",
+        "telemetry.sdk.name": "opentelemetry",
+        "telemetry.sdk.version": "1.39.1",
+        "langfuse.environment": "staging",
+        "langfuse.release": "9.0 Hotfix",
+        "service.name": "unknown_service"
+      },
+      "scope": {
+        "name": "langfuse-sdk",
+        "version": "3.7.0",
+        "attributes": {
+          "public_key": "pk1"
+        }
+      }
+    },
+    "latency": 18.749,
+    "usage": {
+      "promptTokens": 22585,
+      "completionTokens": 701,
+      "totalTokens": 23286
+    },
+    "inputCost": "0.067755",
+    "outputCost": "0.010514999999",
+    "totalCost": "0.078269999999",
+    "level": "DEFAULT",
+    "errorCount": 0,
+    "warningCount": 0,
+    "defaultCount": 1,
+    "debugCount": 0,
+    "observationCount": 1,
+    "inputTokens": 22585,
+    "outputTokens": 701,
+    "totalTokens": 23286
+  },
+  {
+    "id": "fb328a876ccc595477ac5893b8325ac6",
+    "projectId": "cmgt9niok000wvo07s9ywpqc3",
+    "timestamp": "2026-02-13T09:51:23.907Z",
+    "tags": [],
+    "bookmarked": false,
+    "name": "Invoke Agent",
+    "release": "9.0 Hotfix",
+    "version": null,
+    "userId": "username@email.com",
+    "environment": "staging",
+    "sessionId": "5bef0490-08c0-11f1-907e-cdcae5aa3470",
+    "public": false,
+    "input": "yes, please proceed",
+    "output": [
+      {
+        "type": "guardrail_trace",
+        "trace": {
+          "action": "NONE",
+          "inputAssessments": [{}],
+          "metadata": {
+            "clientRequestId": "6011b6de-c0b3-44be-b8cd-97b977b9c171",
+            "endTime": "2026-02-13T09:51:24.962681Z",
+            "startTime": "2026-02-13T09:51:24.320700Z",
+            "totalTimeMs": 642
+          },
+          "traceId": "533bc7a2-91c5-4f88-bff2-c64b17913201-guardrail-pre-0"
+        }
+      },
+      {
+        "type": "routing_classifier_trace",
+        "trace": {
+          "modelInvocationInput": {
+            "foundationModel": "model_name",
+            "inferenceConfiguration": {
+              "maximumLength": 512,
+              "stopSequences": ["\n\nHuman:"],
+              "temperature": 0,
+              "topK": 250,
+              "topP": 1
+            },
+            "text": "Input Prompt + Context  +text user sent",
+            "traceId": "533bc7a2-91c5-4f88-bff2-c64b17913201-routing-0",
+            "type": "ROUTING_CLASSIFIER"
+          }
+        }
+      },
+      {
+        "type": "routing_classifier_trace",
+        "trace": {
+          "modelInvocationOutput": {
+            "metadata": {
+              "clientRequestId": "f6bf66b7-dadd-4eb3-8fea-0fb7b84fcad2",
+              "endTime": "2026-02-13T09:51:26.414804Z",
+              "startTime": "2026-02-13T09:51:24.966105Z",
+              "totalTimeMs": 1448,
+              "usage": { "inputTokens": 4468, "outputTokens": 14 }
+            },
+            "rawResponse": {
+              "content": "{\"stop_sequence\":null,\"type\":\"message\",\"id\":\"msg_bdrk_019AxJoLNBSz3Y4o8HLsYWV4\",\"content\":[{\"imageSource\":null,\"reasoningTextSignature\":null,\"reasoningRedactedContent\":null,\"name\":null,\"type\":\"text\",\"id\":null,\"source\":null,\"input\":null,\"is_error\":null,\"text\":\"<a>keep_previous_agent</a>\",\"content\":null,\"reasoningText\":null,\"tool_use_id\":null,\"guardContent\":null}],\"model\":\"model_name\",\"usage\":{\"input_tokens\":4468,\"output_tokens\":14,\"cache_read_input_tokens\":null,\"cache_creation_input_tokens\":null},\"role\":\"assistant\",\"stop_reason\":\"end_turn\"}"
+            },
+            "traceId": "533bc7a2-91c5-4f88-bff2-c64b17913201-routing-0"
+          }
+        }
+      },
+      {
+        "type": "routing_classifier_trace",
+        "trace": {
+          "invocationInput": {
+            "agentCollaboratorInvocationInput": {
+              "agentCollaboratorAliasArn": "aws_arn_model_uri",
+              "agentCollaboratorName": "Case-Management2-Collaborator",
+              "input": { "text": "yes, please proceed", "type": "TEXT" }
+            },
+            "invocationType": "AGENT_COLLABORATOR",
+            "traceId": "533bc7a2-91c5-4f88-bff2-c64b17913201-routing-0"
+          }
+        }
+      },
+      {
+        "type": "guardrail_trace",
+        "trace": {
+          "action": "NONE",
+          "inputAssessments": [{}],
+          "metadata": {
+            "clientRequestId": "c7c226b6-2ef2-430f-8b37-30f6b4e70537",
+            "endTime": "2026-02-13T09:51:27.577633Z",
+            "startTime": "2026-02-13T09:51:26.919586Z",
+            "totalTimeMs": 658
+          },
+          "traceId": "9e61bfe5-9f6e-445f-990a-bf97e5c45658-guardrail-pre-0"
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "modelInvocationInput": {
+            "foundationModel": "model_name",
+            "inferenceConfiguration": {
+              "maximumLength": 2048,
+              "stopSequences": ["</invoke>", "</answer>", "</error>"],
+              "temperature": 0,
+              "topK": 250,
+              "topP": 1
+            },
+            "text": "Input Prompt + Context  +text user sent",
+            "traceId": "9e61bfe5-9f6e-445f-990a-bf97e5c45658-0",
+            "type": "ORCHESTRATION"
+          }
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "modelInvocationOutput": {
+            "metadata": {
+              "clientRequestId": "0b408b6a-955d-4c45-9fd9-08a5f4d13fbd",
+              "endTime": "2026-02-13T09:51:32.686544Z",
+              "startTime": "2026-02-13T09:51:27.628897Z",
+              "totalTimeMs": 5058,
+              "usage": { "inputTokens": 10437, "outputTokens": 165 }
+            },
+            "rawResponse": {
+              "content": "{\"stop_sequence\":null,\"type\":\"message\",\"id\":\"msg_bdrk_01BnCsExikmf5FKAFL4T7cYe\",\"content\":[{\"imageSource\":null,\"reasoningTextSignature\":null,\"reasoningRedactedContent\":null,\"name\":null,\"type\":\"text\",\"id\":null,\"source\":null,\"input\":null,\"is_error\":null,\"text\":\"<thinking>The user has confirmed they are ready to proceed with attaching a file to their support case. I'll now inform the Support Case Management Agent to initiate the file attachment process.</thinking>\",\"content\":null,\"reasoningText\":null,\"tool_use_id\":null,\"guardContent\":null},{\"imageSource\":null,\"reasoningTextSignature\":null,\"reasoningRedactedContent\":null,\"name\":\"CommAPI_sendMessage\",\"type\":\"tool_use\",\"id\":\"toolu_bdrk_01JThnfzwdbZ6RtFtxYgpxv5\",\"source\":null,\"input\":{\"recipient\":\"SupportCase-Management-Agent\",\"content\":\"The user has confirmed they are ready to proceed with attaching a file to their support case (Case Number: case_num_XYZ). Please initiate the file attachment process and provide the necessary instructions or upload link.\"},\"is_error\":null,\"text\":null,\"content\":null,\"reasoningText\":null,\"tool_use_id\":null,\"guardContent\":null}],\"model\":\"model_name\",\"usage\":{\"input_tokens\":10437,\"output_tokens\":165,\"cache_read_input_tokens\":null,\"cache_creation_input_tokens\":null},\"role\":\"assistant\",\"stop_reason\":\"tool_use\"}"
+            },
+            "traceId": "9e61bfe5-9f6e-445f-990a-bf97e5c45658-0"
+          }
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "rationale": {
+            "text": "The user has confirmed they are ready to proceed with attaching a file to their support case. I'll now inform the Support Case Management Agent to initiate the file attachment process.",
+            "traceId": "9e61bfe5-9f6e-445f-990a-bf97e5c45658-0"
+          }
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "invocationInput": {
+            "agentCollaboratorInvocationInput": {
+              "agentCollaboratorAliasArn": "aws_arn_model_uri2",
+              "agentCollaboratorName": "SupportCase-Management-Agent",
+              "input": {
+                "text": "The user has confirmed they are ready to proceed with attaching a file to their support case (Case Number: case_num_XYZ). Please initiate the file attachment process and provide the necessary instructions or upload link.",
+                "type": "TEXT"
+              }
+            },
+            "invocationType": "AGENT_COLLABORATOR",
+            "traceId": "9e61bfe5-9f6e-445f-990a-bf97e5c45658-0"
+          }
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "modelInvocationInput": {
+            "foundationModel": "model_name",
+            "inferenceConfiguration": {
+              "maximumLength": 2048,
+              "stopSequences": ["</invoke>", "</answer>", "</error>"],
+              "temperature": 0,
+              "topK": 250,
+              "topP": 1
+            },
+            "text": "Input Prompt + Context  +text user sent",
+            "traceId": "75f46f14-477c-4368-a037-f526d1e11271-0",
+            "type": "ORCHESTRATION"
+          }
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "modelInvocationOutput": {
+            "metadata": {
+              "clientRequestId": "ff298615-618a-4742-ad2d-6b1386baf205",
+              "endTime": "2026-02-13T09:51:38.807127Z",
+              "startTime": "2026-02-13T09:51:33.058220Z",
+              "totalTimeMs": 5749,
+              "usage": { "inputTokens": 11563, "outputTokens": 146 }
+            },
+            "rawResponse": {
+              "content": "{\"stop_sequence\":null,\"type\":\"message\",\"id\":\"msg_bdrk_011hhcKDp9KZ3dUJ9zRWL3S2\",\"content\":[{\"imageSource\":null,\"reasoningTextSignature\":null,\"reasoningRedactedContent\":null,\"name\":null,\"type\":\"text\",\"id\":null,\"source\":null,\"input\":null,\"is_error\":null,\"text\":\"<thinking>The user has confirmed they are ready to proceed with attaching a file to their support case. I will now initiate the file attachment process using the POST__case_attachment__processCaseAttachments function.</thinking>\",\"content\":null,\"reasoningText\":null,\"tool_use_id\":null,\"guardContent\":null},{\"imageSource\":null,\"reasoningTextSignature\":null,\"reasoningRedactedContent\":null,\"name\":\"POST__case_attachment__processCaseAttachments\",\"type\":\"tool_use\",\"id\":\"toolu_bdrk_01VJJKuitcXAsRQ8qaMB2Ac1\",\"source\":null,\"input\":{\"case_id\":\"case_id_in_sys\",\"case_number\":\"case_num_XYZ\"},\"is_error\":null,\"text\":null,\"content\":null,\"reasoningText\":null,\"tool_use_id\":null,\"guardContent\":null}],\"model\":\"model_name\",\"usage\":{\"input_tokens\":11563,\"output_tokens\":146,\"cache_read_input_tokens\":null,\"cache_creation_input_tokens\":null},\"role\":\"assistant\",\"stop_reason\":\"tool_use\"}"
+            },
+            "traceId": "75f46f14-477c-4368-a037-f526d1e11271-0"
+          }
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "rationale": {
+            "text": "The user has confirmed they are ready to proceed with attaching a file to their support case. I will now initiate the file attachment process using the POST__case_attachment__processCaseAttachments function.",
+            "traceId": "75f46f14-477c-4368-a037-f526d1e11271-0"
+          }
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "invocationInput": {
+            "actionGroupInvocationInput": {
+              "actionGroupName": "case_attachment",
+              "apiPath": "/case-attachment",
+              "executionType": "RETURN_CONTROL",
+              "invocationId": "945c1112-a7d2-4eb2-b876-3ec143562d2b",
+              "requestBody": {
+                "content": {
+                  "application/json": [
+                    {
+                      "name": "case_id",
+                      "type": "string",
+                      "value": "case_id_in_sys"
+                    },
+                    {
+                      "name": "case_number",
+                      "type": "string",
+                      "value": "case_num_XYZ"
+                    }
+                  ]
+                }
+              },
+              "verb": "POST"
+            },
+            "invocationType": "ACTION_GROUP",
+            "traceId": "75f46f14-477c-4368-a037-f526d1e11271-0"
+          }
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "observation": {
+            "agentCollaboratorInvocationOutput": {
+              "agentCollaboratorAliasArn": "aws_arn_model_uri2",
+              "agentCollaboratorName": "SupportCase-Management-Agent",
+              "metadata": {
+                "clientRequestId": "75f46f14-477c-4368-a037-f526d1e11271",
+                "endTime": "2026-02-13T09:51:38.929368Z",
+                "startTime": "2026-02-13T09:51:32.733617Z",
+                "totalTimeMs": 6196
+              },
+              "output": {
+                "returnControlPayload": {
+                  "invocationId": "945c1112-a7d2-4eb2-b876-3ec143562d2b",
+                  "invocationInputs": [
+                    {
+                      "apiInvocationInput": {
+                        "actionGroup": "case_attachment",
+                        "agentId": "PNBQYBTH4I",
+                        "apiPath": "/case-attachment",
+                        "collaboratorName": "SupportCase-Management-Agent",
+                        "httpMethod": "POST",
+                        "requestBody": {
+                          "content": {
+                            "application/json": {
+                              "properties": [
+                                {
+                                  "name": "case_id",
+                                  "type": "string",
+                                  "value": "case_id_in_sys"
+                                },
+                                {
+                                  "name": "case_number",
+                                  "type": "string",
+                                  "value": "case_num_XYZ"
+                                }
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                },
+                "type": "RETURN_CONTROL"
+              }
+            },
+            "traceId": "9e61bfe5-9f6e-445f-990a-bf97e5c45658-0",
+            "type": "AGENT_COLLABORATOR"
+          }
+        }
+      },
+      {
+        "type": "routing_classifier_trace",
+        "trace": {
+          "observation": {
+            "agentCollaboratorInvocationOutput": {
+              "agentCollaboratorAliasArn": "aws_arn_model_uri",
+              "agentCollaboratorName": "Case-Management2-Collaborator",
+              "metadata": {
+                "clientRequestId": "9e61bfe5-9f6e-445f-990a-bf97e5c45658",
+                "endTime": "2026-02-13T09:51:39.052213Z",
+                "startTime": "2026-02-13T09:51:26.433749Z",
+                "totalTimeMs": 12619
+              },
+              "output": {
+                "returnControlPayload": {
+                  "invocationId": "650e6b19-a553-4a5c-9183-f2f744b9093b",
+                  "invocationInputs": [
+                    {
+                      "apiInvocationInput": {
+                        "actionGroup": "case_attachment",
+                        "agentId": "PNBQYBTH4I",
+                        "apiPath": "/case-attachment",
+                        "collaboratorName": "SupportCase-Management-Agent",
+                        "httpMethod": "POST",
+                        "parameters": [],
+                        "requestBody": {
+                          "content": {
+                            "application/json": {
+                              "properties": [
+                                {
+                                  "name": "case_id",
+                                  "type": "string",
+                                  "value": "case_id_in_sys"
+                                },
+                                {
+                                  "name": "case_number",
+                                  "type": "string",
+                                  "value": "case_num_XYZ"
+                                }
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                },
+                "type": "RETURN_CONTROL"
+              }
+            },
+            "traceId": "533bc7a2-91c5-4f88-bff2-c64b17913201-routing-0",
+            "type": "AGENT_COLLABORATOR"
+          }
+        }
+      }
+    ],
+    "metadata": {
+      "resourceAttributes": {
+        "telemetry.sdk.language": "python",
+        "telemetry.sdk.name": "opentelemetry",
+        "telemetry.sdk.version": "1.39.1",
+        "langfuse.environment": "staging",
+        "langfuse.release": "9.0 Hotfix",
+        "service.name": "unknown_service"
+      },
+      "scope": {
+        "name": "langfuse-sdk",
+        "version": "3.7.0",
+        "attributes": {
+          "public_key": "pk1"
+        }
+      }
+    },
+    "latency": 15.684,
+    "usage": {
+      "promptTokens": 26468,
+      "completionTokens": 325,
+      "totalTokens": 26793
+    },
+    "inputCost": "0.079404",
+    "outputCost": "0.004875",
+    "totalCost": "0.084279",
+    "level": "DEFAULT",
+    "errorCount": 0,
+    "warningCount": 0,
+    "defaultCount": 1,
+    "debugCount": 0,
+    "observationCount": 1,
+    "inputTokens": 26468,
+    "outputTokens": 325,
+    "totalTokens": 26793
+  },
+  {
+    "id": "e1cfc316145cc7fb0efe1cecbf5e4c9d",
+    "projectId": "cmgt9niok000wvo07s9ywpqc3",
+    "timestamp": "2026-02-13T09:49:40.287Z",
+    "tags": [],
+    "bookmarked": false,
+    "name": "Invoke Agent",
+    "release": "9.0 Hotfix",
+    "version": null,
+    "userId": "username@email.com",
+    "environment": "staging",
+    "sessionId": "5bef0490-08c0-11f1-907e-cdcae5aa3470",
+    "public": false,
+    "input": "please help me to attach a file for this case",
+    "output": [
+      {
+        "type": "guardrail_trace",
+        "trace": {
+          "action": "NONE",
+          "inputAssessments": [{}],
+          "metadata": {
+            "clientRequestId": "021d1fb2-d96f-4005-8bff-d92bdbcf38df",
+            "endTime": "2026-02-13T09:49:41.422652Z",
+            "startTime": "2026-02-13T09:49:40.688682Z",
+            "totalTimeMs": 734
+          },
+          "traceId": "ae8c22ef-81cd-4269-b636-25aed6cf281c-guardrail-pre-0"
+        }
+      },
+      {
+        "type": "routing_classifier_trace",
+        "trace": {
+          "modelInvocationInput": {
+            "foundationModel": "model_name",
+            "inferenceConfiguration": {
+              "maximumLength": 512,
+              "stopSequences": ["\n\nHuman:"],
+              "temperature": 0,
+              "topK": 250,
+              "topP": 1
+            },
+            "text": "Input Prompt + Context  +text user sent",
+            "traceId": "ae8c22ef-81cd-4269-b636-25aed6cf281c-routing-0",
+            "type": "ROUTING_CLASSIFIER"
+          }
+        }
+      },
+      {
+        "type": "routing_classifier_trace",
+        "trace": {
+          "modelInvocationOutput": {
+            "metadata": {
+              "clientRequestId": "1ca4b44b-6c9c-42b3-82c1-c7ec7f5de2a5",
+              "endTime": "2026-02-13T09:49:43.182241Z",
+              "startTime": "2026-02-13T09:49:41.425603Z",
+              "totalTimeMs": 1757,
+              "usage": { "inputTokens": 4119, "outputTokens": 22 }
+            },
+            "rawResponse": {
+              "content": "{\"stop_sequence\":null,\"type\":\"message\",\"id\":\"msg_bdrk_01TR83AMK8VvXs4rTX8E9Cpw\",\"content\":[{\"imageSource\":null,\"reasoningTextSignature\":null,\"reasoningRedactedContent\":null,\"name\":null,\"type\":\"text\",\"id\":null,\"source\":null,\"input\":null,\"is_error\":null,\"text\":\"<a>Case-Management2-Collaborator</a>\",\"content\":null,\"reasoningText\":null,\"tool_use_id\":null,\"guardContent\":null}],\"model\":\"model_name\",\"usage\":{\"input_tokens\":4119,\"output_tokens\":22,\"cache_read_input_tokens\":null,\"cache_creation_input_tokens\":null},\"role\":\"assistant\",\"stop_reason\":\"end_turn\"}"
+            },
+            "traceId": "ae8c22ef-81cd-4269-b636-25aed6cf281c-routing-0"
+          }
+        }
+      },
+      {
+        "type": "routing_classifier_trace",
+        "trace": {
+          "invocationInput": {
+            "agentCollaboratorInvocationInput": {
+              "agentCollaboratorAliasArn": "aws_arn_model_uri",
+              "agentCollaboratorName": "Case-Management2-Collaborator",
+              "input": {
+                "text": "please help me to attach a file for this case",
+                "type": "TEXT"
+              }
+            },
+            "invocationType": "AGENT_COLLABORATOR",
+            "traceId": "ae8c22ef-81cd-4269-b636-25aed6cf281c-routing-0"
+          }
+        }
+      },
+      {
+        "type": "guardrail_trace",
+        "trace": {
+          "action": "NONE",
+          "inputAssessments": [{}],
+          "metadata": {
+            "clientRequestId": "a0b5fdc6-0f7f-4f10-b168-5f537a886828",
+            "endTime": "2026-02-13T09:49:44.453315Z",
+            "startTime": "2026-02-13T09:49:43.697614Z",
+            "totalTimeMs": 756
+          },
+          "traceId": "7e6d2ea9-09c0-4d79-869d-6368729bcc71-guardrail-pre-0"
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "modelInvocationInput": {
+            "foundationModel": "model_name",
+            "inferenceConfiguration": {
+              "maximumLength": 2048,
+              "stopSequences": ["</invoke>", "</answer>", "</error>"],
+              "temperature": 0,
+              "topK": 250,
+              "topP": 1
+            },
+            "text": "Input Prompt + Context  +text user sent",
+            "traceId": "7e6d2ea9-09c0-4d79-869d-6368729bcc71-0",
+            "type": "ORCHESTRATION"
+          }
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "modelInvocationOutput": {
+            "metadata": {
+              "clientRequestId": "fe9b3289-b541-4894-8188-6e42411aeda9",
+              "endTime": "2026-02-13T09:49:49.726391Z",
+              "startTime": "2026-02-13T09:49:44.501484Z",
+              "totalTimeMs": 5225,
+              "usage": { "inputTokens": 8954, "outputTokens": 177 }
+            },
+            "rawResponse": {
+              "content": "{\"stop_sequence\":null,\"type\":\"message\",\"id\":\"msg_bdrk_01UhWx7XXG7UNQY9tf8ucJqN\",\"content\":[{\"imageSource\":null,\"reasoningTextSignature\":null,\"reasoningRedactedContent\":null,\"name\":null,\"type\":\"text\",\"id\":null,\"source\":null,\"input\":null,\"is_error\":null,\"text\":\"<thinking>The user wants to attach a file to the recently created support case. I'll need to engage the Support Case Management Agent to assist with this process.</thinking>\\n\\nCertainly, I'd be happy to help you attach a file to your support case. Let me initiate the process for you.\",\"content\":null,\"reasoningText\":null,\"tool_use_id\":null,\"guardContent\":null},{\"imageSource\":null,\"reasoningTextSignature\":null,\"reasoningRedactedContent\":null,\"name\":\"CommAPI_sendMessage\",\"type\":\"tool_use\",\"id\":\"toolu_bdrk_01L8YnrnvksACXTWsV57KGre\",\"source\":null,\"input\":{\"recipient\":\"SupportCase-Management-Agent\",\"content\":\"The user wants to attach a file to the recently created support case (Case Number: case_num_XYZ). Please provide instructions on how to proceed with file attachment.\"},\"is_error\":null,\"text\":null,\"content\":null,\"reasoningText\":null,\"tool_use_id\":null,\"guardContent\":null}],\"model\":\"model_name\",\"usage\":{\"input_tokens\":8954,\"output_tokens\":177,\"cache_read_input_tokens\":null,\"cache_creation_input_tokens\":null},\"role\":\"assistant\",\"stop_reason\":\"tool_use\"}"
+            },
+            "traceId": "7e6d2ea9-09c0-4d79-869d-6368729bcc71-0"
+          }
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "rationale": {
+            "text": "The user wants to attach a file to the recently created support case. I'll need to engage the Support Case Management Agent to assist with this process.",
+            "traceId": "7e6d2ea9-09c0-4d79-869d-6368729bcc71-0"
+          }
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "invocationInput": {
+            "agentCollaboratorInvocationInput": {
+              "agentCollaboratorAliasArn": "aws_arn_model_uri2",
+              "agentCollaboratorName": "SupportCase-Management-Agent",
+              "input": {
+                "text": "The user wants to attach a file to the recently created support case (Case Number: case_num_XYZ). Please provide instructions on how to proceed with file attachment.",
+                "type": "TEXT"
+              }
+            },
+            "invocationType": "AGENT_COLLABORATOR",
+            "traceId": "7e6d2ea9-09c0-4d79-869d-6368729bcc71-0"
+          }
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "modelInvocationInput": {
+            "foundationModel": "model_name",
+            "inferenceConfiguration": {
+              "maximumLength": 2048,
+              "stopSequences": ["</invoke>", "</answer>", "</error>"],
+              "temperature": 0,
+              "topK": 250,
+              "topP": 1
+            },
+            "text": "Input Prompt + Context  +text user sent",
+            "traceId": "c4d39d83-9d44-40c7-b605-0f8534627001-0",
+            "type": "ORCHESTRATION"
+          }
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "modelInvocationOutput": {
+            "metadata": {
+              "clientRequestId": "0efcac32-107a-4dca-840a-c9536f1295c3",
+              "endTime": "2026-02-13T09:49:54.697167Z",
+              "startTime": "2026-02-13T09:49:50.176988Z",
+              "totalTimeMs": 4521,
+              "usage": { "inputTokens": 10345, "outputTokens": 133 }
+            },
+            "rawResponse": {
+              "content": "{\"stop_sequence\":null,\"type\":\"message\",\"id\":\"msg_bdrk_01S6H3wrCgDZMxm9hVNydSbZ\",\"content\":[{\"imageSource\":null,\"reasoningTextSignature\":null,\"reasoningRedactedContent\":null,\"name\":null,\"type\":\"text\",\"id\":null,\"source\":null,\"input\":null,\"is_error\":null,\"text\":\"<thinking>The user wants to attach a file to the recently created support case. I'll guide them through the process of attaching a file, following the WF3: Case Update & File Attachments workflow. First, I need to verify the case and then provide instructions for file attachment.</thinking>\",\"content\":null,\"reasoningText\":null,\"tool_use_id\":null,\"guardContent\":null},{\"imageSource\":null,\"reasoningTextSignature\":null,\"reasoningRedactedContent\":null,\"name\":\"POST__sfdc_case_management_actions__verifyCase\",\"type\":\"tool_use\",\"id\":\"toolu_bdrk_01Q2BVnAP3fPwGfMPTgrpXsx\",\"source\":null,\"input\":{\"case_number\":\"case_num_XYZ\"},\"is_error\":null,\"text\":null,\"content\":null,\"reasoningText\":null,\"tool_use_id\":null,\"guardContent\":null}],\"model\":\"model_name\",\"usage\":{\"input_tokens\":10345,\"output_tokens\":133,\"cache_read_input_tokens\":null,\"cache_creation_input_tokens\":null},\"role\":\"assistant\",\"stop_reason\":\"tool_use\"}"
+            },
+            "traceId": "c4d39d83-9d44-40c7-b605-0f8534627001-0"
+          }
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "rationale": {
+            "text": "The user wants to attach a file to the recently created support case. I'll guide them through the process of attaching a file, following the WF3: Case Update & File Attachments workflow. First, I need to verify the case and then provide instructions for file attachment.",
+            "traceId": "c4d39d83-9d44-40c7-b605-0f8534627001-0"
+          }
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "invocationInput": {
+            "actionGroupInvocationInput": {
+              "actionGroupName": "case_mgmt_actions",
+              "apiPath": "/case-mgmt/verify-case",
+              "executionType": "LAMBDA",
+              "requestBody": {
+                "content": {
+                  "application/json": [
+                    {
+                      "name": "case_number",
+                      "type": "string",
+                      "value": "case_num_XYZ"
+                    }
+                  ]
+                }
+              },
+              "verb": "post"
+            },
+            "invocationType": "ACTION_GROUP",
+            "traceId": "c4d39d83-9d44-40c7-b605-0f8534627001-0"
+          }
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "observation": {
+            "actionGroupInvocationOutput": {
+              "metadata": {
+                "clientRequestId": "444cedd8-325f-41ab-b553-56adf0a05e12",
+                "endTime": "2026-02-13T09:49:59.833713Z",
+                "startTime": "2026-02-13T09:49:54.704439Z",
+                "totalTimeMs": 5129
+              },
+              "text": "{\"is_valid\": true, \"case_id\": \"case_id_in_sys\", \"case_status\": \"Active\"}"
+            },
+            "traceId": "c4d39d83-9d44-40c7-b605-0f8534627001-0",
+            "type": "ACTION_GROUP"
+          }
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "modelInvocationInput": {
+            "foundationModel": "model_name",
+            "inferenceConfiguration": {
+              "maximumLength": 2048,
+              "stopSequences": ["</invoke>", "</answer>", "</error>"],
+              "temperature": 0,
+              "topK": 250,
+              "topP": 1
+            },
+            "text": "Input Prompt + Context  +text user sent",
+            "traceId": "c4d39d83-9d44-40c7-b605-0f8534627001-1",
+            "type": "ORCHESTRATION"
+          }
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "modelInvocationOutput": {
+            "metadata": {
+              "clientRequestId": "4d059995-09cf-408b-be4d-2076cd3f1bbc",
+              "endTime": "2026-02-13T09:50:07.922995Z",
+              "startTime": "2026-02-13T09:49:59.841124Z",
+              "totalTimeMs": 8081,
+              "usage": { "inputTokens": 10522, "outputTokens": 323 }
+            },
+            "rawResponse": {
+              "content": "{\"stop_sequence\":\"</answer>\",\"type\":\"message\",\"id\":\"msg_bdrk_019oMn69J7gSuMUxTDKNwJsR\",\"content\":[{\"imageSource\":null,\"reasoningTextSignature\":null,\"reasoningRedactedContent\":null,\"name\":null,\"type\":\"text\",\"id\":null,\"source\":null,\"input\":null,\"is_error\":null,\"text\":\"<thinking>The case has been verified successfully. Now, I'll provide instructions to the user for attaching a file to the case.</thinking>\\n\\n<answer>Certainly! I'd be happy to help you attach a file to your recently created support case (Case Number: case_num_XYZ). Before we proceed, please note the following file attachment guidelines:\\n\\nSupported file formats include:\\n- Documents: .csv, .doc, .docx, .dot, .pdf, .ppt, .pptx, .rtf, .txt, .xls, .xlsx\\n- Images: .bmp, .gif, .jpeg, .jpg, .png, .tif, .tiff\\n- Other: .js, .mdb, .mp3, .ogg, .wav, .vi, .mov, .mpeg, .mpg, .swf, .gpg, .zip, .css, .htm, .html, .xml, .xsl, .xslt\\n\\nThe maximum file size allowed is 2GB.\\n\\nTo attach a file to your case:\\n\\n1. Prepare the file you wish to attach, ensuring it meets the format and size requirements.\\n2. Let me know when you're ready to proceed with the file attachment.\\n3. I will then initiate the file attachment process, which will provide you with instructions on how to upload your file securely.\\n\\nAre you ready to proceed with attaching a file to your case?\",\"content\":null,\"reasoningText\":null,\"tool_use_id\":null,\"guardContent\":null}],\"model\":\"model_name\",\"usage\":{\"input_tokens\":10522,\"output_tokens\":323,\"cache_read_input_tokens\":null,\"cache_creation_input_tokens\":null},\"role\":\"assistant\",\"stop_reason\":\"stop_sequence\"}"
+            },
+            "traceId": "c4d39d83-9d44-40c7-b605-0f8534627001-1"
+          }
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "rationale": {
+            "text": "The case has been verified successfully. Now, I'll provide instructions to the user for attaching a file to the case.",
+            "traceId": "c4d39d83-9d44-40c7-b605-0f8534627001-1"
+          }
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "observation": {
+            "finalResponse": {
+              "metadata": {
+                "endTime": "2026-02-13T09:50:08.044063Z",
+                "operationTotalTimeMs": 18182,
+                "startTime": "2026-02-13T09:49:49.862222Z"
+              },
+              "text": "Certainly! I'd be happy to help you attach a file to your recently created support case (Case Number: case_num_XYZ). Before we proceed, please note the following file attachment guidelines:\n\nSupported file formats include:\n- Documents: .csv, .doc, .docx, .dot, .pdf, .ppt, .pptx, .rtf, .txt, .xls, .xlsx\n- Images: .bmp, .gif, .jpeg, .jpg, .png, .tif, .tiff\n- Other: .js, .mdb, .mp3, .ogg, .wav, .vi, .mov, .mpeg, .mpg, .swf, .gpg, .zip, .css, .htm, .html, .xml, .xsl, .xslt\n\nThe maximum file size allowed is 2GB.\n\nTo attach a file to your case:\n\n1. Prepare the file you wish to attach, ensuring it meets the format and size requirements.\n2. Let me know when you're ready to proceed with the file attachment.\n3. I will then initiate the file attachment process, which will provide you with instructions on how to upload your file securely.\n\nAre you ready to proceed with attaching a file to your case?"
+            },
+            "traceId": "c4d39d83-9d44-40c7-b605-0f8534627001-1",
+            "type": "FINISH"
+          }
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "observation": {
+            "agentCollaboratorInvocationOutput": {
+              "agentCollaboratorAliasArn": "aws_arn_model_uri2",
+              "agentCollaboratorName": "SupportCase-Management-Agent",
+              "metadata": {
+                "clientRequestId": "c4d39d83-9d44-40c7-b605-0f8534627001",
+                "endTime": "2026-02-13T09:50:08.120239Z",
+                "startTime": "2026-02-13T09:49:49.777651Z",
+                "totalTimeMs": 18343
+              },
+              "output": {
+                "text": "Certainly! I'd be happy to help you attach a file to your recently created support case (Case Number: case_num_XYZ). Before we proceed, please note the following file attachment guidelines:\n\nSupported file formats include:\n- Documents: .csv, .doc, .docx, .dot, .pdf, .ppt, .pptx, .rtf, .txt, .xls, .xlsx\n- Images: .bmp, .gif, .jpeg, .jpg, .png, .tif, .tiff\n- Other: .js, .mdb, .mp3, .ogg, .wav, .vi, .mov, .mpeg, .mpg, .swf, .gpg, .zip, .css, .htm, .html, .xml, .xsl, .xslt\n\nThe maximum file size allowed is 2GB.\n\nTo attach a file to your case:\n\n1. Prepare the file you wish to attach, ensuring it meets the format and size requirements.\n2. Let me know when you're ready to proceed with the file attachment.\n3. I will then initiate the file attachment process, which will provide you with instructions on how to upload your file securely.\n\nAre you ready to proceed with attaching a file to your case?",
+                "type": "TEXT"
+              }
+            },
+            "traceId": "7e6d2ea9-09c0-4d79-869d-6368729bcc71-0",
+            "type": "AGENT_COLLABORATOR"
+          }
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "modelInvocationInput": {
+            "foundationModel": "model_name",
+            "inferenceConfiguration": {
+              "maximumLength": 2048,
+              "stopSequences": ["</invoke>", "</answer>", "</error>"],
+              "temperature": 0,
+              "topK": 250,
+              "topP": 1
+            },
+            "text": "Input Prompt + Context  +text user sent",
+            "traceId": "7e6d2ea9-09c0-4d79-869d-6368729bcc71-1",
+            "type": "ORCHESTRATION"
+          }
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "modelInvocationOutput": {
+            "metadata": {
+              "clientRequestId": "3ce831f9-b770-4103-98dd-00639364dbaf",
+              "endTime": "2026-02-13T09:50:20.844392Z",
+              "startTime": "2026-02-13T09:50:08.169524Z",
+              "totalTimeMs": 12675,
+              "usage": { "inputTokens": 9399, "outputTokens": 693 }
+            },
+            "rawResponse": {
+              "content": "{\"stop_sequence\":\"</answer>\",\"type\":\"message\",\"id\":\"msg_bdrk_01PBZdA2npQpmvWzebXA7YYY\",\"content\":[{\"imageSource\":null,\"reasoningTextSignature\":null,\"reasoningRedactedContent\":null,\"name\":null,\"type\":\"text\",\"id\":null,\"source\":null,\"input\":null,\"is_error\":null,\"text\":\"<thinking>The Support Case Management Agent has provided the file attachment guidelines and process. I'll relay this information to the user and ask if they're ready to proceed.</thinking>\\n\\nCertainly! I'd be happy to help you attach a file to your recently created support case (Case Number: case_num_XYZ). Before we proceed, please note the following important file attachment guidelines:\\n\\nSupported file formats include:\\n- Documents: .csv, .doc, .docx, .dot, .pdf, .ppt, .pptx, .rtf, .txt, .xls, .xlsx\\n- Images: .bmp, .gif, .jpeg, .jpg, .png, .tif, .tiff\\n- Other: .js, .mdb, .mp3, .ogg, .wav, .vi, .mov, .mpeg, .mpg, .swf, .gpg, .zip, .css, .htm, .html, .xml, .xsl, .xslt\\n\\nThe maximum file size allowed is 2GB.\\n\\nTo attach a file to your case, please follow these steps:\\n\\n1. Prepare the file you wish to attach, ensuring it meets the format and size requirements mentioned above.\\n2. Let me know when you're ready to proceed with the file attachment.\\n3. Once you confirm you're ready, I will initiate the file attachment process, which will provide you with instructions on how to upload your file securely.\\n\\nAre you ready to proceed with attaching a file to your case? If so, please confirm, and I'll start the process for you.\\n\\n<thinking>I'll wait for the user's confirmation before proceeding with the file attachment process.</thinking><answer>Certainly! I'd be happy to help you attach a file to your recently created support case (Case Number: case_num_XYZ). Before we proceed, please note the following important file attachment guidelines:\\n\\nSupported file formats include:\\n- Documents: .csv, .doc, .docx, .dot, .pdf, .ppt, .pptx, .rtf, .txt, .xls, .xlsx\\n- Images: .bmp, .gif, .jpeg, .jpg, .png, .tif, .tiff\\n- Other: .js, .mdb, .mp3, .ogg, .wav, .vi, .mov, .mpeg, .mpg, .swf, .gpg, .zip, .css, .htm, .html, .xml, .xsl, .xslt\\n\\nThe maximum file size allowed is 2GB.\\n\\nTo attach a file to your case, please follow these steps:\\n\\n1. Prepare the file you wish to attach, ensuring it meets the format and size requirements mentioned above.\\n2. Let me know when you're ready to proceed with the file attachment.\\n3. Once you confirm you're ready, I will initiate the file attachment process, which will provide you with instructions on how to upload your file securely.\\n\\nAre you ready to proceed with attaching a file to your case? If so, please confirm, and I'll start the process for you.\",\"content\":null,\"reasoningText\":null,\"tool_use_id\":null,\"guardContent\":null}],\"model\":\"model_name\",\"usage\":{\"input_tokens\":9399,\"output_tokens\":693,\"cache_read_input_tokens\":null,\"cache_creation_input_tokens\":null},\"role\":\"assistant\",\"stop_reason\":\"stop_sequence\"}"
+            },
+            "traceId": "7e6d2ea9-09c0-4d79-869d-6368729bcc71-1"
+          }
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "rationale": {
+            "text": "The Support Case Management Agent has provided the file attachment guidelines and process. I'll relay this information to the user and ask if they're ready to proceed.</thinking>\n\nCertainly! I'd be happy to help you attach a file to your recently created support case (Case Number: case_num_XYZ). Before we proceed, please note the following important file attachment guidelines:\n\nSupported file formats include:\n- Documents: .csv, .doc, .docx, .dot, .pdf, .ppt, .pptx, .rtf, .txt, .xls, .xlsx\n- Images: .bmp, .gif, .jpeg, .jpg, .png, .tif, .tiff\n- Other: .js, .mdb, .mp3, .ogg, .wav, .vi, .mov, .mpeg, .mpg, .swf, .gpg, .zip, .css, .htm, .html, .xml, .xsl, .xslt\n\nThe maximum file size allowed is 2GB.\n\nTo attach a file to your case, please follow these steps:\n\n1. Prepare the file you wish to attach, ensuring it meets the format and size requirements mentioned above.\n2. Let me know when you're ready to proceed with the file attachment.\n3. Once you confirm you're ready, I will initiate the file attachment process, which will provide you with instructions on how to upload your file securely.\n\nAre you ready to proceed with attaching a file to your case? If so, please confirm, and I'll start the process for you.\n\n<thinking>I'll wait for the user's confirmation before proceeding with the file attachment process.",
+            "traceId": "7e6d2ea9-09c0-4d79-869d-6368729bcc71-1"
+          }
+        }
+      },
+      {
+        "type": "guardrail_trace",
+        "trace": {
+          "action": "NONE",
+          "metadata": {
+            "clientRequestId": "7d3e10c7-5bc3-4b33-849c-52566aac748d",
+            "endTime": "2026-02-13T09:50:21.654408Z",
+            "startTime": "2026-02-13T09:50:21.025358Z",
+            "totalTimeMs": 629
+          },
+          "outputAssessments": [{}],
+          "traceId": "7e6d2ea9-09c0-4d79-869d-6368729bcc71-guardrail-post-0"
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "observation": {
+            "finalResponse": {
+              "metadata": {
+                "endTime": "2026-02-13T09:50:21.716435Z",
+                "operationTotalTimeMs": 38414,
+                "startTime": "2026-02-13T09:49:43.302554Z"
+              },
+              "text": "Certainly! I'd be happy to help you attach a file to your recently created support case (Case Number: case_num_XYZ). Before we proceed, please note the following important file attachment guidelines:\n\nSupported file formats include:\n- Documents: .csv, .doc, .docx, .dot, .pdf, .ppt, .pptx, .rtf, .txt, .xls, .xlsx\n- Images: .bmp, .gif, .jpeg, .jpg, .png, .tif, .tiff\n- Other: .js, .mdb, .mp3, .ogg, .wav, .vi, .mov, .mpeg, .mpg, .swf, .gpg, .zip, .css, .htm, .html, .xml, .xsl, .xslt\n\nThe maximum file size allowed is 2GB.\n\nTo attach a file to your case, please follow these steps:\n\n1. Prepare the file you wish to attach, ensuring it meets the format and size requirements mentioned above.\n2. Let me know when you're ready to proceed with the file attachment.\n3. Once you confirm you're ready, I will initiate the file attachment process, which will provide you with instructions on how to upload your file securely.\n\nAre you ready to proceed with attaching a file to your case? If so, please confirm, and I'll start the process for you."
+            },
+            "traceId": "7e6d2ea9-09c0-4d79-869d-6368729bcc71-1",
+            "type": "FINISH"
+          }
+        }
+      },
+      {
+        "type": "routing_classifier_trace",
+        "trace": {
+          "observation": {
+            "agentCollaboratorInvocationOutput": {
+              "agentCollaboratorAliasArn": "aws_arn_model_uri",
+              "agentCollaboratorName": "Case-Management2-Collaborator",
+              "metadata": {
+                "clientRequestId": "7e6d2ea9-09c0-4d79-869d-6368729bcc71",
+                "endTime": "2026-02-13T09:50:21.795449Z",
+                "startTime": "2026-02-13T09:49:43.197585Z",
+                "totalTimeMs": 38598
+              },
+              "output": {
+                "text": "Certainly! I'd be happy to help you attach a file to your recently created support case (Case Number: case_num_XYZ). Before we proceed, please note the following important file attachment guidelines:\n\nSupported file formats include:\n- Documents: .csv, .doc, .docx, .dot, .pdf, .ppt, .pptx, .rtf, .txt, .xls, .xlsx\n- Images: .bmp, .gif, .jpeg, .jpg, .png, .tif, .tiff\n- Other: .js, .mdb, .mp3, .ogg, .wav, .vi, .mov, .mpeg, .mpg, .swf, .gpg, .zip, .css, .htm, .html, .xml, .xsl, .xslt\n\nThe maximum file size allowed is 2GB.\n\nTo attach a file to your case, please follow these steps:\n\n1. Prepare the file you wish to attach, ensuring it meets the format and size requirements mentioned above.\n2. Let me know when you're ready to proceed with the file attachment.\n3. Once you confirm you're ready, I will initiate the file attachment process, which will provide you with instructions on how to upload your file securely.\n\nAre you ready to proceed with attaching a file to your case? If so, please confirm, and I'll start the process for you.",
+                "type": "TEXT"
+              }
+            },
+            "traceId": "ae8c22ef-81cd-4269-b636-25aed6cf281c-routing-0",
+            "type": "AGENT_COLLABORATOR"
+          }
+        }
+      },
+      {
+        "type": "routing_classifier_trace",
+        "trace": {
+          "observation": {
+            "finalResponse": {
+              "metadata": {
+                "endTime": "2026-02-13T09:50:21.800572Z",
+                "operationTotalTimeMs": 41467,
+                "startTime": "2026-02-13T09:49:40.333570Z"
+              },
+              "text": "Certainly! I'd be happy to help you attach a file to your recently created support case (Case Number: case_num_XYZ). Before we proceed, please note the following important file attachment guidelines:\n\nSupported file formats include:\n- Documents: .csv, .doc, .docx, .dot, .pdf, .ppt, .pptx, .rtf, .txt, .xls, .xlsx\n- Images: .bmp, .gif, .jpeg, .jpg, .png, .tif, .tiff\n- Other: .js, .mdb, .mp3, .ogg, .wav, .vi, .mov, .mpeg, .mpg, .swf, .gpg, .zip, .css, .htm, .html, .xml, .xsl, .xslt\n\nThe maximum file size allowed is 2GB.\n\nTo attach a file to your case, please follow these steps:\n\n1. Prepare the file you wish to attach, ensuring it meets the format and size requirements mentioned above.\n2. Let me know when you're ready to proceed with the file attachment.\n3. Once you confirm you're ready, I will initiate the file attachment process, which will provide you with instructions on how to upload your file securely.\n\nAre you ready to proceed with attaching a file to your case? If so, please confirm, and I'll start the process for you."
+            },
+            "traceId": "ae8c22ef-81cd-4269-b636-25aed6cf281c-routing-0",
+            "type": "FINISH"
+          }
+        }
+      },
+      {
+        "type": "guardrail_trace",
+        "trace": {
+          "action": "NONE",
+          "metadata": {
+            "clientRequestId": "dcc3a258-6ae8-4243-80f0-74ed4529a14c",
+            "endTime": "2026-02-13T09:50:22.690753Z",
+            "startTime": "2026-02-13T09:50:21.967549Z",
+            "totalTimeMs": 723
+          },
+          "outputAssessments": [{}],
+          "traceId": "ae8c22ef-81cd-4269-b636-25aed6cf281c-guardrail-post-0"
+        }
+      },
+      {
+        "type": "chunk",
+        "chunk": {
+          "bytes": "Certainly! I'd be happy to help you attach a file to your recently created support case (Case Number: case_num_XYZ). Before we proceed, please note the following important file attachment guidelines:\n\nSupported file formats include:\n- Documents: .csv, .doc, .docx, .dot, .pdf, .ppt, .pptx, .rtf, .txt, .xls, .xlsx\n- Images: .bmp, .gif, .jpeg, .jpg, .png, .tif, .tiff\n- Other: .js, .mdb, .mp3, .ogg, .wav, .vi, .mov, .mpeg, .mpg, .swf, .gpg, .zip, .css, .htm, .html, .xml, .xsl, .xslt\n\nThe maximum file size allowed is 2GB.\n\nTo attach a file to your case, please follow these steps:\n\n1. Prepare the file you wish to attach, ensuring it meets the format and size requirements mentioned above.\n2. Let me know when you're ready to proceed with the file attachment.\n3. Once you confirm you're ready, I will initiate the file attachment process, which will provide you with instructions on how to upload your file securely.\n\nAre you ready to proceed with attaching a file to your case? If so, please confirm, and I'll start the process for you."
+        }
+      }
+    ],
+    "metadata": {
+      "resourceAttributes": {
+        "telemetry.sdk.language": "python",
+        "telemetry.sdk.name": "opentelemetry",
+        "telemetry.sdk.version": "1.39.1",
+        "langfuse.environment": "staging",
+        "langfuse.release": "9.0 Hotfix",
+        "service.name": "unknown_service"
+      },
+      "scope": {
+        "name": "langfuse-sdk",
+        "version": "3.7.0",
+        "attributes": {
+          "public_key": "pk1"
+        }
+      }
+    },
+    "latency": 42.53,
+    "usage": {
+      "promptTokens": 43339,
+      "completionTokens": 1348,
+      "totalTokens": 44687
+    },
+    "inputCost": "0.130017",
+    "outputCost": "0.02022",
+    "totalCost": "0.150236999999",
+    "level": "DEFAULT",
+    "errorCount": 0,
+    "warningCount": 0,
+    "defaultCount": 1,
+    "debugCount": 0,
+    "observationCount": 1,
+    "inputTokens": 43339,
+    "outputTokens": 1348,
+    "totalTokens": 44687
+  },
+  {
+    "id": "f18779ccb5fd17a66be0609de7635f13",
+    "projectId": "cmgt9niok000wvo07s9ywpqc3",
+    "timestamp": "2026-02-13T09:46:11.102Z",
+    "tags": [],
+    "bookmarked": false,
+    "name": "Invoke Agent",
+    "release": "9.0 Hotfix",
+    "version": null,
+    "userId": "username@email.com",
+    "environment": "staging",
+    "sessionId": "5bef0490-08c0-11f1-907e-cdcae5aa3470",
+    "public": false,
+    "input": "A complete network outage\nSoftware version: n/a",
+    "output": [
+      {
+        "type": "guardrail_trace",
+        "trace": {
+          "action": "NONE",
+          "inputAssessments": [{}],
+          "metadata": {
+            "clientRequestId": "e411e791-09ad-4660-83cd-c2c20c5283e5",
+            "endTime": "2026-02-13T09:46:12.255327Z",
+            "startTime": "2026-02-13T09:46:11.559386Z",
+            "totalTimeMs": 696
+          },
+          "traceId": "022c7205-d6ae-44b9-b05a-2b0d33593b9b-guardrail-pre-0"
+        }
+      },
+      {
+        "type": "routing_classifier_trace",
+        "trace": {
+          "modelInvocationInput": {
+            "foundationModel": "model_name",
+            "inferenceConfiguration": {
+              "maximumLength": 512,
+              "stopSequences": ["\n\nHuman:"],
+              "temperature": 0,
+              "topK": 250,
+              "topP": 1
+            },
+            "text": "Input Prompt + Context  +text user sent",
+            "traceId": "022c7205-d6ae-44b9-b05a-2b0d33593b9b-routing-0",
+            "type": "ROUTING_CLASSIFIER"
+          }
+        }
+      },
+      {
+        "type": "routing_classifier_trace",
+        "trace": {
+          "modelInvocationOutput": {
+            "metadata": {
+              "clientRequestId": "7b5b23b4-6a33-4a59-b895-f133b510f4c6",
+              "endTime": "2026-02-13T09:46:13.394640Z",
+              "startTime": "2026-02-13T09:46:12.258274Z",
+              "totalTimeMs": 1136,
+              "usage": { "inputTokens": 3867, "outputTokens": 14 }
+            },
+            "rawResponse": {
+              "content": "{\"stop_sequence\":null,\"type\":\"message\",\"id\":\"msg_bdrk_017BHU3WGpFu23XJ4ohobndB\",\"content\":[{\"reasoningTextSignature\":null,\"reasoningRedactedContent\":null,\"imageSource\":null,\"name\":null,\"type\":\"text\",\"id\":null,\"source\":null,\"input\":null,\"is_error\":null,\"text\":\"<a>keep_previous_agent</a>\",\"content\":null,\"reasoningText\":null,\"tool_use_id\":null,\"guardContent\":null}],\"model\":\"model_name\",\"usage\":{\"input_tokens\":3867,\"output_tokens\":14,\"cache_read_input_tokens\":null,\"cache_creation_input_tokens\":null},\"role\":\"assistant\",\"stop_reason\":\"end_turn\"}"
+            },
+            "traceId": "022c7205-d6ae-44b9-b05a-2b0d33593b9b-routing-0"
+          }
+        }
+      },
+      {
+        "type": "routing_classifier_trace",
+        "trace": {
+          "invocationInput": {
+            "agentCollaboratorInvocationInput": {
+              "agentCollaboratorAliasArn": "aws_arn_model_uri",
+              "agentCollaboratorName": "Case-Management2-Collaborator",
+              "input": {
+                "text": "A complete network outage\nSoftware version: n/a",
+                "type": "TEXT"
+              }
+            },
+            "invocationType": "AGENT_COLLABORATOR",
+            "traceId": "022c7205-d6ae-44b9-b05a-2b0d33593b9b-routing-0"
+          }
+        }
+      },
+      {
+        "type": "guardrail_trace",
+        "trace": {
+          "action": "NONE",
+          "inputAssessments": [{}],
+          "metadata": {
+            "clientRequestId": "22fe89b0-94a7-42f4-b364-3f82f0729e83",
+            "endTime": "2026-02-13T09:46:14.470167Z",
+            "startTime": "2026-02-13T09:46:13.801853Z",
+            "totalTimeMs": 669
+          },
+          "traceId": "61af2a87-a376-4ceb-9a1f-61daa5e4ce28-guardrail-pre-0"
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "modelInvocationInput": {
+            "foundationModel": "model_name",
+            "inferenceConfiguration": {
+              "maximumLength": 2048,
+              "stopSequences": ["</invoke>", "</answer>", "</error>"],
+              "temperature": 0,
+              "topK": 250,
+              "topP": 1
+            },
+            "text": "Input Prompt + Context  +text user sent",
+            "traceId": "61af2a87-a376-4ceb-9a1f-61daa5e4ce28-0",
+            "type": "ORCHESTRATION"
+          }
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "modelInvocationOutput": {
+            "metadata": {
+              "clientRequestId": "c541beb1-a28a-4771-8f47-3b00c0aa53e1",
+              "endTime": "2026-02-13T09:46:20.527761Z",
+              "startTime": "2026-02-13T09:46:14.554381Z",
+              "totalTimeMs": 5973,
+              "usage": { "inputTokens": 7890, "outputTokens": 175 }
+            },
+            "rawResponse": {
+              "content": "{\"stop_sequence\":null,\"type\":\"message\",\"id\":\"msg_bdrk_015sVXeWaZtSKZBvhNZiQdG5\",\"content\":[{\"imageSource\":null,\"reasoningTextSignature\":null,\"reasoningRedactedContent\":null,\"name\":null,\"type\":\"text\",\"id\":null,\"source\":null,\"input\":null,\"is_error\":null,\"text\":\"<thinking>The user has provided the impact level and indicated that the software version is not applicable. I'll now pass this information to the Support Case Management Agent to finalize the case creation.</thinking>\",\"content\":null,\"reasoningText\":null,\"tool_use_id\":null,\"guardContent\":null},{\"imageSource\":null,\"reasoningTextSignature\":null,\"reasoningRedactedContent\":null,\"name\":\"CommAPI_sendMessage\",\"type\":\"tool_use\",\"id\":\"toolu_bdrk_0122VXdhoecTrXf19fWLJRfj\",\"source\":null,\"input\":{\"recipient\":\"SupportCase-Management-Agent\",\"content\":\"The user has provided the following information for the support case:\\n\\nSubject: \\\"Network problem occurs intermittently\\\"\\nImpact: A complete network outage\\nSoftware version: n/a (not applicable)\\n\\nPlease proceed with creating the support case using this information.\"},\"is_error\":null,\"text\":null,\"content\":null,\"reasoningText\":null,\"tool_use_id\":null,\"guardContent\":null}],\"model\":\"model_name\",\"usage\":{\"input_tokens\":7890,\"output_tokens\":175,\"cache_read_input_tokens\":null,\"cache_creation_input_tokens\":null},\"role\":\"assistant\",\"stop_reason\":\"tool_use\"}"
+            },
+            "traceId": "61af2a87-a376-4ceb-9a1f-61daa5e4ce28-0"
+          }
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "rationale": {
+            "text": "The user has provided the impact level and indicated that the software version is not applicable. I'll now pass this information to the Support Case Management Agent to finalize the case creation.",
+            "traceId": "61af2a87-a376-4ceb-9a1f-61daa5e4ce28-0"
+          }
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "invocationInput": {
+            "agentCollaboratorInvocationInput": {
+              "agentCollaboratorAliasArn": "aws_arn_model_uri2",
+              "agentCollaboratorName": "SupportCase-Management-Agent",
+              "input": {
+                "text": "The user has provided the following information for the support case:\n\nSubject: \"Network problem occurs intermittently\"\nImpact: A complete network outage\nSoftware version: n/a (not applicable)\n\nPlease proceed with creating the support case using this information.",
+                "type": "TEXT"
+              }
+            },
+            "invocationType": "AGENT_COLLABORATOR",
+            "traceId": "61af2a87-a376-4ceb-9a1f-61daa5e4ce28-0"
+          }
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "modelInvocationInput": {
+            "foundationModel": "model_name",
+            "inferenceConfiguration": {
+              "maximumLength": 2048,
+              "stopSequences": ["</invoke>", "</answer>", "</error>"],
+              "temperature": 0,
+              "topK": 250,
+              "topP": 1
+            },
+            "text": "Input Prompt + Context  +text user sent",
+            "traceId": "597894a8-a6b2-49ec-8a8e-df6ca31ef56c-0",
+            "type": "ORCHESTRATION"
+          }
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "modelInvocationOutput": {
+            "metadata": {
+              "clientRequestId": "fff32b6b-649a-4e45-b7b3-ab053e1a5525",
+              "endTime": "2026-02-13T09:46:28.182041Z",
+              "startTime": "2026-02-13T09:46:20.909072Z",
+              "totalTimeMs": 7273,
+              "usage": { "inputTokens": 9376, "outputTokens": 186 }
+            },
+            "rawResponse": {
+              "content": "{\"stop_sequence\":null,\"type\":\"message\",\"id\":\"msg_bdrk_0165bpiLtogVhLgSiFRGb4cy\",\"content\":[{\"imageSource\":null,\"reasoningTextSignature\":null,\"reasoningRedactedContent\":null,\"name\":null,\"type\":\"text\",\"id\":null,\"source\":null,\"input\":null,\"is_error\":null,\"text\":\"<thinking>Thank you for providing the necessary information. I will now proceed to create the support case using the details provided by the user. I'll use the POST__sfdc_case_management_actions__createCase function to create the case.</thinking>\",\"content\":null,\"reasoningText\":null,\"guardContent\":null,\"tool_use_id\":null},{\"imageSource\":null,\"reasoningTextSignature\":null,\"reasoningRedactedContent\":null,\"name\":\"POST__sfdc_case_management_actions__createCase\",\"type\":\"tool_use\",\"id\":\"toolu_bdrk_01BGoF76vMEnDnZPDz76en6J\",\"source\":null,\"input\":{\"subject\":\"Network problem occurs intermittently\",\"issue_desc\":\"Network problem occurs intermittently\",\"network_impact\":1,\"software_version\":\"n/a\"},\"is_error\":null,\"text\":null,\"content\":null,\"reasoningText\":null,\"guardContent\":null,\"tool_use_id\":null}],\"model\":\"model_name\",\"usage\":{\"input_tokens\":9376,\"output_tokens\":186,\"cache_read_input_tokens\":null,\"cache_creation_input_tokens\":null},\"role\":\"assistant\",\"stop_reason\":\"tool_use\"}"
+            },
+            "traceId": "597894a8-a6b2-49ec-8a8e-df6ca31ef56c-0"
+          }
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "rationale": {
+            "text": "Thank you for providing the necessary information. I will now proceed to create the support case using the details provided by the user. I'll use the POST__sfdc_case_management_actions__createCase function to create the case.",
+            "traceId": "597894a8-a6b2-49ec-8a8e-df6ca31ef56c-0"
+          }
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "invocationInput": {
+            "actionGroupInvocationInput": {
+              "actionGroupName": "case_mgmt_actions",
+              "apiPath": "/case-mgmt/create-case",
+              "executionType": "LAMBDA",
+              "requestBody": {
+                "content": {
+                  "application/json": [
+                    {
+                      "name": "subject",
+                      "type": "string",
+                      "value": "Network problem occurs intermittently"
+                    },
+                    {
+                      "name": "issue_desc",
+                      "type": "string",
+                      "value": "Network problem occurs intermittently"
+                    },
+                    {
+                      "name": "software_version",
+                      "type": "string",
+                      "value": "n/a"
+                    },
+                    {
+                      "name": "network_impact",
+                      "type": "integer",
+                      "value": "1"
+                    }
+                  ]
+                }
+              },
+              "verb": "post"
+            },
+            "invocationType": "ACTION_GROUP",
+            "traceId": "597894a8-a6b2-49ec-8a8e-df6ca31ef56c-0"
+          }
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "observation": {
+            "actionGroupInvocationOutput": {
+              "metadata": {
+                "clientRequestId": "86dae15d-3b65-4391-9293-e5b5f4680f1a",
+                "endTime": "2026-02-13T09:46:40.963264Z",
+                "startTime": "2026-02-13T09:46:28.189020Z",
+                "totalTimeMs": 12774
+              },
+              "text": "{\"case_number\": \"case_num_XYZ\", \"case_id\": \"case_id_in_sys\", \"case_details_page_url\": \"url\"}"
+            },
+            "traceId": "597894a8-a6b2-49ec-8a8e-df6ca31ef56c-0",
+            "type": "ACTION_GROUP"
+          }
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "modelInvocationInput": {
+            "foundationModel": "model_name",
+            "inferenceConfiguration": {
+              "maximumLength": 2048,
+              "stopSequences": ["</invoke>", "</answer>", "</error>"],
+              "temperature": 0,
+              "topK": 250,
+              "topP": 1
+            },
+            "text": "Input Prompt + Context  +text user sent",
+            "traceId": "597894a8-a6b2-49ec-8a8e-df6ca31ef56c-1",
+            "type": "ORCHESTRATION"
+          }
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "modelInvocationOutput": {
+            "metadata": {
+              "clientRequestId": "31719500-1f56-4ef0-9dc0-55d0fcbe07a3",
+              "endTime": "2026-02-13T09:46:46.492342Z",
+              "startTime": "2026-02-13T09:46:40.969852Z",
+              "totalTimeMs": 5523,
+              "usage": { "inputTokens": 9659, "outputTokens": 188 }
+            },
+            "rawResponse": {
+              "content": "{\"stop_sequence\":\"</answer>\",\"type\":\"message\",\"id\":\"msg_bdrk_013Gi5itSfGfxKA89ZCF2eF8\",\"content\":[{\"imageSource\":null,\"reasoningTextSignature\":null,\"reasoningRedactedContent\":null,\"name\":null,\"type\":\"text\",\"id\":null,\"source\":null,\"input\":null,\"is_error\":null,\"text\":\"<thinking>The support case has been successfully created. I will now inform the user about the case creation and provide them with the case number and the case details page URL.</thinking>\\n\\n<answer>Thank you for your patience. I've successfully created a support case for your intermittent network problem. Here are the details:\\n\\n- Case Number: case_num_XYZ\\n- Case Details Page: url\\n\\nYou can use this case number for future reference and visit the case details page to track the progress of your case.\\n\\nIs there anything else you would like to do? For example, would you like to attach any files or add any additional comments to this case?\",\"content\":null,\"reasoningText\":null,\"guardContent\":null,\"tool_use_id\":null}],\"model\":\"model_name\",\"usage\":{\"input_tokens\":9659,\"output_tokens\":188,\"cache_read_input_tokens\":null,\"cache_creation_input_tokens\":null},\"role\":\"assistant\",\"stop_reason\":\"stop_sequence\"}"
+            },
+            "traceId": "597894a8-a6b2-49ec-8a8e-df6ca31ef56c-1"
+          }
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "rationale": {
+            "text": "The support case has been successfully created. I will now inform the user about the case creation and provide them with the case number and the case details page URL.",
+            "traceId": "597894a8-a6b2-49ec-8a8e-df6ca31ef56c-1"
+          }
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "observation": {
+            "finalResponse": {
+              "metadata": {
+                "endTime": "2026-02-13T09:46:46.596751Z",
+                "operationTotalTimeMs": 25949,
+                "startTime": "2026-02-13T09:46:20.647765Z"
+              },
+              "text": "Thank you for your patience. I've successfully created a support case for your intermittent network problem. Here are the details:\n\n- Case Number: case_num_XYZ\n- Case Details Page: url\n\nYou can use this case number for future reference and visit the case details page to track the progress of your case.\n\nIs there anything else you would like to do? For example, would you like to attach any files or add any additional comments to this case?"
+            },
+            "traceId": "597894a8-a6b2-49ec-8a8e-df6ca31ef56c-1",
+            "type": "FINISH"
+          }
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "observation": {
+            "agentCollaboratorInvocationOutput": {
+              "agentCollaboratorAliasArn": "aws_arn_model_uri2",
+              "agentCollaboratorName": "SupportCase-Management-Agent",
+              "metadata": {
+                "clientRequestId": "597894a8-a6b2-49ec-8a8e-df6ca31ef56c",
+                "endTime": "2026-02-13T09:46:46.663699Z",
+                "startTime": "2026-02-13T09:46:20.570138Z",
+                "totalTimeMs": 26093
+              },
+              "output": {
+                "text": "Thank you for your patience. I've successfully created a support case for your intermittent network problem. Here are the details:\n\n- Case Number: case_num_XYZ\n- Case Details Page: url\n\nYou can use this case number for future reference and visit the case details page to track the progress of your case.\n\nIs there anything else you would like to do? For example, would you like to attach any files or add any additional comments to this case?",
+                "type": "TEXT"
+              }
+            },
+            "traceId": "61af2a87-a376-4ceb-9a1f-61daa5e4ce28-0",
+            "type": "AGENT_COLLABORATOR"
+          }
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "modelInvocationInput": {
+            "foundationModel": "model_name",
+            "inferenceConfiguration": {
+              "maximumLength": 2048,
+              "stopSequences": ["</invoke>", "</answer>", "</error>"],
+              "temperature": 0,
+              "topK": 250,
+              "topP": 1
+            },
+            "text": "Input Prompt + Context  +text user sent",
+            "traceId": "61af2a87-a376-4ceb-9a1f-61daa5e4ce28-1",
+            "type": "ORCHESTRATION"
+          }
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "modelInvocationOutput": {
+            "metadata": {
+              "clientRequestId": "2c85e67d-ef0e-4ca5-ab3c-b1b08f174a80",
+              "endTime": "2026-02-13T09:46:56.391229Z",
+              "startTime": "2026-02-13T09:46:46.714091Z",
+              "totalTimeMs": 9677,
+              "usage": { "inputTokens": 8219, "outputTokens": 489 }
+            },
+            "rawResponse": {
+              "content": "{\"stop_sequence\":\"</answer>\",\"type\":\"message\",\"id\":\"msg_bdrk_012kvAVTGvtq51THppgV8LCg\",\"content\":[{\"imageSource\":null,\"reasoningTextSignature\":null,\"reasoningRedactedContent\":null,\"name\":null,\"type\":\"text\",\"id\":null,\"source\":null,\"input\":null,\"is_error\":null,\"text\":\"<thinking>The Support Case Management Agent has successfully created the case and provided the case number and details page. I'll relay this information to the user and ask if they need any further assistance.</thinking>\\n\\nThank you for providing the necessary information. I'm pleased to inform you that a support case has been successfully created for your intermittent network problem. Here are the details of your case:\\n\\n**Case Number:** case_num_XYZ\\n**Case Details Page:** [View Case Details](url)\\n\\nYou can use this case number for future reference when contacting support. The case details page allows you to track the progress of your case.\\n\\nIs there anything else you would like to do regarding this case? For example:\\n1. Would you like to attach any files to the case?\\n2. Do you want to add any additional comments or information?\\n3. Do you need any other assistance related to this case?\\n\\nPlease let me know if you need any further help.\\n\\n<thinking>I'll wait for the user's response to see if they need any additional assistance with the newly created case.</thinking><answer>Thank you for providing the necessary information. I'm pleased to inform you that a support case has been successfully created for your intermittent network problem. Here are the details of your case:\\n\\n**Case Number:** case_num_XYZ\\n**Case Details Page:** [View Case Details](url)\\n\\nYou can use this case number for future reference when contacting support. The case details page allows you to track the progress of your case.\\n\\nIs there anything else you would like to do regarding this case? For example:\\n1. Would you like to attach any files to the case?\\n2. Do you want to add any additional comments or information?\\n3. Do you need any other assistance related to this case?\\n\\nPlease let me know if you need any further help.\",\"content\":null,\"reasoningText\":null,\"tool_use_id\":null,\"guardContent\":null}],\"model\":\"model_name\",\"usage\":{\"input_tokens\":8219,\"output_tokens\":489,\"cache_read_input_tokens\":null,\"cache_creation_input_tokens\":null},\"role\":\"assistant\",\"stop_reason\":\"stop_sequence\"}"
+            },
+            "traceId": "61af2a87-a376-4ceb-9a1f-61daa5e4ce28-1"
+          }
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "rationale": {
+            "text": "The Support Case Management Agent has successfully created the case and provided the case number and details page. I'll relay this information to the user and ask if they need any further assistance.</thinking>\n\nThank you for providing the necessary information. I'm pleased to inform you that a support case has been successfully created for your intermittent network problem. Here are the details of your case:\n\n**Case Number:** case_num_XYZ\n**Case Details Page:** [View Case Details](url)\n\nYou can use this case number for future reference when contacting support. The case details page allows you to track the progress of your case.\n\nIs there anything else you would like to do regarding this case? For example:\n1. Would you like to attach any files to the case?\n2. Do you want to add any additional comments or information?\n3. Do you need any other assistance related to this case?\n\nPlease let me know if you need any further help.\n\n<thinking>I'll wait for the user's response to see if they need any additional assistance with the newly created case.",
+            "traceId": "61af2a87-a376-4ceb-9a1f-61daa5e4ce28-1"
+          }
+        }
+      },
+      {
+        "type": "guardrail_trace",
+        "trace": {
+          "action": "NONE",
+          "metadata": {
+            "clientRequestId": "1374b193-84a8-4f58-ac42-ab5d4826b139",
+            "endTime": "2026-02-13T09:46:57.029240Z",
+            "startTime": "2026-02-13T09:46:56.544731Z",
+            "totalTimeMs": 485
+          },
+          "outputAssessments": [{}],
+          "traceId": "61af2a87-a376-4ceb-9a1f-61daa5e4ce28-guardrail-post-0"
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "observation": {
+            "finalResponse": {
+              "metadata": {
+                "endTime": "2026-02-13T09:46:57.078344Z",
+                "operationTotalTimeMs": 43587,
+                "startTime": "2026-02-13T09:46:13.491751Z"
+              },
+              "text": "Thank you for providing the necessary information. I'm pleased to inform you that a support case has been successfully created for your intermittent network problem. Here are the details of your case:\n\n**Case Number:** case_num_XYZ\n**Case Details Page:** [View Case Details](url)\n\nYou can use this case number for future reference when contacting support. The case details page allows you to track the progress of your case.\n\nIs there anything else you would like to do regarding this case? For example:\n1. Would you like to attach any files to the case?\n2. Do you want to add any additional comments or information?\n3. Do you need any other assistance related to this case?\n\nPlease let me know if you need any further help."
+            },
+            "traceId": "61af2a87-a376-4ceb-9a1f-61daa5e4ce28-1",
+            "type": "FINISH"
+          }
+        }
+      },
+      {
+        "type": "routing_classifier_trace",
+        "trace": {
+          "observation": {
+            "agentCollaboratorInvocationOutput": {
+              "agentCollaboratorAliasArn": "aws_arn_model_uri",
+              "agentCollaboratorName": "Case-Management2-Collaborator",
+              "metadata": {
+                "clientRequestId": "61af2a87-a376-4ceb-9a1f-61daa5e4ce28",
+                "endTime": "2026-02-13T09:46:57.149222Z",
+                "startTime": "2026-02-13T09:46:13.413789Z",
+                "totalTimeMs": 43736
+              },
+              "output": {
+                "text": "Thank you for providing the necessary information. I'm pleased to inform you that a support case has been successfully created for your intermittent network problem. Here are the details of your case:\n\n**Case Number:** case_num_XYZ\n**Case Details Page:** [View Case Details](url)\n\nYou can use this case number for future reference when contacting support. The case details page allows you to track the progress of your case.\n\nIs there anything else you would like to do regarding this case? For example:\n1. Would you like to attach any files to the case?\n2. Do you want to add any additional comments or information?\n3. Do you need any other assistance related to this case?\n\nPlease let me know if you need any further help.",
+                "type": "TEXT"
+              }
+            },
+            "traceId": "022c7205-d6ae-44b9-b05a-2b0d33593b9b-routing-0",
+            "type": "AGENT_COLLABORATOR"
+          }
+        }
+      },
+      {
+        "type": "routing_classifier_trace",
+        "trace": {
+          "observation": {
+            "finalResponse": {
+              "metadata": {
+                "endTime": "2026-02-13T09:46:57.157902Z",
+                "operationTotalTimeMs": 46019,
+                "startTime": "2026-02-13T09:46:11.138000Z"
+              },
+              "text": "Thank you for providing the necessary information. I'm pleased to inform you that a support case has been successfully created for your intermittent network problem. Here are the details of your case:\n\n**Case Number:** case_num_XYZ\n**Case Details Page:** [View Case Details](url)\n\nYou can use this case number for future reference when contacting support. The case details page allows you to track the progress of your case.\n\nIs there anything else you would like to do regarding this case? For example:\n1. Would you like to attach any files to the case?\n2. Do you want to add any additional comments or information?\n3. Do you need any other assistance related to this case?\n\nPlease let me know if you need any further help."
+            },
+            "traceId": "022c7205-d6ae-44b9-b05a-2b0d33593b9b-routing-0",
+            "type": "FINISH"
+          }
+        }
+      },
+      {
+        "type": "guardrail_trace",
+        "trace": {
+          "action": "NONE",
+          "metadata": {
+            "clientRequestId": "67610cf3-335c-4921-a511-a4a7d472ba36",
+            "endTime": "2026-02-13T09:46:57.971162Z",
+            "startTime": "2026-02-13T09:46:57.323616Z",
+            "totalTimeMs": 648
+          },
+          "outputAssessments": [{}],
+          "traceId": "022c7205-d6ae-44b9-b05a-2b0d33593b9b-guardrail-post-0"
+        }
+      },
+      {
+        "type": "chunk",
+        "chunk": {
+          "bytes": "Thank you for providing the necessary information. I'm pleased to inform you that a support case has been successfully created for your intermittent network problem. Here are the details of your case:\n\n**Case Number:** case_num_XYZ\n**Case Details Page:** [View Case Details](url)\n\nYou can use this case number for future reference when contacting support. The case details page allows you to track the progress of your case.\n\nIs there anything else you would like to do regarding this case? For example:\n1. Would you like to attach any files to the case?\n2. Do you want to add any additional comments or information?\n3. Do you need any other assistance related to this case?\n\nPlease let me know if you need any further help."
+        }
+      }
+    ],
+    "metadata": {
+      "resourceAttributes": {
+        "telemetry.sdk.language": "python",
+        "telemetry.sdk.name": "opentelemetry",
+        "telemetry.sdk.version": "1.39.1",
+        "langfuse.environment": "staging",
+        "langfuse.release": "9.0 Hotfix",
+        "service.name": "unknown_service"
+      },
+      "scope": {
+        "name": "langfuse-sdk",
+        "version": "3.7.0",
+        "attributes": {
+          "public_key": "pk1"
+        }
+      }
+    },
+    "latency": 46.999,
+    "usage": {
+      "promptTokens": 39011,
+      "completionTokens": 1052,
+      "totalTokens": 40063
+    },
+    "inputCost": "0.117033",
+    "outputCost": "0.01578",
+    "totalCost": "0.132813",
+    "level": "DEFAULT",
+    "errorCount": 0,
+    "warningCount": 0,
+    "defaultCount": 1,
+    "debugCount": 0,
+    "observationCount": 1,
+    "inputTokens": 39011,
+    "outputTokens": 1052,
+    "totalTokens": 40063
+  },
+  {
+    "id": "5eb768f42fa89941d31e9ddfae4740ed",
+    "projectId": "cmgt9niok000wvo07s9ywpqc3",
+    "timestamp": "2026-02-13T09:45:13.224Z",
+    "tags": [],
+    "bookmarked": false,
+    "name": "Invoke Agent",
+    "release": "9.0 Hotfix",
+    "version": null,
+    "userId": "username@email.com",
+    "environment": "staging",
+    "sessionId": "5bef0490-08c0-11f1-907e-cdcae5aa3470",
+    "public": false,
+    "input": "no, please raise a case",
+    "output": [
+      {
+        "type": "guardrail_trace",
+        "trace": {
+          "action": "NONE",
+          "inputAssessments": [{}],
+          "metadata": {
+            "clientRequestId": "dd85ff61-a4c1-49f6-ad84-7942398cd577",
+            "endTime": "2026-02-13T09:45:14.390063Z",
+            "startTime": "2026-02-13T09:45:13.679726Z",
+            "totalTimeMs": 711
+          },
+          "traceId": "6cc4b8a5-1377-415b-bed6-3307cd2175c2-guardrail-pre-0"
+        }
+      },
+      {
+        "type": "routing_classifier_trace",
+        "trace": {
+          "modelInvocationInput": {
+            "foundationModel": "model_name",
+            "inferenceConfiguration": {
+              "maximumLength": 512,
+              "stopSequences": ["\n\nHuman:"],
+              "temperature": 0,
+              "topK": 250,
+              "topP": 1
+            },
+            "text": "Input Prompt + Context  +text user sent",
+            "traceId": "6cc4b8a5-1377-415b-bed6-3307cd2175c2-routing-0",
+            "type": "ROUTING_CLASSIFIER"
+          }
+        }
+      },
+      {
+        "type": "routing_classifier_trace",
+        "trace": {
+          "modelInvocationOutput": {
+            "metadata": {
+              "clientRequestId": "5dc848b5-f0c1-404f-aef0-98befdca66cd",
+              "endTime": "2026-02-13T09:45:16.073718Z",
+              "startTime": "2026-02-13T09:45:14.392709Z",
+              "totalTimeMs": 1681,
+              "usage": { "inputTokens": 3643, "outputTokens": 14 }
+            },
+            "rawResponse": {
+              "content": "{\"stop_sequence\":null,\"type\":\"message\",\"id\":\"msg_bdrk_01FpTiUNKXvRPDdwsRWiKMP8\",\"content\":[{\"imageSource\":null,\"reasoningTextSignature\":null,\"reasoningRedactedContent\":null,\"name\":null,\"type\":\"text\",\"id\":null,\"source\":null,\"input\":null,\"is_error\":null,\"text\":\"<a>keep_previous_agent</a>\",\"content\":null,\"tool_use_id\":null,\"guardContent\":null,\"reasoningText\":null}],\"model\":\"model_name\",\"usage\":{\"input_tokens\":3643,\"output_tokens\":14,\"cache_read_input_tokens\":null,\"cache_creation_input_tokens\":null},\"role\":\"assistant\",\"stop_reason\":\"end_turn\"}"
+            },
+            "traceId": "6cc4b8a5-1377-415b-bed6-3307cd2175c2-routing-0"
+          }
+        }
+      },
+      {
+        "type": "routing_classifier_trace",
+        "trace": {
+          "invocationInput": {
+            "agentCollaboratorInvocationInput": {
+              "agentCollaboratorAliasArn": "aws_arn_model_uri",
+              "agentCollaboratorName": "Case-Management2-Collaborator",
+              "input": { "text": "no, please raise a case", "type": "TEXT" }
+            },
+            "invocationType": "AGENT_COLLABORATOR",
+            "traceId": "6cc4b8a5-1377-415b-bed6-3307cd2175c2-routing-0"
+          }
+        }
+      },
+      {
+        "type": "guardrail_trace",
+        "trace": {
+          "action": "NONE",
+          "inputAssessments": [{}],
+          "metadata": {
+            "clientRequestId": "0efda187-0a3e-4c77-aeae-62eaa16a276b",
+            "endTime": "2026-02-13T09:45:17.368109Z",
+            "startTime": "2026-02-13T09:45:16.645307Z",
+            "totalTimeMs": 723
+          },
+          "traceId": "2291e332-1f03-4d85-b433-8943130b0744-guardrail-pre-0"
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "modelInvocationInput": {
+            "foundationModel": "model_name",
+            "inferenceConfiguration": {
+              "maximumLength": 2048,
+              "stopSequences": ["</invoke>", "</answer>", "</error>"],
+              "temperature": 0,
+              "topK": 250,
+              "topP": 1
+            },
+            "text": "Input Prompt + Context  +text user sent",
+            "traceId": "2291e332-1f03-4d85-b433-8943130b0744-0",
+            "type": "ORCHESTRATION"
+          }
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "modelInvocationOutput": {
+            "metadata": {
+              "clientRequestId": "418698be-ee92-4e3f-9161-a33b82dc2149",
+              "endTime": "2026-02-13T09:45:24.057675Z",
+              "startTime": "2026-02-13T09:45:17.424109Z",
+              "totalTimeMs": 6633,
+              "usage": { "inputTokens": 6951, "outputTokens": 175 }
+            },
+            "rawResponse": {
+              "content": "{\"stop_sequence\":null,\"type\":\"message\",\"id\":\"msg_bdrk_01KoMUeexQVcCGsiwrLuxCzk\",\"content\":[{\"imageSource\":null,\"reasoningTextSignature\":null,\"reasoningRedactedContent\":null,\"name\":null,\"type\":\"text\",\"id\":null,\"source\":null,\"input\":null,\"is_error\":null,\"text\":\"<thinking>The user seems to be reluctant to provide additional details and wants to proceed with creating the case with minimal information. I'll inform the Support Case Management Agent about this and ask how to proceed.</thinking>\",\"content\":null,\"reasoningText\":null,\"tool_use_id\":null,\"guardContent\":null},{\"imageSource\":null,\"reasoningTextSignature\":null,\"reasoningRedactedContent\":null,\"name\":\"CommAPI_sendMessage\",\"type\":\"tool_use\",\"id\":\"toolu_bdrk_01X7sE1FiqkW9Yt6KQAnVPmi\",\"source\":null,\"input\":{\"recipient\":\"SupportCase-Management-Agent\",\"content\":\"The user is reluctant to provide additional details about their network issue. They have only provided the subject line \\\"Network problem occurs intermittently\\\" and are insisting on creating the case without further information. How should we proceed with the case creation?\"},\"is_error\":null,\"text\":null,\"content\":null,\"reasoningText\":null,\"tool_use_id\":null,\"guardContent\":null}],\"model\":\"model_name\",\"usage\":{\"input_tokens\":6951,\"output_tokens\":175,\"cache_read_input_tokens\":null,\"cache_creation_input_tokens\":null},\"role\":\"assistant\",\"stop_reason\":\"tool_use\"}"
+            },
+            "traceId": "2291e332-1f03-4d85-b433-8943130b0744-0"
+          }
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "rationale": {
+            "text": "The user seems to be reluctant to provide additional details and wants to proceed with creating the case with minimal information. I'll inform the Support Case Management Agent about this and ask how to proceed.",
+            "traceId": "2291e332-1f03-4d85-b433-8943130b0744-0"
+          }
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "invocationInput": {
+            "agentCollaboratorInvocationInput": {
+              "agentCollaboratorAliasArn": "aws_arn_model_uri2",
+              "agentCollaboratorName": "SupportCase-Management-Agent",
+              "input": {
+                "text": "The user is reluctant to provide additional details about their network issue. They have only provided the subject line \"Network problem occurs intermittently\" and are insisting on creating the case without further information. How should we proceed with the case creation?",
+                "type": "TEXT"
+              }
+            },
+            "invocationType": "AGENT_COLLABORATOR",
+            "traceId": "2291e332-1f03-4d85-b433-8943130b0744-0"
+          }
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "modelInvocationInput": {
+            "foundationModel": "model_name",
+            "inferenceConfiguration": {
+              "maximumLength": 2048,
+              "stopSequences": ["</invoke>", "</answer>", "</error>"],
+              "temperature": 0,
+              "topK": 250,
+              "topP": 1
+            },
+            "text": "Input Prompt + Context  +text user sent",
+            "traceId": "29026b68-61e4-47e6-9e20-2f77adf46b3c-0",
+            "type": "ORCHESTRATION"
+          }
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "modelInvocationOutput": {
+            "metadata": {
+              "clientRequestId": "1f298fe7-015c-41ed-993b-8836c96af62b",
+              "endTime": "2026-02-13T09:45:33.291715Z",
+              "startTime": "2026-02-13T09:45:24.462324Z",
+              "totalTimeMs": 8829,
+              "usage": { "inputTokens": 8705, "outputTokens": 241 }
+            },
+            "rawResponse": {
+              "content": "{\"stop_sequence\":\"</answer>\",\"type\":\"message\",\"id\":\"msg_bdrk_01BejAQoGDrsN8KCQ3LZX2dc\",\"content\":[{\"imageSource\":null,\"reasoningTextSignature\":null,\"reasoningRedactedContent\":null,\"name\":null,\"type\":\"text\",\"id\":null,\"source\":null,\"input\":null,\"is_error\":null,\"text\":\"<thinking>I understand that the user is reluctant to provide additional details about their network issue. While it's preferable to have more information, we should respect the user's wishes and proceed with creating the case using the limited information provided. We'll use the subject line as both the subject and a brief description for the case. We still need to gather the required information about network impact and software version to complete the case creation process.</thinking>\\n\\n<answer>I understand that you'd like to proceed with creating the case with the information you've provided. We'll use \\\"Network problem occurs intermittently\\\" as both the subject and brief description for your case. \\n\\nTo complete the case creation, I need to ask you two more important questions:\\n\\n1. How would you describe the impact of this intermittent network problem on your operations? Is it:\\n   a) A complete network outage\\n   b) Degraded network services\\n   c) No significant network impact\\n\\n2. Could you please provide the software version of the affected device or system? If you're unsure, you can let me know, and we can proceed without this information.\",\"content\":null,\"reasoningText\":null,\"tool_use_id\":null,\"guardContent\":null}],\"model\":\"model_name\",\"usage\":{\"input_tokens\":8705,\"output_tokens\":241,\"cache_read_input_tokens\":null,\"cache_creation_input_tokens\":null},\"role\":\"assistant\",\"stop_reason\":\"stop_sequence\"}"
+            },
+            "traceId": "29026b68-61e4-47e6-9e20-2f77adf46b3c-0"
+          }
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "rationale": {
+            "text": "I understand that the user is reluctant to provide additional details about their network issue. While it's preferable to have more information, we should respect the user's wishes and proceed with creating the case using the limited information provided. We'll use the subject line as both the subject and a brief description for the case. We still need to gather the required information about network impact and software version to complete the case creation process.",
+            "traceId": "29026b68-61e4-47e6-9e20-2f77adf46b3c-0"
+          }
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "observation": {
+            "finalResponse": {
+              "metadata": {
+                "endTime": "2026-02-13T09:45:33.395069Z",
+                "operationTotalTimeMs": 9179,
+                "startTime": "2026-02-13T09:45:24.216779Z"
+              },
+              "text": "I understand that you'd like to proceed with creating the case with the information you've provided. We'll use \"Network problem occurs intermittently\" as both the subject and brief description for your case. \n\nTo complete the case creation, I need to ask you two more important questions:\n\n1. How would you describe the impact of this intermittent network problem on your operations? Is it:\n   a) A complete network outage\n   b) Degraded network services\n   c) No significant network impact\n\n2. Could you please provide the software version of the affected device or system? If you're unsure, you can let me know, and we can proceed without this information."
+            },
+            "traceId": "29026b68-61e4-47e6-9e20-2f77adf46b3c-0",
+            "type": "FINISH"
+          }
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "observation": {
+            "agentCollaboratorInvocationOutput": {
+              "agentCollaboratorAliasArn": "aws_arn_model_uri2",
+              "agentCollaboratorName": "SupportCase-Management-Agent",
+              "metadata": {
+                "clientRequestId": "29026b68-61e4-47e6-9e20-2f77adf46b3c",
+                "endTime": "2026-02-13T09:45:33.466259Z",
+                "startTime": "2026-02-13T09:45:24.130673Z",
+                "totalTimeMs": 9336
+              },
+              "output": {
+                "text": "I understand that you'd like to proceed with creating the case with the information you've provided. We'll use \"Network problem occurs intermittently\" as both the subject and brief description for your case. \n\nTo complete the case creation, I need to ask you two more important questions:\n\n1. How would you describe the impact of this intermittent network problem on your operations? Is it:\n   a) A complete network outage\n   b) Degraded network services\n   c) No significant network impact\n\n2. Could you please provide the software version of the affected device or system? If you're unsure, you can let me know, and we can proceed without this information.",
+                "type": "TEXT"
+              }
+            },
+            "traceId": "2291e332-1f03-4d85-b433-8943130b0744-0",
+            "type": "AGENT_COLLABORATOR"
+          }
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "modelInvocationInput": {
+            "foundationModel": "model_name",
+            "inferenceConfiguration": {
+              "maximumLength": 2048,
+              "stopSequences": ["</invoke>", "</answer>", "</error>"],
+              "temperature": 0,
+              "topK": 250,
+              "topP": 1
+            },
+            "text": "Input Prompt + Context  +text user sent",
+            "traceId": "2291e332-1f03-4d85-b433-8943130b0744-1",
+            "type": "ORCHESTRATION"
+          }
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "modelInvocationOutput": {
+            "metadata": {
+              "clientRequestId": "8fb5bcd1-3e35-44b4-b406-69bac81386f5",
+              "endTime": "2026-02-13T09:45:42.422005Z",
+              "startTime": "2026-02-13T09:45:33.542423Z",
+              "totalTimeMs": 8880,
+              "usage": { "inputTokens": 7281, "outputTokens": 405 }
+            },
+            "rawResponse": {
+              "content": "{\"stop_sequence\":\"</answer>\",\"type\":\"message\",\"id\":\"msg_bdrk_016VZMr7moEAFGTvAHXCem5W\",\"content\":[{\"imageSource\":null,\"reasoningTextSignature\":null,\"reasoningRedactedContent\":null,\"name\":null,\"type\":\"text\",\"id\":null,\"source\":null,\"input\":null,\"is_error\":null,\"text\":\"<thinking>The Support Case Management Agent is trying to gather minimal but crucial information to create the case. I'll relay these questions to the user.</thinking>\\n\\nI apologize for the inconvenience. I understand you want to create the case with minimal information. We'll proceed with creating the case using the subject line you provided: \\\"Network problem occurs intermittently\\\".\\n\\nTo complete the case creation process, I need to ask you two brief but important questions:\\n\\n1. How would you describe the impact of this intermittent network problem on your operations? Please choose one:\\n   a) A complete network outage\\n   b) Degraded network services\\n   c) No significant network impact\\n\\n2. Could you please provide the software version of the affected device or system? If you're unsure, you can let me know, and we can proceed without this information.\\n\\nOnce you provide answers to these questions, we'll be able to create your support case immediately.\\n\\n<thinking>I'll wait for the user's response to these two questions before proceeding with the final step of case creation.</thinking><answer>I apologize for the inconvenience. I understand you want to create the case with minimal information. We'll proceed with creating the case using the subject line you provided: \\\"Network problem occurs intermittently\\\".\\n\\nTo complete the case creation process, I need to ask you two brief but important questions:\\n\\n1. How would you describe the impact of this intermittent network problem on your operations? Please choose one:\\n   a) A complete network outage\\n   b) Degraded network services\\n   c) No significant network impact\\n\\n2. Could you please provide the software version of the affected device or system? If you're unsure, you can let me know, and we can proceed without this information.\\n\\nOnce you provide answers to these questions, we'll be able to create your support case immediately.\",\"content\":null,\"reasoningText\":null,\"tool_use_id\":null,\"guardContent\":null}],\"model\":\"model_name\",\"usage\":{\"input_tokens\":7281,\"output_tokens\":405,\"cache_read_input_tokens\":null,\"cache_creation_input_tokens\":null},\"role\":\"assistant\",\"stop_reason\":\"stop_sequence\"}"
+            },
+            "traceId": "2291e332-1f03-4d85-b433-8943130b0744-1"
+          }
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "rationale": {
+            "text": "The Support Case Management Agent is trying to gather minimal but crucial information to create the case. I'll relay these questions to the user.</thinking>\n\nI apologize for the inconvenience. I understand you want to create the case with minimal information. We'll proceed with creating the case using the subject line you provided: \"Network problem occurs intermittently\".\n\nTo complete the case creation process, I need to ask you two brief but important questions:\n\n1. How would you describe the impact of this intermittent network problem on your operations? Please choose one:\n   a) A complete network outage\n   b) Degraded network services\n   c) No significant network impact\n\n2. Could you please provide the software version of the affected device or system? If you're unsure, you can let me know, and we can proceed without this information.\n\nOnce you provide answers to these questions, we'll be able to create your support case immediately.\n\n<thinking>I'll wait for the user's response to these two questions before proceeding with the final step of case creation.",
+            "traceId": "2291e332-1f03-4d85-b433-8943130b0744-1"
+          }
+        }
+      },
+      {
+        "type": "guardrail_trace",
+        "trace": {
+          "action": "NONE",
+          "metadata": {
+            "clientRequestId": "c1560147-055d-4439-995a-771bb40b3463",
+            "endTime": "2026-02-13T09:45:43.358718Z",
+            "startTime": "2026-02-13T09:45:42.603464Z",
+            "totalTimeMs": 755
+          },
+          "outputAssessments": [{}],
+          "traceId": "2291e332-1f03-4d85-b433-8943130b0744-guardrail-post-0"
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "observation": {
+            "finalResponse": {
+              "metadata": {
+                "endTime": "2026-02-13T09:45:43.413170Z",
+                "operationTotalTimeMs": 27249,
+                "startTime": "2026-02-13T09:45:16.164822Z"
+              },
+              "text": "I apologize for the inconvenience. I understand you want to create the case with minimal information. We'll proceed with creating the case using the subject line you provided: \"Network problem occurs intermittently\".\n\nTo complete the case creation process, I need to ask you two brief but important questions:\n\n1. How would you describe the impact of this intermittent network problem on your operations? Please choose one:\n   a) A complete network outage\n   b) Degraded network services\n   c) No significant network impact\n\n2. Could you please provide the software version of the affected device or system? If you're unsure, you can let me know, and we can proceed without this information.\n\nOnce you provide answers to these questions, we'll be able to create your support case immediately."
+            },
+            "traceId": "2291e332-1f03-4d85-b433-8943130b0744-1",
+            "type": "FINISH"
+          }
+        }
+      },
+      {
+        "type": "routing_classifier_trace",
+        "trace": {
+          "observation": {
+            "agentCollaboratorInvocationOutput": {
+              "agentCollaboratorAliasArn": "aws_arn_model_uri",
+              "agentCollaboratorName": "Case-Management2-Collaborator",
+              "metadata": {
+                "clientRequestId": "2291e332-1f03-4d85-b433-8943130b0744",
+                "endTime": "2026-02-13T09:45:43.485293Z",
+                "startTime": "2026-02-13T09:45:16.086878Z",
+                "totalTimeMs": 27399
+              },
+              "output": {
+                "text": "I apologize for the inconvenience. I understand you want to create the case with minimal information. We'll proceed with creating the case using the subject line you provided: \"Network problem occurs intermittently\".\n\nTo complete the case creation process, I need to ask you two brief but important questions:\n\n1. How would you describe the impact of this intermittent network problem on your operations? Please choose one:\n   a) A complete network outage\n   b) Degraded network services\n   c) No significant network impact\n\n2. Could you please provide the software version of the affected device or system? If you're unsure, you can let me know, and we can proceed without this information.\n\nOnce you provide answers to these questions, we'll be able to create your support case immediately.",
+                "type": "TEXT"
+              }
+            },
+            "traceId": "6cc4b8a5-1377-415b-bed6-3307cd2175c2-routing-0",
+            "type": "AGENT_COLLABORATOR"
+          }
+        }
+      },
+      {
+        "type": "routing_classifier_trace",
+        "trace": {
+          "observation": {
+            "finalResponse": {
+              "metadata": {
+                "endTime": "2026-02-13T09:45:43.490885Z",
+                "operationTotalTimeMs": 30230,
+                "startTime": "2026-02-13T09:45:13.260653Z"
+              },
+              "text": "I apologize for the inconvenience. I understand you want to create the case with minimal information. We'll proceed with creating the case using the subject line you provided: \"Network problem occurs intermittently\".\n\nTo complete the case creation process, I need to ask you two brief but important questions:\n\n1. How would you describe the impact of this intermittent network problem on your operations? Please choose one:\n   a) A complete network outage\n   b) Degraded network services\n   c) No significant network impact\n\n2. Could you please provide the software version of the affected device or system? If you're unsure, you can let me know, and we can proceed without this information.\n\nOnce you provide answers to these questions, we'll be able to create your support case immediately."
+            },
+            "traceId": "6cc4b8a5-1377-415b-bed6-3307cd2175c2-routing-0",
+            "type": "FINISH"
+          }
+        }
+      },
+      {
+        "type": "guardrail_trace",
+        "trace": {
+          "action": "NONE",
+          "metadata": {
+            "clientRequestId": "2e5a69d3-2007-490a-9287-45bf31607c61",
+            "endTime": "2026-02-13T09:45:44.392605Z",
+            "startTime": "2026-02-13T09:45:43.686861Z",
+            "totalTimeMs": 706
+          },
+          "outputAssessments": [{}],
+          "traceId": "6cc4b8a5-1377-415b-bed6-3307cd2175c2-guardrail-post-0"
+        }
+      },
+      {
+        "type": "chunk",
+        "chunk": {
+          "bytes": "I apologize for the inconvenience. I understand you want to create the case with minimal information. We'll proceed with creating the case using the subject line you provided: \"Network problem occurs intermittently\".\n\nTo complete the case creation process, I need to ask you two brief but important questions:\n\n1. How would you describe the impact of this intermittent network problem on your operations? Please choose one:\n   a) A complete network outage\n   b) Degraded network services\n   c) No significant network impact\n\n2. Could you please provide the software version of the affected device or system? If you're unsure, you can let me know, and we can proceed without this information.\n\nOnce you provide answers to these questions, we'll be able to create your support case immediately."
+        }
+      }
+    ],
+    "metadata": {
+      "resourceAttributes": {
+        "telemetry.sdk.language": "python",
+        "telemetry.sdk.name": "opentelemetry",
+        "telemetry.sdk.version": "1.39.1",
+        "langfuse.environment": "staging",
+        "langfuse.release": "9.0 Hotfix",
+        "service.name": "unknown_service"
+      },
+      "scope": {
+        "name": "langfuse-sdk",
+        "version": "3.7.0",
+        "attributes": {
+          "public_key": "pk1"
+        }
+      }
+    },
+    "latency": 31.292,
+    "usage": {
+      "promptTokens": 26580,
+      "completionTokens": 835,
+      "totalTokens": 27415
+    },
+    "inputCost": "0.07974",
+    "outputCost": "0.012525",
+    "totalCost": "0.092265",
+    "level": "DEFAULT",
+    "errorCount": 0,
+    "warningCount": 0,
+    "defaultCount": 1,
+    "debugCount": 0,
+    "observationCount": 1,
+    "inputTokens": 26580,
+    "outputTokens": 835,
+    "totalTokens": 27415
+  },
+  {
+    "id": "8c498d0fe55194455e35c136f84bc222",
+    "projectId": "cmgt9niok000wvo07s9ywpqc3",
+    "timestamp": "2026-02-13T09:44:16.655Z",
+    "tags": [],
+    "bookmarked": false,
+    "name": "Invoke Agent",
+    "release": "9.0 Hotfix",
+    "version": null,
+    "userId": "username@email.com",
+    "environment": "staging",
+    "sessionId": "5bef0490-08c0-11f1-907e-cdcae5aa3470",
+    "public": false,
+    "input": "Network problem occurs intermittently",
+    "output": [
+      {
+        "type": "guardrail_trace",
+        "trace": {
+          "action": "NONE",
+          "inputAssessments": [{}],
+          "metadata": {
+            "clientRequestId": "07e37d7b-ee82-401d-b976-55f7e63151a9",
+            "endTime": "2026-02-13T09:44:17.878466Z",
+            "startTime": "2026-02-13T09:44:17.213989Z",
+            "totalTimeMs": 665
+          },
+          "traceId": "3e2ee6e6-7dc6-4b2a-bebb-e9f0218f4c56-guardrail-pre-0"
+        }
+      },
+      {
+        "type": "routing_classifier_trace",
+        "trace": {
+          "modelInvocationInput": {
+            "foundationModel": "model_name",
+            "inferenceConfiguration": {
+              "maximumLength": 512,
+              "stopSequences": ["\n\nHuman:"],
+              "temperature": 0,
+              "topK": 250,
+              "topP": 1
+            },
+            "text": "Input Prompt + Context  +text user sent",
+            "traceId": "3e2ee6e6-7dc6-4b2a-bebb-e9f0218f4c56-routing-0",
+            "type": "ROUTING_CLASSIFIER"
+          }
+        }
+      },
+      {
+        "type": "routing_classifier_trace",
+        "trace": {
+          "modelInvocationOutput": {
+            "metadata": {
+              "clientRequestId": "d982c22c-c48d-4f41-aabf-67a011cc7ac4",
+              "endTime": "2026-02-13T09:44:19.258117Z",
+              "startTime": "2026-02-13T09:44:17.882152Z",
+              "totalTimeMs": 1376,
+              "usage": { "inputTokens": 3488, "outputTokens": 14 }
+            },
+            "rawResponse": {
+              "content": "{\"stop_sequence\":null,\"type\":\"message\",\"id\":\"msg_bdrk_018xmNtBM4kobkA2MhhBKeDP\",\"content\":[{\"imageSource\":null,\"reasoningTextSignature\":null,\"reasoningRedactedContent\":null,\"name\":null,\"type\":\"text\",\"id\":null,\"source\":null,\"input\":null,\"is_error\":null,\"text\":\"<a>keep_previous_agent</a>\",\"content\":null,\"reasoningText\":null,\"tool_use_id\":null,\"guardContent\":null}],\"model\":\"model_name\",\"usage\":{\"input_tokens\":3488,\"output_tokens\":14,\"cache_read_input_tokens\":null,\"cache_creation_input_tokens\":null},\"role\":\"assistant\",\"stop_reason\":\"end_turn\"}"
+            },
+            "traceId": "3e2ee6e6-7dc6-4b2a-bebb-e9f0218f4c56-routing-0"
+          }
+        }
+      },
+      {
+        "type": "routing_classifier_trace",
+        "trace": {
+          "invocationInput": {
+            "agentCollaboratorInvocationInput": {
+              "agentCollaboratorAliasArn": "aws_arn_model_uri",
+              "agentCollaboratorName": "Case-Management2-Collaborator",
+              "input": {
+                "text": "Network problem occurs intermittently",
+                "type": "TEXT"
+              }
+            },
+            "invocationType": "AGENT_COLLABORATOR",
+            "traceId": "3e2ee6e6-7dc6-4b2a-bebb-e9f0218f4c56-routing-0"
+          }
+        }
+      },
+      {
+        "type": "guardrail_trace",
+        "trace": {
+          "action": "NONE",
+          "inputAssessments": [{}],
+          "metadata": {
+            "clientRequestId": "e1168691-cbe0-45f9-8511-ecd580b690e5",
+            "endTime": "2026-02-13T09:44:20.617581Z",
+            "startTime": "2026-02-13T09:44:19.711346Z",
+            "totalTimeMs": 906
+          },
+          "traceId": "20c800ba-9316-4f42-9696-4ecfd8d6c1bb-guardrail-pre-0"
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "modelInvocationInput": {
+            "foundationModel": "model_name",
+            "inferenceConfiguration": {
+              "maximumLength": 2048,
+              "stopSequences": ["</invoke>", "</answer>", "</error>"],
+              "temperature": 0,
+              "topK": 250,
+              "topP": 1
+            },
+            "text": "Input Prompt + Context  +text user sent",
+            "traceId": "20c800ba-9316-4f42-9696-4ecfd8d6c1bb-0",
+            "type": "ORCHESTRATION"
+          }
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "modelInvocationOutput": {
+            "metadata": {
+              "clientRequestId": "11c0f277-f2a7-4409-97a8-729252fec1b9",
+              "endTime": "2026-02-13T09:44:24.938995Z",
+              "startTime": "2026-02-13T09:44:20.663147Z",
+              "totalTimeMs": 4275,
+              "usage": { "inputTokens": 6282, "outputTokens": 153 }
+            },
+            "rawResponse": {
+              "content": "{\"stop_sequence\":null,\"type\":\"message\",\"id\":\"msg_bdrk_01Q5hNALxAEyvHx8ds3665pJ\",\"content\":[{\"imageSource\":null,\"reasoningTextSignature\":null,\"reasoningRedactedContent\":null,\"name\":null,\"type\":\"text\",\"id\":null,\"source\":null,\"input\":null,\"is_error\":null,\"text\":\"<thinking>The user has provided a brief subject line for the support case. I'll now pass this information to the Support Case Management Agent to continue with the case creation process.</thinking>\",\"content\":null,\"reasoningText\":null,\"tool_use_id\":null,\"guardContent\":null},{\"imageSource\":null,\"reasoningTextSignature\":null,\"reasoningRedactedContent\":null,\"name\":\"CommAPI_sendMessage\",\"type\":\"tool_use\",\"id\":\"toolu_bdrk_01LGCpLxSE6EY8banNXNtNyk\",\"source\":null,\"input\":{\"recipient\":\"SupportCase-Management-Agent\",\"content\":\"The user has provided the following subject line for the support case: \\\"Network problem occurs intermittently\\\". Please continue with the case creation process and gather any additional necessary information.\"},\"is_error\":null,\"text\":null,\"content\":null,\"reasoningText\":null,\"tool_use_id\":null,\"guardContent\":null}],\"model\":\"model_name\",\"usage\":{\"input_tokens\":6282,\"output_tokens\":153,\"cache_read_input_tokens\":null,\"cache_creation_input_tokens\":null},\"role\":\"assistant\",\"stop_reason\":\"tool_use\"}"
+            },
+            "traceId": "20c800ba-9316-4f42-9696-4ecfd8d6c1bb-0"
+          }
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "rationale": {
+            "text": "The user has provided a brief subject line for the support case. I'll now pass this information to the Support Case Management Agent to continue with the case creation process.",
+            "traceId": "20c800ba-9316-4f42-9696-4ecfd8d6c1bb-0"
+          }
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "invocationInput": {
+            "agentCollaboratorInvocationInput": {
+              "agentCollaboratorAliasArn": "aws_arn_model_uri2",
+              "agentCollaboratorName": "SupportCase-Management-Agent",
+              "input": {
+                "text": "The user has provided the following subject line for the support case: \"Network problem occurs intermittently\". Please continue with the case creation process and gather any additional necessary information.",
+                "type": "TEXT"
+              }
+            },
+            "invocationType": "AGENT_COLLABORATOR",
+            "traceId": "20c800ba-9316-4f42-9696-4ecfd8d6c1bb-0"
+          }
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "modelInvocationInput": {
+            "foundationModel": "model_name",
+            "inferenceConfiguration": {
+              "maximumLength": 2048,
+              "stopSequences": ["</invoke>", "</answer>", "</error>"],
+              "temperature": 0,
+              "topK": 250,
+              "topP": 1
+            },
+            "text": "Input Prompt + Context  +text user sent",
+            "traceId": "5488e5c4-ddd3-416c-a18e-2bf37345cc5b-0",
+            "type": "ORCHESTRATION"
+          }
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "modelInvocationOutput": {
+            "metadata": {
+              "clientRequestId": "5c80cf61-e17c-4926-92e4-f08a58a2aefb",
+              "endTime": "2026-02-13T09:44:29.890935Z",
+              "startTime": "2026-02-13T09:44:25.345190Z",
+              "totalTimeMs": 4545,
+              "usage": { "inputTokens": 8265, "outputTokens": 128 }
+            },
+            "rawResponse": {
+              "content": "{\"stop_sequence\":\"</answer>\",\"type\":\"message\",\"id\":\"msg_bdrk_01VUs6AhXZVaifMjMEfmwhcL\",\"content\":[{\"imageSource\":null,\"reasoningTextSignature\":null,\"reasoningRedactedContent\":null,\"name\":null,\"type\":\"text\",\"id\":null,\"source\":null,\"input\":null,\"is_error\":null,\"text\":\"<thinking>Thank you for providing the subject line. I'll now proceed with gathering the remaining necessary information for creating the support case, following the WF2: Create New Case workflow.</thinking>\\n\\n<answer>Thank you for providing the subject line: \\\"Network problem occurs intermittently\\\". I've recorded that for your case. Now, let's gather some more details to ensure we can provide the best possible support.\\n\\nCould you please provide a brief description of the issue you're experiencing? Please include any specific symptoms, when you first noticed the problem, and any troubleshooting steps you've already taken.\",\"content\":null,\"reasoningText\":null,\"tool_use_id\":null,\"guardContent\":null}],\"model\":\"model_name\",\"usage\":{\"input_tokens\":8265,\"output_tokens\":128,\"cache_read_input_tokens\":null,\"cache_creation_input_tokens\":null},\"role\":\"assistant\",\"stop_reason\":\"stop_sequence\"}"
+            },
+            "traceId": "5488e5c4-ddd3-416c-a18e-2bf37345cc5b-0"
+          }
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "rationale": {
+            "text": "Thank you for providing the subject line. I'll now proceed with gathering the remaining necessary information for creating the support case, following the WF2: Create New Case workflow.",
+            "traceId": "5488e5c4-ddd3-416c-a18e-2bf37345cc5b-0"
+          }
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "observation": {
+            "finalResponse": {
+              "metadata": {
+                "endTime": "2026-02-13T09:44:29.957404Z",
+                "operationTotalTimeMs": 4884,
+                "startTime": "2026-02-13T09:44:25.073584Z"
+              },
+              "text": "Thank you for providing the subject line: \"Network problem occurs intermittently\". I've recorded that for your case. Now, let's gather some more details to ensure we can provide the best possible support.\n\nCould you please provide a brief description of the issue you're experiencing? Please include any specific symptoms, when you first noticed the problem, and any troubleshooting steps you've already taken."
+            },
+            "traceId": "5488e5c4-ddd3-416c-a18e-2bf37345cc5b-0",
+            "type": "FINISH"
+          }
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "observation": {
+            "agentCollaboratorInvocationOutput": {
+              "agentCollaboratorAliasArn": "aws_arn_model_uri2",
+              "agentCollaboratorName": "SupportCase-Management-Agent",
+              "metadata": {
+                "clientRequestId": "5488e5c4-ddd3-416c-a18e-2bf37345cc5b",
+                "endTime": "2026-02-13T09:44:30.030372Z",
+                "startTime": "2026-02-13T09:44:24.985165Z",
+                "totalTimeMs": 5045
+              },
+              "output": {
+                "text": "Thank you for providing the subject line: \"Network problem occurs intermittently\". I've recorded that for your case. Now, let's gather some more details to ensure we can provide the best possible support.\n\nCould you please provide a brief description of the issue you're experiencing? Please include any specific symptoms, when you first noticed the problem, and any troubleshooting steps you've already taken.",
+                "type": "TEXT"
+              }
+            },
+            "traceId": "20c800ba-9316-4f42-9696-4ecfd8d6c1bb-0",
+            "type": "AGENT_COLLABORATOR"
+          }
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "modelInvocationInput": {
+            "foundationModel": "model_name",
+            "inferenceConfiguration": {
+              "maximumLength": 2048,
+              "stopSequences": ["</invoke>", "</answer>", "</error>"],
+              "temperature": 0,
+              "topK": 250,
+              "topP": 1
+            },
+            "text": "Input Prompt + Context + User input",
+            "traceId": "20c800ba-9316-4f42-9696-4ecfd8d6c1bb-1",
+            "type": "ORCHESTRATION"
+          }
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "modelInvocationOutput": {
+            "metadata": {
+              "clientRequestId": "0f2da047-b586-42f9-b768-4b085142d383",
+              "endTime": "2026-02-13T09:44:36.709679Z",
+              "startTime": "2026-02-13T09:44:30.051055Z",
+              "totalTimeMs": 6658,
+              "usage": { "inputTokens": 6527, "outputTokens": 283 }
+            },
+            "rawResponse": {
+              "content": "{\"stop_sequence\":\"</answer>\",\"type\":\"message\",\"id\":\"msg_bdrk_01WjpgYD1kYjaGDBVuXwht5u\",\"content\":[{\"imageSource\":null,\"reasoningTextSignature\":null,\"reasoningRedactedContent\":null,\"name\":null,\"type\":\"text\",\"id\":null,\"source\":null,\"input\":null,\"is_error\":null,\"text\":\"<thinking>The Support Case Management Agent is requesting more detailed information about the network issue. I'll relay this request to the user.</thinking>\\n\\nThank you for providing the subject line. To proceed with creating your support case, we need some additional details about the network problem you're experiencing. This will help our support team better understand and address your issue.\\n\\nCould you please provide a brief description of the network problem, including the following information:\\n\\n1. Specific symptoms you're observing\\n2. When you first noticed the problem\\n3. Any troubleshooting steps you've already taken\\n\\nThis information will be crucial in helping our support team diagnose and resolve your issue more efficiently.\\n\\n<thinking>I'll wait for the user to provide these details before continuing with the case creation process.</thinking><answer>Thank you for providing the subject line. To proceed with creating your support case, we need some additional details about the network problem you're experiencing. This will help our support team better understand and address your issue.\\n\\nCould you please provide a brief description of the network problem, including the following information:\\n\\n1. Specific symptoms you're observing\\n2. When you first noticed the problem\\n3. Any troubleshooting steps you've already taken\\n\\nThis information will be crucial in helping our support team diagnose and resolve your issue more efficiently.\",\"content\":null,\"reasoningText\":null,\"tool_use_id\":null,\"guardContent\":null}],\"model\":\"model_name\",\"usage\":{\"input_tokens\":6527,\"output_tokens\":283,\"cache_read_input_tokens\":null,\"cache_creation_input_tokens\":null},\"role\":\"assistant\",\"stop_reason\":\"stop_sequence\"}"
+            },
+            "traceId": "20c800ba-9316-4f42-9696-4ecfd8d6c1bb-1"
+          }
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "rationale": {
+            "text": "The Support Case Management Agent is requesting more detailed information about the network issue. I'll relay this request to the user.</thinking>\n\nThank you for providing the subject line. To proceed with creating your support case, we need some additional details about the network problem you're experiencing. This will help our support team better understand and address your issue.\n\nCould you please provide a brief description of the network problem, including the following information:\n\n1. Specific symptoms you're observing\n2. When you first noticed the problem\n3. Any troubleshooting steps you've already taken\n\nThis information will be crucial in helping our support team diagnose and resolve your issue more efficiently.\n\n<thinking>I'll wait for the user to provide these details before continuing with the case creation process.",
+            "traceId": "20c800ba-9316-4f42-9696-4ecfd8d6c1bb-1"
+          }
+        }
+      },
+      {
+        "type": "guardrail_trace",
+        "trace": {
+          "action": "NONE",
+          "metadata": {
+            "clientRequestId": "e6944010-bdef-4185-991a-820f8b4cec4b",
+            "endTime": "2026-02-13T09:44:37.590437Z",
+            "startTime": "2026-02-13T09:44:36.878275Z",
+            "totalTimeMs": 712
+          },
+          "outputAssessments": [{}],
+          "traceId": "20c800ba-9316-4f42-9696-4ecfd8d6c1bb-guardrail-post-0"
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "observation": {
+            "finalResponse": {
+              "metadata": {
+                "endTime": "2026-02-13T09:44:37.646648Z",
+                "operationTotalTimeMs": 18300,
+                "startTime": "2026-02-13T09:44:19.346074Z"
+              },
+              "text": "Thank you for providing the subject line. To proceed with creating your support case, we need some additional details about the network problem you're experiencing. This will help our support team better understand and address your issue.\n\nCould you please provide a brief description of the network problem, including the following information:\n\n1. Specific symptoms you're observing\n2. When you first noticed the problem\n3. Any troubleshooting steps you've already taken\n\nThis information will be crucial in helping our support team diagnose and resolve your issue more efficiently."
+            },
+            "traceId": "20c800ba-9316-4f42-9696-4ecfd8d6c1bb-1",
+            "type": "FINISH"
+          }
+        }
+      },
+      {
+        "type": "routing_classifier_trace",
+        "trace": {
+          "observation": {
+            "agentCollaboratorInvocationOutput": {
+              "agentCollaboratorAliasArn": "aws_arn_model_uri",
+              "agentCollaboratorName": "Case-Management2-Collaborator",
+              "metadata": {
+                "clientRequestId": "20c800ba-9316-4f42-9696-4ecfd8d6c1bb",
+                "endTime": "2026-02-13T09:44:37.715506Z",
+                "startTime": "2026-02-13T09:44:19.271279Z",
+                "totalTimeMs": 18444
+              },
+              "output": {
+                "text": "Thank you for providing the subject line. To proceed with creating your support case, we need some additional details about the network problem you're experiencing. This will help our support team better understand and address your issue.\n\nCould you please provide a brief description of the network problem, including the following information:\n\n1. Specific symptoms you're observing\n2. When you first noticed the problem\n3. Any troubleshooting steps you've already taken\n\nThis information will be crucial in helping our support team diagnose and resolve your issue more efficiently.",
+                "type": "TEXT"
+              }
+            },
+            "traceId": "3e2ee6e6-7dc6-4b2a-bebb-e9f0218f4c56-routing-0",
+            "type": "AGENT_COLLABORATOR"
+          }
+        }
+      },
+      {
+        "type": "routing_classifier_trace",
+        "trace": {
+          "observation": {
+            "finalResponse": {
+              "metadata": {
+                "endTime": "2026-02-13T09:44:37.720784Z",
+                "operationTotalTimeMs": 21025,
+                "startTime": "2026-02-13T09:44:16.695831Z"
+              },
+              "text": "Thank you for providing the subject line. To proceed with creating your support case, we need some additional details about the network problem you're experiencing. This will help our support team better understand and address your issue.\n\nCould you please provide a brief description of the network problem, including the following information:\n\n1. Specific symptoms you're observing\n2. When you first noticed the problem\n3. Any troubleshooting steps you've already taken\n\nThis information will be crucial in helping our support team diagnose and resolve your issue more efficiently."
+            },
+            "traceId": "3e2ee6e6-7dc6-4b2a-bebb-e9f0218f4c56-routing-0",
+            "type": "FINISH"
+          }
+        }
+      },
+      {
+        "type": "guardrail_trace",
+        "trace": {
+          "action": "NONE",
+          "metadata": {
+            "clientRequestId": "cacdca51-12b7-482a-bd91-ac16f548e94b",
+            "endTime": "2026-02-13T09:44:38.634741Z",
+            "startTime": "2026-02-13T09:44:37.887295Z",
+            "totalTimeMs": 747
+          },
+          "outputAssessments": [{}],
+          "traceId": "3e2ee6e6-7dc6-4b2a-bebb-e9f0218f4c56-guardrail-post-0"
+        }
+      },
+      {
+        "type": "chunk",
+        "chunk": {
+          "bytes": "Thank you for providing the subject line. To proceed with creating your support case, we need some additional details about the network problem you're experiencing. This will help our support team better understand and address your issue.\n\nCould you please provide a brief description of the network problem, including the following information:\n\n1. Specific symptoms you're observing\n2. When you first noticed the problem\n3. Any troubleshooting steps you've already taken\n\nThis information will be crucial in helping our support team diagnose and resolve your issue more efficiently."
+        }
+      }
+    ],
+    "metadata": {
+      "resourceAttributes": {
+        "telemetry.sdk.language": "python",
+        "telemetry.sdk.name": "opentelemetry",
+        "telemetry.sdk.version": "1.39.1",
+        "langfuse.environment": "staging",
+        "langfuse.release": "9.0 Hotfix",
+        "service.name": "unknown_service"
+      },
+      "scope": {
+        "name": "langfuse-sdk",
+        "version": "3.7.0",
+        "attributes": {
+          "public_key": "pk1"
+        }
+      }
+    },
+    "latency": 22.109,
+    "usage": {
+      "promptTokens": 24562,
+      "completionTokens": 578,
+      "totalTokens": 25140
+    },
+    "inputCost": "0.073686",
+    "outputCost": "0.008669999999",
+    "totalCost": "0.082356",
+    "level": "DEFAULT",
+    "errorCount": 0,
+    "warningCount": 0,
+    "defaultCount": 1,
+    "debugCount": 0,
+    "observationCount": 1,
+    "inputTokens": 24562,
+    "outputTokens": 578,
+    "totalTokens": 25140
+  },
+  {
+    "id": "30cb8862512870f21004590edf80082b",
+    "projectId": "cmgt9niok000wvo07s9ywpqc3",
+    "timestamp": "2026-02-13T09:43:15.547Z",
+    "tags": [],
+    "bookmarked": false,
+    "name": "Invoke Agent",
+    "release": "9.0 Hotfix",
+    "version": null,
+    "userId": "username@email.com",
+    "environment": "staging",
+    "sessionId": "5bef0490-08c0-11f1-907e-cdcae5aa3470",
+    "public": false,
+    "input": "please create a support case",
+    "output": [
+      {
+        "type": "guardrail_trace",
+        "trace": {
+          "action": "NONE",
+          "inputAssessments": [{}],
+          "metadata": {
+            "clientRequestId": "80650ee0-9b35-4183-80fc-3e696b0a3eb8",
+            "endTime": "2026-02-13T09:43:16.707321Z",
+            "startTime": "2026-02-13T09:43:15.984811Z",
+            "totalTimeMs": 723
+          },
+          "traceId": "eceeefc3-3735-4ef4-9a1c-341b5ceb6f58-guardrail-pre-0"
+        }
+      },
+      {
+        "type": "routing_classifier_trace",
+        "trace": {
+          "modelInvocationInput": {
+            "foundationModel": "model_name",
+            "inferenceConfiguration": {
+              "maximumLength": 512,
+              "stopSequences": ["\n\nHuman:"],
+              "temperature": 0,
+              "topK": 250,
+              "topP": 1
+            },
+            "text": "Input Prompt + Context  +text user sent",
+            "traceId": "eceeefc3-3735-4ef4-9a1c-341b5ceb6f58-routing-0",
+            "type": "ROUTING_CLASSIFIER"
+          }
+        }
+      },
+      {
+        "type": "routing_classifier_trace",
+        "trace": {
+          "modelInvocationOutput": {
+            "metadata": {
+              "clientRequestId": "4fba2331-c34e-4e92-b7ca-f336d3477b97",
+              "endTime": "2026-02-13T09:43:18.225176Z",
+              "startTime": "2026-02-13T09:43:16.709900Z",
+              "totalTimeMs": 1516,
+              "usage": { "inputTokens": 3380, "outputTokens": 22 }
+            },
+            "rawResponse": {
+              "content": "{\"stop_sequence\":null,\"type\":\"message\",\"id\":\"msg_bdrk_01Lsq491qtNMwFzZnnKjzCuH\",\"content\":[{\"imageSource\":null,\"reasoningTextSignature\":null,\"reasoningRedactedContent\":null,\"name\":null,\"type\":\"text\",\"id\":null,\"source\":null,\"input\":null,\"is_error\":null,\"text\":\"<a>Case-Management2-Collaborator</a>\",\"content\":null,\"reasoningText\":null,\"tool_use_id\":null,\"guardContent\":null}],\"model\":\"model_name\",\"usage\":{\"input_tokens\":3380,\"output_tokens\":22,\"cache_read_input_tokens\":null,\"cache_creation_input_tokens\":null},\"role\":\"assistant\",\"stop_reason\":\"end_turn\"}"
+            },
+            "traceId": "eceeefc3-3735-4ef4-9a1c-341b5ceb6f58-routing-0"
+          }
+        }
+      },
+      {
+        "type": "routing_classifier_trace",
+        "trace": {
+          "invocationInput": {
+            "agentCollaboratorInvocationInput": {
+              "agentCollaboratorAliasArn": "aws_arn_model_uri",
+              "agentCollaboratorName": "Case-Management2-Collaborator",
+              "input": {
+                "text": "please create a support case",
+                "type": "TEXT"
+              }
+            },
+            "invocationType": "AGENT_COLLABORATOR",
+            "traceId": "eceeefc3-3735-4ef4-9a1c-341b5ceb6f58-routing-0"
+          }
+        }
+      },
+      {
+        "type": "guardrail_trace",
+        "trace": {
+          "action": "NONE",
+          "inputAssessments": [{}],
+          "metadata": {
+            "clientRequestId": "60947eda-f2fb-4f05-8fb3-6b059b5e8dd9",
+            "endTime": "2026-02-13T09:43:19.988110Z",
+            "startTime": "2026-02-13T09:43:18.740557Z",
+            "totalTimeMs": 1248
+          },
+          "traceId": "c99d9980-383e-4961-a879-6faeab5fa3de-guardrail-pre-0"
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "modelInvocationInput": {
+            "foundationModel": "model_name",
+            "inferenceConfiguration": {
+              "maximumLength": 2048,
+              "stopSequences": ["</invoke>", "</answer>", "</error>"],
+              "temperature": 0,
+              "topK": 250,
+              "topP": 1
+            },
+            "text": "Input Prompt + Context  +text user sent",
+            "traceId": "c99d9980-383e-4961-a879-6faeab5fa3de-0",
+            "type": "ORCHESTRATION"
+          }
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "modelInvocationOutput": {
+            "metadata": {
+              "clientRequestId": "d1fbf5b0-2523-4360-b9cb-eedf9c3c55a2",
+              "endTime": "2026-02-13T09:43:24.940277Z",
+              "startTime": "2026-02-13T09:43:20.034939Z",
+              "totalTimeMs": 4906,
+              "usage": { "inputTokens": 5741, "outputTokens": 217 }
+            },
+            "rawResponse": {
+              "content": "{\"stop_sequence\":null,\"type\":\"message\",\"id\":\"msg_bdrk_01XpWqwVUSe5cbGdVXKWqEg7\",\"content\":[{\"name\":null,\"type\":\"text\",\"id\":null,\"source\":null,\"input\":null,\"is_error\":null,\"text\":\"<thinking>\\nThe user has confirmed that they want to create a support case without self-troubleshooting guidance. I will now proceed to engage the Support Case Management Agent to initiate the case creation process.\\n</thinking>\\n\\nCertainly, I'll help you create a support case for your network issue right away. I'll now connect you with our Support Case Management system to gather the necessary information and create the case.\",\"content\":null,\"reasoningText\":null,\"tool_use_id\":null,\"guardContent\":null,\"imageSource\":null,\"reasoningTextSignature\":null,\"reasoningRedactedContent\":null},{\"name\":\"CommAPI_sendMessage\",\"type\":\"tool_use\",\"id\":\"toolu_bdrk_018CreQpMKXco9RaQC2iYKHU\",\"source\":null,\"input\":{\"recipient\":\"SupportCase-Management-Agent\",\"content\":\"The user 'name' (email: username@email.com) is requesting to create a new support case for a network issue. Please initiate the case creation process and gather all necessary information from the user.\"},\"is_error\":null,\"text\":null,\"content\":null,\"reasoningText\":null,\"tool_use_id\":null,\"guardContent\":null,\"imageSource\":null,\"reasoningTextSignature\":null,\"reasoningRedactedContent\":null}],\"model\":\"model_name\",\"usage\":{\"input_tokens\":5741,\"output_tokens\":217,\"cache_read_input_tokens\":null,\"cache_creation_input_tokens\":null},\"role\":\"assistant\",\"stop_reason\":\"tool_use\"}"
+            },
+            "traceId": "c99d9980-383e-4961-a879-6faeab5fa3de-0"
+          }
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "rationale": {
+            "text": "The user has confirmed that they want to create a support case without self-troubleshooting guidance. I will now proceed to engage the Support Case Management Agent to initiate the case creation process.",
+            "traceId": "c99d9980-383e-4961-a879-6faeab5fa3de-0"
+          }
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "invocationInput": {
+            "agentCollaboratorInvocationInput": {
+              "agentCollaboratorAliasArn": "aws_arn_model_uri2",
+              "agentCollaboratorName": "SupportCase-Management-Agent",
+              "input": {
+                "text": "The user 'name' (email: username@email.com) is requesting to create a new support case for a network issue. Please initiate the case creation process and gather all necessary information from the user.",
+                "type": "TEXT"
+              }
+            },
+            "invocationType": "AGENT_COLLABORATOR",
+            "traceId": "c99d9980-383e-4961-a879-6faeab5fa3de-0"
+          }
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "modelInvocationInput": {
+            "foundationModel": "model_name",
+            "inferenceConfiguration": {
+              "maximumLength": 2048,
+              "stopSequences": ["</invoke>", "</answer>", "</error>"],
+              "temperature": 0,
+              "topK": 250,
+              "topP": 1
+            },
+            "text": "Input Prompt + Context  +text user sent",
+            "traceId": "986782ff-1c0e-4aaf-aeee-5a693f1efb0f-0",
+            "type": "ORCHESTRATION"
+          }
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "modelInvocationOutput": {
+            "metadata": {
+              "clientRequestId": "d7b63aad-bc66-4c9e-840f-4653b3d96984",
+              "endTime": "2026-02-13T09:43:30.932393Z",
+              "startTime": "2026-02-13T09:43:25.378453Z",
+              "totalTimeMs": 5554,
+              "usage": { "inputTokens": 7940, "outputTokens": 126 }
+            },
+            "rawResponse": {
+              "content": "{\"type\":\"message\",\"id\":\"msg_bdrk_015eAzTy2pGUEt7hmXZ9ADYi\",\"content\":[{\"imageSource\":null,\"reasoningTextSignature\":null,\"reasoningRedactedContent\":null,\"name\":null,\"type\":\"text\",\"id\":null,\"source\":null,\"input\":null,\"is_error\":null,\"text\":\"<thinking>I understand that the user 'name' wants to create a new support case for a network issue. I'll initiate the case creation process using the appropriate workflow (WF2: Create New Case) and gather the necessary information from the user.</thinking>\\n\\n<answer>Certainly, I'd be happy to help you create a new support case for your network issue, name. Let's go through the process step by step to gather the necessary information. First, could you please provide a brief subject line for your case that summarizes the network issue you're experiencing?\",\"content\":null,\"reasoningText\":null,\"tool_use_id\":null,\"guardContent\":null}],\"model\":\"model_name\",\"usage\":{\"input_tokens\":7940,\"output_tokens\":126,\"cache_read_input_tokens\":null,\"cache_creation_input_tokens\":null},\"role\":\"assistant\",\"stop_sequence\":\"</answer>\",\"stop_reason\":\"stop_sequence\"}"
+            },
+            "traceId": "986782ff-1c0e-4aaf-aeee-5a693f1efb0f-0"
+          }
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "rationale": {
+            "text": "I understand that the user 'name' wants to create a new support case for a network issue. I'll initiate the case creation process using the appropriate workflow (WF2: Create New Case) and gather the necessary information from the user.",
+            "traceId": "986782ff-1c0e-4aaf-aeee-5a693f1efb0f-0"
+          }
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "observation": {
+            "finalResponse": {
+              "metadata": {
+                "endTime": "2026-02-13T09:43:30.981615Z",
+                "operationTotalTimeMs": 5943,
+                "startTime": "2026-02-13T09:43:25.038476Z"
+              },
+              "text": "Certainly, I'd be happy to help you create a new support case for your network issue, name. Let's go through the process step by step to gather the necessary information. First, could you please provide a brief subject line for your case that summarizes the network issue you're experiencing?"
+            },
+            "traceId": "986782ff-1c0e-4aaf-aeee-5a693f1efb0f-0",
+            "type": "FINISH"
+          }
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "observation": {
+            "agentCollaboratorInvocationOutput": {
+              "agentCollaboratorAliasArn": "aws_arn_model_uri2",
+              "agentCollaboratorName": "SupportCase-Management-Agent",
+              "metadata": {
+                "clientRequestId": "986782ff-1c0e-4aaf-aeee-5a693f1efb0f",
+                "endTime": "2026-02-13T09:43:31.050823Z",
+                "startTime": "2026-02-13T09:43:24.954407Z",
+                "totalTimeMs": 6096
+              },
+              "output": {
+                "text": "Certainly, I'd be happy to help you create a new support case for your network issue, name. Let's go through the process step by step to gather the necessary information. First, could you please provide a brief subject line for your case that summarizes the network issue you're experiencing?",
+                "type": "TEXT"
+              }
+            },
+            "traceId": "c99d9980-383e-4961-a879-6faeab5fa3de-0",
+            "type": "AGENT_COLLABORATOR"
+          }
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "modelInvocationInput": {
+            "foundationModel": "model_name",
+            "inferenceConfiguration": {
+              "maximumLength": 2048,
+              "stopSequences": ["</invoke>", "</answer>", "</error>"],
+              "temperature": 0,
+              "topK": 250,
+              "topP": 1
+            },
+            "text": "Input Prompt + Context  +text user sent",
+            "traceId": "c99d9980-383e-4961-a879-6faeab5fa3de-1",
+            "type": "ORCHESTRATION"
+          }
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "modelInvocationOutput": {
+            "metadata": {
+              "clientRequestId": "d997988b-82e0-4021-acb7-24e1e00c4587",
+              "endTime": "2026-02-13T09:43:36.226753Z",
+              "startTime": "2026-02-13T09:43:31.086104Z",
+              "totalTimeMs": 5140,
+              "usage": { "inputTokens": 5987, "outputTokens": 138 }
+            },
+            "rawResponse": {
+              "content": "{\"stop_sequence\":null,\"type\":\"message\",\"id\":\"msg_bdrk_01TJMKAzxoMDrW9trkYJhi5y\",\"content\":[{\"name\":null,\"type\":\"text\",\"id\":null,\"source\":null,\"input\":null,\"is_error\":null,\"text\":\"<thinking>The Support Case Management Agent has responded and is ready to assist with creating the support case. I'll relay this information to the user and ask for the required details.</thinking>\\n\\nCertainly, I'll help you create a support case for your network issue. To get started, we need some information about the problem you're experiencing. \\n\\nCould you please provide a brief subject line that summarizes the network issue you're facing? This will help us categorize and prioritize your case effectively.\\n\\n<thinking>I'll wait for the user's response with the subject line before proceeding with the next steps in the case creation process.</thinking>\",\"content\":null,\"reasoningText\":null,\"tool_use_id\":null,\"guardContent\":null,\"imageSource\":null,\"reasoningTextSignature\":null,\"reasoningRedactedContent\":null}],\"model\":\"model_name\",\"usage\":{\"input_tokens\":5987,\"output_tokens\":138,\"cache_read_input_tokens\":null,\"cache_creation_input_tokens\":null},\"role\":\"assistant\",\"stop_reason\":\"end_turn\"}"
+            },
+            "traceId": "c99d9980-383e-4961-a879-6faeab5fa3de-1"
+          }
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "rationale": {
+            "text": "The Support Case Management Agent has responded and is ready to assist with creating the support case. I'll relay this information to the user and ask for the required details.</thinking>\n\nCertainly, I'll help you create a support case for your network issue. To get started, we need some information about the problem you're experiencing. \n\nCould you please provide a brief subject line that summarizes the network issue you're facing? This will help us categorize and prioritize your case effectively.\n\n<thinking>I'll wait for the user's response with the subject line before proceeding with the next steps in the case creation process.",
+            "traceId": "c99d9980-383e-4961-a879-6faeab5fa3de-1"
+          }
+        }
+      },
+      {
+        "type": "guardrail_trace",
+        "trace": {
+          "action": "NONE",
+          "metadata": {
+            "clientRequestId": "d6b15a31-35f9-43a2-b53c-d6d958b17d9f",
+            "endTime": "2026-02-13T09:43:36.930544Z",
+            "startTime": "2026-02-13T09:43:36.376106Z",
+            "totalTimeMs": 554
+          },
+          "outputAssessments": [{}],
+          "traceId": "c99d9980-383e-4961-a879-6faeab5fa3de-guardrail-post-0"
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "observation": {
+            "finalResponse": {
+              "metadata": {
+                "endTime": "2026-02-13T09:43:36.989603Z",
+                "operationTotalTimeMs": 18677,
+                "startTime": "2026-02-13T09:43:18.312339Z"
+              },
+              "text": "\n\nCertainly, I'll help you create a support case for your network issue. To get started, we need some information about the problem you're experiencing. \n\nCould you please provide a brief subject line that summarizes the network issue you're facing? This will help us categorize and prioritize your case effectively.\n\n"
+            },
+            "traceId": "c99d9980-383e-4961-a879-6faeab5fa3de-1",
+            "type": "FINISH"
+          }
+        }
+      },
+      {
+        "type": "routing_classifier_trace",
+        "trace": {
+          "observation": {
+            "agentCollaboratorInvocationOutput": {
+              "agentCollaboratorAliasArn": "aws_arn_model_uri",
+              "agentCollaboratorName": "Case-Management2-Collaborator",
+              "metadata": {
+                "clientRequestId": "c99d9980-383e-4961-a879-6faeab5fa3de",
+                "endTime": "2026-02-13T09:43:37.052360Z",
+                "startTime": "2026-02-13T09:43:18.236828Z",
+                "totalTimeMs": 18816
+              },
+              "output": {
+                "text": "\n\nCertainly, I'll help you create a support case for your network issue. To get started, we need some information about the problem you're experiencing. \n\nCould you please provide a brief subject line that summarizes the network issue you're facing? This will help us categorize and prioritize your case effectively.\n\n",
+                "type": "TEXT"
+              }
+            },
+            "traceId": "eceeefc3-3735-4ef4-9a1c-341b5ceb6f58-routing-0",
+            "type": "AGENT_COLLABORATOR"
+          }
+        }
+      },
+      {
+        "type": "routing_classifier_trace",
+        "trace": {
+          "observation": {
+            "finalResponse": {
+              "metadata": {
+                "endTime": "2026-02-13T09:43:37.057527Z",
+                "operationTotalTimeMs": 21475,
+                "startTime": "2026-02-13T09:43:15.582113Z"
+              },
+              "text": "\n\nCertainly, I'll help you create a support case for your network issue. To get started, we need some information about the problem you're experiencing. \n\nCould you please provide a brief subject line that summarizes the network issue you're facing? This will help us categorize and prioritize your case effectively.\n\n"
+            },
+            "traceId": "eceeefc3-3735-4ef4-9a1c-341b5ceb6f58-routing-0",
+            "type": "FINISH"
+          }
+        }
+      },
+      {
+        "type": "guardrail_trace",
+        "trace": {
+          "action": "NONE",
+          "metadata": {
+            "clientRequestId": "61a42d60-8f06-4911-a68c-f0b442ea69e7",
+            "endTime": "2026-02-13T09:43:37.885625Z",
+            "startTime": "2026-02-13T09:43:37.218212Z",
+            "totalTimeMs": 667
+          },
+          "outputAssessments": [{}],
+          "traceId": "eceeefc3-3735-4ef4-9a1c-341b5ceb6f58-guardrail-post-0"
+        }
+      },
+      {
+        "type": "chunk",
+        "chunk": {
+          "bytes": "\n\nCertainly, I'll help you create a support case for your network issue. To get started, we need some information about the problem you're experiencing. \n\nCould you please provide a brief subject line that summarizes the network issue you're facing? This will help us categorize and prioritize your case effectively.\n\n"
+        }
+      }
+    ],
+    "metadata": {
+      "resourceAttributes": {
+        "telemetry.sdk.language": "python",
+        "telemetry.sdk.name": "opentelemetry",
+        "telemetry.sdk.version": "1.39.1",
+        "langfuse.environment": "staging",
+        "langfuse.release": "9.0 Hotfix",
+        "service.name": "unknown_service"
+      },
+      "scope": {
+        "name": "langfuse-sdk",
+        "version": "3.7.0",
+        "attributes": {
+          "public_key": "pk1"
+        }
+      }
+    },
+    "latency": 22.442,
+    "usage": {
+      "promptTokens": 23048,
+      "completionTokens": 503,
+      "totalTokens": 23551
+    },
+    "inputCost": "0.069144",
+    "outputCost": "0.007545",
+    "totalCost": "0.076689",
+    "level": "DEFAULT",
+    "errorCount": 0,
+    "warningCount": 0,
+    "defaultCount": 1,
+    "debugCount": 0,
+    "observationCount": 1,
+    "inputTokens": 23048,
+    "outputTokens": 503,
+    "totalTokens": 23551
+  },
+  {
+    "id": "da8c8e9e4c62c2bdab42928f052defdf",
+    "projectId": "cmgt9niok000wvo07s9ywpqc3",
+    "timestamp": "2026-02-13T09:42:50.197Z",
+    "tags": [],
+    "bookmarked": false,
+    "name": "Invoke Agent",
+    "release": "9.0 Hotfix",
+    "version": null,
+    "userId": "username@email.com",
+    "environment": "staging",
+    "sessionId": "5bef0490-08c0-11f1-907e-cdcae5aa3470",
+    "public": false,
+    "input": "I have been facing a network issue. PLease help me to raise a support case for this",
+    "output": [
+      {
+        "type": "guardrail_trace",
+        "trace": {
+          "action": "NONE",
+          "inputAssessments": [{}],
+          "metadata": {
+            "clientRequestId": "12a97f87-5f93-4f0e-8529-4c6f65212a67",
+            "endTime": "2026-02-13T09:42:51.392059Z",
+            "startTime": "2026-02-13T09:42:50.688093Z",
+            "totalTimeMs": 704
+          },
+          "traceId": "d9a9dc2b-0afa-42d8-b59d-e3d4144a8ccb-guardrail-pre-0"
+        }
+      },
+      {
+        "type": "routing_classifier_trace",
+        "trace": {
+          "modelInvocationInput": {
+            "foundationModel": "model_name",
+            "inferenceConfiguration": {
+              "maximumLength": 512,
+              "stopSequences": ["\n\nHuman:"],
+              "temperature": 0,
+              "topK": 250,
+              "topP": 1
+            },
+            "text": "Input Prompt + Context  +text user sent",
+            "traceId": "d9a9dc2b-0afa-42d8-b59d-e3d4144a8ccb-routing-0",
+            "type": "ROUTING_CLASSIFIER"
+          }
+        }
+      },
+      {
+        "type": "routing_classifier_trace",
+        "trace": {
+          "modelInvocationOutput": {
+            "metadata": {
+              "clientRequestId": "f88df368-8240-4eea-b422-fba18f33799a",
+              "endTime": "2026-02-13T09:42:53.272139Z",
+              "startTime": "2026-02-13T09:42:51.394564Z",
+              "totalTimeMs": 1878,
+              "usage": { "inputTokens": 3222, "outputTokens": 22 }
+            },
+            "rawResponse": {
+              "content": "{\"stop_sequence\":null,\"type\":\"message\",\"id\":\"msg_bdrk_011rnh5NjgGgS3aa5Gy8DCLy\",\"content\":[{\"imageSource\":null,\"reasoningTextSignature\":null,\"reasoningRedactedContent\":null,\"name\":null,\"type\":\"text\",\"id\":null,\"source\":null,\"input\":null,\"is_error\":null,\"text\":\"<a>Case-Management2-Collaborator</a>\",\"content\":null,\"reasoningText\":null,\"tool_use_id\":null,\"guardContent\":null}],\"model\":\"model_name\",\"usage\":{\"input_tokens\":3222,\"output_tokens\":22,\"cache_read_input_tokens\":null,\"cache_creation_input_tokens\":null},\"role\":\"assistant\",\"stop_reason\":\"end_turn\"}"
+            },
+            "traceId": "d9a9dc2b-0afa-42d8-b59d-e3d4144a8ccb-routing-0"
+          }
+        }
+      },
+      {
+        "type": "routing_classifier_trace",
+        "trace": {
+          "invocationInput": {
+            "agentCollaboratorInvocationInput": {
+              "agentCollaboratorAliasArn": "aws_arn_model_uri",
+              "agentCollaboratorName": "Case-Management2-Collaborator",
+              "input": {
+                "text": "I have been facing a network issue. PLease help me to raise a support case for this",
+                "type": "TEXT"
+              }
+            },
+            "invocationType": "AGENT_COLLABORATOR",
+            "traceId": "d9a9dc2b-0afa-42d8-b59d-e3d4144a8ccb-routing-0"
+          }
+        }
+      },
+      {
+        "type": "guardrail_trace",
+        "trace": {
+          "action": "NONE",
+          "inputAssessments": [{}],
+          "metadata": {
+            "clientRequestId": "07f2898a-8b7f-4a8f-a8ab-f189f25b4fa5",
+            "endTime": "2026-02-13T09:42:54.417681Z",
+            "startTime": "2026-02-13T09:42:53.747934Z",
+            "totalTimeMs": 670
+          },
+          "traceId": "4d6f7377-d945-4811-b4d7-63a2a67cca52-guardrail-pre-0"
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "modelInvocationInput": {
+            "foundationModel": "model_name",
+            "inferenceConfiguration": {
+              "maximumLength": 2048,
+              "stopSequences": ["</invoke>", "</answer>", "</error>"],
+              "temperature": 0,
+              "topK": 250,
+              "topP": 1
+            },
+            "text": "Input Prompt + Context  +text user sent",
+            "traceId": "4d6f7377-d945-4811-b4d7-63a2a67cca52-0",
+            "type": "ORCHESTRATION"
+          }
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "modelInvocationOutput": {
+            "metadata": {
+              "clientRequestId": "3f778d17-5382-4066-b249-ecd903169bd7",
+              "endTime": "2026-02-13T09:43:00.426880Z",
+              "startTime": "2026-02-13T09:42:54.497107Z",
+              "totalTimeMs": 5929,
+              "usage": { "inputTokens": 5372, "outputTokens": 206 }
+            },
+            "rawResponse": {
+              "content": "{\"type\":\"message\",\"id\":\"msg_bdrk_01Rnxryt7JCiDgMpQLNpHTCF\",\"content\":[{\"imageSource\":null,\"reasoningTextSignature\":null,\"reasoningRedactedContent\":null,\"name\":null,\"type\":\"text\",\"id\":null,\"source\":null,\"input\":null,\"is_error\":null,\"text\":\"<thinking>\\nThe user is requesting to create a support case for a network issue. This falls under the category of case creation for a non-hardware related problem. I need to invoke the Support Case Management Agent to handle this request. Before proceeding, I should clarify if the user needs any self-troubleshooting guidance.\\n</thinking>\\n\\nCertainly, I'd be happy to help you raise a support case for your network issue. Before we proceed with creating a case, I'd like to ask:\\n\\nWould you like some self-troubleshooting guidance for your network issue, or would you prefer to directly create a support case?\\n\\n<thinking>\\nNow I'll wait for the user's response to determine the next steps. If they want self-troubleshooting guidance, I'll need to involve the Troubleshooting Guidance Agent. If they want to proceed with case creation, I'll engage the Support Case Management Agent.\\n</thinking>\",\"content\":null,\"reasoningText\":null,\"tool_use_id\":null,\"guardContent\":null}],\"model\":\"model_name\",\"usage\":{\"input_tokens\":5372,\"output_tokens\":206,\"cache_read_input_tokens\":null,\"cache_creation_input_tokens\":null},\"role\":\"assistant\",\"stop_sequence\":null,\"stop_reason\":\"end_turn\"}"
+            },
+            "traceId": "4d6f7377-d945-4811-b4d7-63a2a67cca52-0"
+          }
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "rationale": {
+            "text": "The user is requesting to create a support case for a network issue. This falls under the category of case creation for a non-hardware related problem. I need to invoke the Support Case Management Agent to handle this request. Before proceeding, I should clarify if the user needs any self-troubleshooting guidance.\n</thinking>\n\nCertainly, I'd be happy to help you raise a support case for your network issue. Before we proceed with creating a case, I'd like to ask:\n\nWould you like some self-troubleshooting guidance for your network issue, or would you prefer to directly create a support case?\n\n<thinking>\nNow I'll wait for the user's response to determine the next steps. If they want self-troubleshooting guidance, I'll need to involve the Troubleshooting Guidance Agent. If they want to proceed with case creation, I'll engage the Support Case Management Agent.",
+            "traceId": "4d6f7377-d945-4811-b4d7-63a2a67cca52-0"
+          }
+        }
+      },
+      {
+        "type": "guardrail_trace",
+        "trace": {
+          "action": "NONE",
+          "metadata": {
+            "clientRequestId": "e3577587-c3fc-4c4d-bdf6-ea2ed779ebc9",
+            "endTime": "2026-02-13T09:43:01.311813Z",
+            "startTime": "2026-02-13T09:43:00.633491Z",
+            "totalTimeMs": 678
+          },
+          "outputAssessments": [{}],
+          "traceId": "4d6f7377-d945-4811-b4d7-63a2a67cca52-guardrail-post-0"
+        }
+      },
+      {
+        "type": "orchestration_trace",
+        "trace": {
+          "observation": {
+            "finalResponse": {
+              "metadata": {
+                "endTime": "2026-02-13T09:43:01.361729Z",
+                "operationTotalTimeMs": 7996,
+                "startTime": "2026-02-13T09:42:53.365863Z"
+              },
+              "text": "\n\nCertainly, I'd be happy to help you raise a support case for your network issue. Before we proceed with creating a case, I'd like to ask:\n\nWould you like some self-troubleshooting guidance for your network issue, or would you prefer to directly create a support case?\n\n"
+            },
+            "traceId": "4d6f7377-d945-4811-b4d7-63a2a67cca52-0",
+            "type": "FINISH"
+          }
+        }
+      },
+      {
+        "type": "routing_classifier_trace",
+        "trace": {
+          "observation": {
+            "agentCollaboratorInvocationOutput": {
+              "agentCollaboratorAliasArn": "aws_arn_model_uri",
+              "agentCollaboratorName": "Case-Management2-Collaborator",
+              "metadata": {
+                "clientRequestId": "4d6f7377-d945-4811-b4d7-63a2a67cca52",
+                "endTime": "2026-02-13T09:43:01.428329Z",
+                "startTime": "2026-02-13T09:42:53.284643Z",
+                "totalTimeMs": 8144
+              },
+              "output": {
+                "text": "\n\nCertainly, I'd be happy to help you raise a support case for your network issue. Before we proceed with creating a case, I'd like to ask:\n\nWould you like some self-troubleshooting guidance for your network issue, or would you prefer to directly create a support case?\n\n",
+                "type": "TEXT"
+              }
+            },
+            "traceId": "d9a9dc2b-0afa-42d8-b59d-e3d4144a8ccb-routing-0",
+            "type": "AGENT_COLLABORATOR"
+          }
+        }
+      },
+      {
+        "type": "routing_classifier_trace",
+        "trace": {
+          "observation": {
+            "finalResponse": {
+              "metadata": {
+                "endTime": "2026-02-13T09:43:01.432961Z",
+                "operationTotalTimeMs": 11183,
+                "startTime": "2026-02-13T09:42:50.249776Z"
+              },
+              "text": "\n\nCertainly, I'd be happy to help you raise a support case for your network issue. Before we proceed with creating a case, I'd like to ask:\n\nWould you like some self-troubleshooting guidance for your network issue, or would you prefer to directly create a support case?\n\n"
+            },
+            "traceId": "d9a9dc2b-0afa-42d8-b59d-e3d4144a8ccb-routing-0",
+            "type": "FINISH"
+          }
+        }
+      },
+      {
+        "type": "guardrail_trace",
+        "trace": {
+          "action": "NONE",
+          "metadata": {
+            "clientRequestId": "55658c21-b28a-4d0b-9313-a0ef556fcd0a",
+            "endTime": "2026-02-13T09:43:02.268904Z",
+            "startTime": "2026-02-13T09:43:01.579580Z",
+            "totalTimeMs": 689
+          },
+          "outputAssessments": [{}],
+          "traceId": "d9a9dc2b-0afa-42d8-b59d-e3d4144a8ccb-guardrail-post-0"
+        }
+      },
+      {
+        "type": "chunk",
+        "chunk": {
+          "bytes": "\n\nCertainly, I'd be happy to help you raise a support case for your network issue. Before we proceed with creating a case, I'd like to ask:\n\nWould you like some self-troubleshooting guidance for your network issue, or would you prefer to directly create a support case?\n\n"
+        }
+      }
+    ],
+    "metadata": {
+      "resourceAttributes": {
+        "telemetry.sdk.language": "python",
+        "telemetry.sdk.name": "opentelemetry",
+        "telemetry.sdk.version": "1.39.1",
+        "langfuse.environment": "staging",
+        "langfuse.release": "9.0 Hotfix",
+        "service.name": "unknown_service"
+      },
+      "scope": {
+        "name": "langfuse-sdk",
+        "version": "3.7.0",
+        "attributes": {
+          "public_key": "pk1"
+        }
+      }
+    },
+    "latency": 12.185,
+    "usage": {
+      "promptTokens": 8594,
+      "completionTokens": 228,
+      "totalTokens": 8822
+    },
+    "inputCost": "0.025782",
+    "outputCost": "0.00342",
+    "totalCost": "0.029202",
+    "level": "DEFAULT",
+    "errorCount": 0,
+    "warningCount": 0,
+    "defaultCount": 1,
+    "debugCount": 0,
+    "observationCount": 1,
+    "inputTokens": 8594,
+    "outputTokens": 228,
+    "totalTokens": 8822
+  }
+]
