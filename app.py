@@ -583,8 +583,8 @@ with T2:
         st.markdown("<div style='color:#e6edf3;font-size:13px;font-weight:600;margin-bottom:12px'>Key Findings</div>", unsafe_allow_html=True)
         findings = [
             ("note note-r",
-             "<b>case_update: 4.5 sequential LLM calls</b><br>"
-             "verify-case → get-url → update-case → confirm run one after another. "
+             "<b>defects_search: 4.5 sequential LLM calls</b><br>"
+             "runs one after another. "
              "Merging to a single structured-output call saves ~18s and ~40% cost."),
             ("note note-y",
              "<b>Troubleshooting: 19s per LLM call</b><br>"
